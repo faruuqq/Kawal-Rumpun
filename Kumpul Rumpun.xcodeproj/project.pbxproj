@@ -14,6 +14,8 @@
 		2AA1DFB12472711D0069FAC8 /* Kumpul_Rumpun.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2AA1DFAF2472711D0069FAC8 /* Kumpul_Rumpun.xcdatamodeld */; };
 		2AA1DFB32472711E0069FAC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AA1DFB22472711E0069FAC8 /* Assets.xcassets */; };
 		2AA1DFB62472711E0069FAC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AA1DFB42472711E0069FAC8 /* LaunchScreen.storyboard */; };
+		2AA1DFBE24728C1C0069FAC8 /* Checkin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AA1DFBD24728C1C0069FAC8 /* Checkin.storyboard */; };
+		2AA1DFC024728C2F0069FAC8 /* CheckinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA1DFBF24728C2F0069FAC8 /* CheckinView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		2AA1DFB22472711E0069FAC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2AA1DFB52472711E0069FAC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2AA1DFB72472711E0069FAC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AA1DFBD24728C1C0069FAC8 /* Checkin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Checkin.storyboard; sourceTree = "<group>"; };
+		2AA1DFBF24728C2F0069FAC8 /* CheckinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckinView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,12 +66,22 @@
 				2AA1DFA82472711D0069FAC8 /* SceneDelegate.swift */,
 				2AA1DFAA2472711D0069FAC8 /* ViewController.swift */,
 				2AA1DFAC2472711D0069FAC8 /* Main.storyboard */,
+				2AA1DFC124728CA80069FAC8 /* Faruuq */,
 				2AA1DFB22472711E0069FAC8 /* Assets.xcassets */,
 				2AA1DFB42472711E0069FAC8 /* LaunchScreen.storyboard */,
 				2AA1DFB72472711E0069FAC8 /* Info.plist */,
 				2AA1DFAF2472711D0069FAC8 /* Kumpul_Rumpun.xcdatamodeld */,
 			);
 			path = "Kumpul Rumpun";
+			sourceTree = "<group>";
+		};
+		2AA1DFC124728CA80069FAC8 /* Faruuq */ = {
+			isa = PBXGroup;
+			children = (
+				2AA1DFBF24728C2F0069FAC8 /* CheckinView.swift */,
+				2AA1DFBD24728C1C0069FAC8 /* Checkin.storyboard */,
+			);
+			path = Faruuq;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AA1DFB62472711E0069FAC8 /* LaunchScreen.storyboard in Resources */,
+				2AA1DFBE24728C1C0069FAC8 /* Checkin.storyboard in Resources */,
 				2AA1DFB32472711E0069FAC8 /* Assets.xcassets in Resources */,
 				2AA1DFAE2472711D0069FAC8 /* Main.storyboard in Resources */,
 			);
@@ -141,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AA1DFC024728C2F0069FAC8 /* CheckinView.swift in Sources */,
 				2AA1DFAB2472711D0069FAC8 /* ViewController.swift in Sources */,
 				2AA1DFA72472711D0069FAC8 /* AppDelegate.swift in Sources */,
 				2AA1DFB12472711D0069FAC8 /* Kumpul_Rumpun.xcdatamodeld in Sources */,
