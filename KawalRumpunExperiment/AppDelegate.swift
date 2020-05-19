@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  Kumpul Rumpun
+//  KawalRumpunExperiment
 //
-//  Created by Muhammad Faruuq Qayyum on 18/05/20.
-//  Copyright © 2020 Apple Academy. All rights reserved.
+//  Created by Muhammad Fawwaz Mayda on 18/05/20.
+//  Copyright © 2020 Muhammad Fawwaz Mayda. All rights reserved.
 //
 
 import UIKit
@@ -35,14 +35,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // MARK: - Core Data stack
 
-    lazy var persistentContainer: NSPersistentCloudKitContainer = {
+    lazy var persistentContainer: NSPersistentContainer = {
         /*
          The persistent container for the application. This implementation
          creates and returns a container, having loaded the store for the
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
         */
-        let container = NSPersistentCloudKitContainer(name: "Kumpul_Rumpun")
+        let container = NSPersistentContainer(name: "KawalRumpunExperiment")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19D76" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CheckPoint" representedClassName="CheckPoint" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="id_warga" optional="YES" attributeType="String"/>
+        <attribute name="isCheckOut" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="Guest" representedClassName="Guest" syncable="YES" codeGenerationType="class">
+        <attribute name="guestAddress" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="id_warga" optional="YES" attributeType="String"/>
+        <attribute name="numberOfDays" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="numberOfGuests" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="HealthCheck" representedClassName="HealthCheck" syncable="YES" codeGenerationType="class">
+        <attribute name="bodyTemp" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="breath" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="cough" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="fever" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="flu" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="id_warga" optional="YES" attributeType="String"/>
+        <attribute name="riskStatus" optional="YES" attributeType="String"/>
+        <attribute name="throatPain" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="worstSymtom" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="Notification" representedClassName="Notification" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="id_related" optional="YES" attributeType="String"/>
+        <attribute name="tipe" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Panic" representedClassName="Panic" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="id_warga" optional="YES" attributeType="String"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="statusActive" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="PesanRT" representedClassName="PesanRT" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="messages" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="RelasiKeluarga" representedClassName="RelasiKeluarga" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="id_warga1" optional="YES" attributeType="String"/>
+        <attribute name="id_warga2" optional="YES" attributeType="String"/>
+        <attribute name="isConfirmed" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="relasi" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Report" representedClassName="Report" syncable="YES" codeGenerationType="class">
+        <attribute name="complaint" optional="YES" attributeType="String"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="id_warga" optional="YES" attributeType="String"/>
+        <attribute name="photo" optional="YES" attributeType="Binary"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Warga" representedClassName="Warga" syncable="YES" codeGenerationType="class">
+        <attribute name="baseLatitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="baseLongitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="currentLatitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="currentLongitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="hp" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="password" optional="YES" attributeType="String"/>
+        <attribute name="rt" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="rw" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="willingToTrack" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+    </entity>
+    <elements>
+        <element name="Warga" positionX="-63" positionY="-18" width="128" height="223"/>
+        <element name="RelasiKeluarga" positionX="-54" positionY="-9" width="128" height="118"/>
+        <element name="Report" positionX="-36" positionY="9" width="128" height="133"/>
+        <element name="HealthCheck" positionX="0" positionY="45" width="128" height="208"/>
+        <element name="Panic" positionX="18" positionY="63" width="128" height="133"/>
+        <element name="Notification" positionX="-9" positionY="108" width="128" height="88"/>
+        <element name="PesanRT" positionX="0" positionY="117" width="128" height="88"/>
+        <element name="Guest" positionX="9" positionY="126" width="128" height="118"/>
+        <element name="CheckPoint" positionX="18" positionY="135" width="128" height="103"/>
+    </elements>
+</model>

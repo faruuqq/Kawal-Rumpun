@@ -1,9 +1,9 @@
 //
 //  SceneDelegate.swift
-//  Kumpul Rumpun
+//  KawalRumpunExperiment
 //
-//  Created by Muhammad Faruuq Qayyum on 18/05/20.
-//  Copyright © 2020 Apple Academy. All rights reserved.
+//  Created by Muhammad Fawwaz Mayda on 18/05/20.
+//  Copyright © 2020 Muhammad Fawwaz Mayda. All rights reserved.
 //
 
 import UIKit
