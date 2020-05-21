@@ -9,7 +9,6 @@
 import UIKit
 
 struct ReportModel {
-    var date : Date = Date.
     var keluhanType = ""
     var complaintText = ""
 }
