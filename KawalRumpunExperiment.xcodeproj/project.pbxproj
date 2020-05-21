@@ -16,6 +16,7 @@
 		4D53D1B82472D39A003526CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D53D1B62472D39A003526CF /* LaunchScreen.storyboard */; };
 		4D53D1C32472D39A003526CF /* KawalRumpunExperimentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D53D1C22472D39A003526CF /* KawalRumpunExperimentTests.swift */; };
 		4D53D1CE2472D39B003526CF /* KawalRumpunExperimentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D53D1CD2472D39B003526CF /* KawalRumpunExperimentUITests.swift */; };
+		4D697FD624765D3800B9C3BB /* GuestFirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D697FD524765D3800B9C3BB /* GuestFirstVC.swift */; };
 		4DB5BFB72473A9C100D86F16 /* KawalRumpunVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB5BFB62473A9C100D86F16 /* KawalRumpunVC.swift */; };
 		4DB5BFB92473A9EE00D86F16 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB5BFB82473A9EE00D86F16 /* SignInVC.swift */; };
 		4DB5BFBB2473AB7600D86F16 /* DashbordSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DB5BFBA2473AB7600D86F16 /* DashbordSB.storyboard */; };
@@ -63,6 +64,7 @@
 		4D53D1C92472D39B003526CF /* KawalRumpunExperimentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KawalRumpunExperimentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D53D1CD2472D39B003526CF /* KawalRumpunExperimentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KawalRumpunExperimentUITests.swift; sourceTree = "<group>"; };
 		4D53D1CF2472D39B003526CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D697FD524765D3800B9C3BB /* GuestFirstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestFirstVC.swift; sourceTree = "<group>"; };
 		4DB5BFB62473A9C100D86F16 /* KawalRumpunVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KawalRumpunVC.swift; sourceTree = "<group>"; };
 		4DB5BFB82473A9EE00D86F16 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		4DB5BFBA2473AB7600D86F16 /* DashbordSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DashbordSB.storyboard; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				4DB5BFC52473B8F000D86F16 /* GuestRegistrationSB.storyboard */,
+				4D697FD524765D3800B9C3BB /* GuestFirstVC.swift */,
 			);
 			path = Guests;
 			sourceTree = "<group>";
@@ -393,6 +396,7 @@
 				4D53D1B32472D39A003526CF /* KawalRumpunExperiment.xcdatamodeld in Sources */,
 				4DB5BFCF2473D0F700D86F16 /* TabBarViewController.swift in Sources */,
 				4D53D1AB2472D39A003526CF /* SceneDelegate.swift in Sources */,
+				4D697FD624765D3800B9C3BB /* GuestFirstVC.swift in Sources */,
 				4DB5BFB72473A9C100D86F16 /* KawalRumpunVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

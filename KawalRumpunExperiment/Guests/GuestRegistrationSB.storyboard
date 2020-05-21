@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Guest FirstVC-->
         <scene sceneID="DZs-2s-UTt">
             <objects>
-                <viewController id="Ozi-Gj-TyG" sceneMemberID="viewController">
+                <viewController id="Ozi-Gj-TyG" customClass="GuestFirstVC" customModule="KawalRumpunExperiment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pZ5-Kv-gQs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -51,10 +51,16 @@
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="zRs-NH-8zp">
                                 <rect key="frame" x="311" y="529" width="94" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="tamuStepperTapped:" destination="Ozi-Gj-TyG" eventType="valueChanged" id="8I2-cl-bM8"/>
+                                </connections>
                             </stepper>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="bCh-lZ-YtI">
                                 <rect key="frame" x="311" y="581" width="94" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="periodeSteppedTapped:" destination="Ozi-Gj-TyG" eventType="valueChanged" id="b2E-9A-e9Z"/>
+                                </connections>
                             </stepper>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wT4-7O-3LS">
                                 <rect key="frame" x="190" y="812" width="35" height="30"/>
@@ -73,6 +79,11 @@
                         <viewLayoutGuide key="safeArea" id="IEt-rH-TJp"/>
                     </view>
                     <navigationItem key="navigationItem" id="LzR-ra-RRl"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="periodeTextField" destination="Mim-j0-hbO" id="SKW-IX-rPB"/>
+                        <outlet property="tamuTextField" destination="lNw-I9-PQb" id="pAz-f7-rbR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9IQ-JE-Mm8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
