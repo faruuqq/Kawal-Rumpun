@@ -14,26 +14,27 @@ struct ReportModel {
 }
 class ReportFirstVC: UIViewController {
     var currentIdWarga = ""
+    @IBOutlet weak var kesehatanButton: UIButton!
+    
+    @IBOutlet weak var fasilitasButton: UIButton!
+    
+    @IBOutlet weak var sosialButton: UIButton!
+    @IBOutlet weak var selanjutnyaButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         //Asume we have the user already logged in
-        if UserDefaults.standard.string(forKey: "id_warga")?.isEmpty {
-            currentIdWarga = "test"
-        } else {
-            currentIdWarga = UserDefaults.standard.string(forKey: "id_warga")
+        if let userDefaultsIdWarga = UserDefaults.standard.string(forKey: "id_warga") {
+            if userDefaultsIdWarga.isEmpty {
+                currentIdWarga = "dummy_id_warga"
+            } else {
+                currentIdWarga = userDefaultsIdWarga
+            }
         }
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func reportTypeButtonTapped(_ sender: UIButton) {
+        print(sender.titleLabel?.text)
     }
-    */
-
+    
 }
