@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A698B982476AA1400FE9CD8 /* CheckInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A698B972476AA1400FE9CD8 /* CheckInVC.swift */; };
 		2A7EFE322475321B00E550B6 /* ButtonRounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7EFE312475321B00E550B6 /* ButtonRounded.swift */; };
 		2A7EFE342475334300E550B6 /* ViewRounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7EFE332475334300E550B6 /* ViewRounded.swift */; };
 		2A7EFE362475337100E550B6 /* ViewShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7EFE352475337100E550B6 /* ViewShadow.swift */; };
@@ -52,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A698B972476AA1400FE9CD8 /* CheckInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInVC.swift; sourceTree = "<group>"; };
 		2A7EFE312475321B00E550B6 /* ButtonRounded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonRounded.swift; sourceTree = "<group>"; };
 		2A7EFE332475334300E550B6 /* ViewRounded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRounded.swift; sourceTree = "<group>"; };
 		2A7EFE352475337100E550B6 /* ViewShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewShadow.swift; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				4DB5BFC72473B8FC00D86F16 /* CheckInOutSB.storyboard */,
+				2A698B972476AA1400FE9CD8 /* CheckInVC.swift */,
 			);
 			path = CheckInOut;
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A698B982476AA1400FE9CD8 /* CheckInVC.swift in Sources */,
 				2A7EFE362475337100E550B6 /* ViewShadow.swift in Sources */,
 				4D53D1AD2472D39A003526CF /* ViewController.swift in Sources */,
 				4D53D1A92472D39A003526CF /* AppDelegate.swift in Sources */,
