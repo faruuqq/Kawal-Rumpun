@@ -10,6 +10,8 @@ import UIKit
 
 class HealthCheckFirstVC: UIViewController {
     
+    @IBOutlet weak var todayLabel: UILabel!
+    @IBOutlet weak var tableView: UITableView!
     
 
     override func viewDidLoad() {

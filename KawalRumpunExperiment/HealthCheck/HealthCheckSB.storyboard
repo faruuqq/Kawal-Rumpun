@@ -63,6 +63,10 @@
                     <tabBarItem key="tabBarItem" title="Item" id="tdd-Ig-SyO"/>
                     <navigationItem key="navigationItem" id="9AK-LJ-hwu"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="QPW-kX-hI4" id="opa-HQ-QDc"/>
+                        <outlet property="todayLabel" destination="Bxa-eQ-BbQ" id="MJF-gH-ftb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IJ4-a0-zZn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
