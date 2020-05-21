@@ -20,20 +20,20 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Lapor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5o3-Lk-29X">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lapor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5o3-Lk-29X">
                                 <rect key="frame" x="20" y="104" width="112" height="48"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Selasa, 12 Mei 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyx-yA-cju">
-                                <rect key="frame" x="20" y="189" width="154" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selasa, 12 Mei 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyx-yA-cju">
+                                <rect key="frame" x="20" y="192" width="154" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Complaint" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lSA-to-7Yb">
-                                <rect key="frame" x="20" y="394" width="374" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Complaint" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lSA-to-7Yb">
+                                <rect key="frame" x="20" y="395.5" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -44,8 +44,8 @@
                                 </constraints>
                                 <state key="normal" title="Selanjutnya"/>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="equalSpacing" spacing="103" translatesAutoresizingMaskIntoConstraints="NO" id="vJd-xS-5Z6">
-                                <rect key="frame" x="20" y="269" width="374" height="50"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="103" translatesAutoresizingMaskIntoConstraints="NO" id="vJd-xS-5Z6">
+                                <rect key="frame" x="20" y="271" width="374" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfe-CK-bgE">
                                         <rect key="frame" x="0.0" y="0.0" width="72" height="50"/>
@@ -90,14 +90,14 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Kategori" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fy3-Ue-G8i">
-                                <rect key="frame" x="20" y="224" width="65" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kategori" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fy3-Ue-G8i">
+                                <rect key="frame" x="20" y="226.5" width="65" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Keluhan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aC9-QV-x3a">
-                                <rect key="frame" x="20" y="342" width="62" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keluhan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aC9-QV-x3a">
+                                <rect key="frame" x="20" y="344" width="62" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -106,23 +106,29 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="HXB-0E-6BG" firstAttribute="trailing" secondItem="Fy3-Ue-G8i" secondAttribute="trailing" constant="329" id="0ZN-D1-6We"/>
+                            <constraint firstItem="lSA-to-7Yb" firstAttribute="top" secondItem="aC9-QV-x3a" secondAttribute="bottom" constant="31" id="3iG-fo-fJf"/>
                             <constraint firstItem="Fy3-Ue-G8i" firstAttribute="leading" secondItem="HXB-0E-6BG" secondAttribute="leading" constant="20" id="D4O-Jb-wo5"/>
                             <constraint firstItem="89V-HP-2W9" firstAttribute="leading" secondItem="HXB-0E-6BG" secondAttribute="leading" constant="10" id="EYJ-9V-fcM"/>
                             <constraint firstItem="HXB-0E-6BG" firstAttribute="trailing" secondItem="tkC-LN-qmt" secondAttribute="trailing" constant="167" id="JPI-7M-XDa"/>
                             <constraint firstItem="aC9-QV-x3a" firstAttribute="leading" secondItem="HXB-0E-6BG" secondAttribute="leading" constant="20" id="OnM-Yk-8NU"/>
+                            <constraint firstItem="HXB-0E-6BG" firstAttribute="trailing" secondItem="lSA-to-7Yb" secondAttribute="trailing" constant="20" id="Py1-i4-BdF"/>
+                            <constraint firstItem="5o3-Lk-29X" firstAttribute="leading" secondItem="HXB-0E-6BG" secondAttribute="leading" constant="20" id="Sxq-EY-2wI"/>
                             <constraint firstItem="HXB-0E-6BG" firstAttribute="trailing" secondItem="89V-HP-2W9" secondAttribute="trailing" constant="10" id="VIF-1n-a6d"/>
                             <constraint firstItem="aC9-QV-x3a" firstAttribute="top" secondItem="vJd-xS-5Z6" secondAttribute="bottom" constant="23" id="ZsX-Ha-YEC"/>
                             <constraint firstItem="HXB-0E-6BG" firstAttribute="trailing" secondItem="hyx-yA-cju" secondAttribute="trailing" constant="240" id="cRx-yc-ti9"/>
                             <constraint firstItem="vJd-xS-5Z6" firstAttribute="leading" secondItem="HXB-0E-6BG" secondAttribute="leading" constant="20" id="f2x-5c-g2b"/>
                             <constraint firstItem="vJd-xS-5Z6" firstAttribute="top" secondItem="Fy3-Ue-G8i" secondAttribute="bottom" constant="24" id="gJ9-xZ-zbq"/>
                             <constraint firstItem="HXB-0E-6BG" firstAttribute="trailing" secondItem="vJd-xS-5Z6" secondAttribute="trailing" constant="20" id="gJf-oA-7y1"/>
+                            <constraint firstItem="HXB-0E-6BG" firstAttribute="trailing" secondItem="5o3-Lk-29X" secondAttribute="trailing" constant="282" id="kEw-8N-C9z"/>
                             <constraint firstItem="tkC-LN-qmt" firstAttribute="top" secondItem="89V-HP-2W9" secondAttribute="bottom" constant="40" id="n1i-Iw-qsP"/>
                             <constraint firstItem="HXB-0E-6BG" firstAttribute="trailing" secondItem="aC9-QV-x3a" secondAttribute="trailing" constant="332" id="o3d-xy-g83"/>
                             <constraint firstItem="lSA-to-7Yb" firstAttribute="top" secondItem="aC9-QV-x3a" secondAttribute="bottom" constant="31" id="qge-So-5o4"/>
+                            <constraint firstItem="5o3-Lk-29X" firstAttribute="top" secondItem="HXB-0E-6BG" secondAttribute="top" constant="60" id="rAH-li-N0C"/>
                             <constraint firstItem="Fy3-Ue-G8i" firstAttribute="top" secondItem="hyx-yA-cju" secondAttribute="bottom" constant="14" id="rav-Pw-3Ka"/>
                             <constraint firstItem="hyx-yA-cju" firstAttribute="leading" secondItem="HXB-0E-6BG" secondAttribute="leading" constant="20" id="s7u-Nc-r01"/>
                             <constraint firstItem="hyx-yA-cju" firstAttribute="top" secondItem="5o3-Lk-29X" secondAttribute="bottom" constant="40" id="vEQ-pf-Qtv"/>
                             <constraint firstItem="tkC-LN-qmt" firstAttribute="leading" secondItem="HXB-0E-6BG" secondAttribute="leading" constant="168" id="wWi-KC-j0x"/>
+                            <constraint firstItem="lSA-to-7Yb" firstAttribute="leading" secondItem="HXB-0E-6BG" secondAttribute="leading" constant="20" id="wjr-r3-Edg"/>
                             <constraint firstItem="tkC-LN-qmt" firstAttribute="bottom" secondItem="HXB-0E-6BG" secondAttribute="bottom" id="zSl-fL-bUK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HXB-0E-6BG"/>
