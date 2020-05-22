@@ -13,12 +13,14 @@ class DashboardVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // adding blue color for navigation bar
-        self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.navigationController?.navigationBar.barTintColor = UIColor(red:0.333, green:0.541, blue:0.910, alpha:1.00)
-        self.navigationController?.navigationBar.backgroundColor = UIColor(red:0.333, green:0.541, blue:0.910, alpha:1.00)
-         self.view.backgroundColor = UIColor(red:0.333, green:0.541, blue:0.910, alpha:1.00)
-        
+        // Setup navigation bar property
+        setNavBar()
+              
+        // Adding subtitle above large title
+        self.navigationItem.titleView = setTitle(title: "", subtitle: getCurrentDay())
+    }
+    
+    func getCurrentDay() -> String {
         // Get current date and time
         let currentDateTime = Date()
         
@@ -32,9 +34,24 @@ class DashboardVC: UIViewController {
         // Get the date from date object
         let dateString = formatter.string(from: currentDateTime)
         
-        // Set the large title with subtitle
-        self.navigationItem.titleView = setTitle(title: "Beranda", subtitle: dateString)
+        return dateString
+    }
+    
+    func setNavBar() {
+        navigationController?.navigationBar.prefersLargeTitles = true
 
+        // Set background color navbar to blue based on design
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = UIColor(red:0.333, green:0.541, blue:0.910, alpha:1.00)
+        
+        // Set large title color to white
+        appearance.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+
+        // Applying navbar property on all state appearance
+        navigationItem.standardAppearance = appearance
+        navigationItem.scrollEdgeAppearance = appearance
+        navigationItem.compactAppearance = appearance
     }
     
     func setTitle(title:String, subtitle:String) -> UIView {
@@ -57,12 +74,12 @@ class DashboardVC: UIViewController {
                 print("iPhone 5S and SE")
             // If screen height equal iPhone 6, 6+, 6S, 6S+, 7, 7+, 8, 8+ and X
             case 1334, 1920, 2208, 2436:
-                //y_Title = 29
                 y_Title = 48
                 y_SubTitle = 30
                 print("iPhone 6, 6+, 6S, 6S+, 7, 7+, 8, 8+ and X")
             default:
-                y_Title = 46
+//
+                y_Title = 29
                 y_SubTitle = 30
                 print("Default")
             }
@@ -74,7 +91,6 @@ class DashboardVC: UIViewController {
 
         // Title label
         let titleLabel = UILabel(frame: CGRect(x: 8.5, y: y_Title, width: 0, height: 0))
-        //let titleLabel = UILabel()
         titleLabel.backgroundColor = UIColor.clear
         titleLabel.textColor = UIColor.white
         titleLabel.font = titleFont
@@ -83,7 +99,6 @@ class DashboardVC: UIViewController {
 
         // SubTitle label
         let subtitleLabel = UILabel(frame: CGRect(x: 8.5, y: y_SubTitle, width: 0, height: 0))
-        //let subtitleLabel = UILabel()
         subtitleLabel.backgroundColor = UIColor.clear
         subtitleLabel.textColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.8)
         subtitleLabel.font = subTitleFont
