@@ -29,6 +29,9 @@
 		4DB5BFCD2473BD1C00D86F16 /* TabBarSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DB5BFCC2473BD1C00D86F16 /* TabBarSB.storyboard */; };
 		4DB5BFCF2473D0F700D86F16 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB5BFCE2473D0F700D86F16 /* TabBarViewController.swift */; };
 		FEF956C7247652D8007A819F /* DashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF956C6247652D8007A819F /* DashboardVC.swift */; };
+		FEF956CA24769FCC007A819F /* RoundedButtonWithShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF956C924769FCC007A819F /* RoundedButtonWithShadow.swift */; };
+		FEF956CC2476A2CD007A819F /* RoundedViewWithShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF956CB2476A2CD007A819F /* RoundedViewWithShadow.swift */; };
+		FEF956CE2476A889007A819F /* RoundedTableWithShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF956CD2476A889007A819F /* RoundedTableWithShadow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +80,9 @@
 		4DB5BFCC2473BD1C00D86F16 /* TabBarSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarSB.storyboard; sourceTree = "<group>"; };
 		4DB5BFCE2473D0F700D86F16 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		FEF956C6247652D8007A819F /* DashboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardVC.swift; sourceTree = "<group>"; };
+		FEF956C924769FCC007A819F /* RoundedButtonWithShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButtonWithShadow.swift; sourceTree = "<group>"; };
+		FEF956CB2476A2CD007A819F /* RoundedViewWithShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedViewWithShadow.swift; sourceTree = "<group>"; };
+		FEF956CD2476A889007A819F /* RoundedTableWithShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTableWithShadow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +133,7 @@
 		4D53D1A72472D39A003526CF /* KawalRumpunExperiment */ = {
 			isa = PBXGroup;
 			children = (
+				FEF956C824769F5C007A819F /* Custom Class */,
 				4DB5BFC02473B19200D86F16 /* Report(Formely Complaint) */,
 				4DB5BFB52473A7A300D86F16 /* CheckInOut */,
 				4DB5BFB42473A79100D86F16 /* Guests */,
@@ -248,6 +255,16 @@
 				4DB5BFCC2473BD1C00D86F16 /* TabBarSB.storyboard */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		FEF956C824769F5C007A819F /* Custom Class */ = {
+			isa = PBXGroup;
+			children = (
+				FEF956C924769FCC007A819F /* RoundedButtonWithShadow.swift */,
+				FEF956CB2476A2CD007A819F /* RoundedViewWithShadow.swift */,
+				FEF956CD2476A889007A819F /* RoundedTableWithShadow.swift */,
+			);
+			path = "Custom Class";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -390,7 +407,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEF956CC2476A2CD007A819F /* RoundedViewWithShadow.swift in Sources */,
 				4D53D1AD2472D39A003526CF /* ViewController.swift in Sources */,
+				FEF956CA24769FCC007A819F /* RoundedButtonWithShadow.swift in Sources */,
+				FEF956CE2476A889007A819F /* RoundedTableWithShadow.swift in Sources */,
 				4D53D1A92472D39A003526CF /* AppDelegate.swift in Sources */,
 				4DB5BFB92473A9EE00D86F16 /* SignInVC.swift in Sources */,
 				4D53D1B32472D39A003526CF /* KawalRumpunExperiment.xcdatamodeld in Sources */,
