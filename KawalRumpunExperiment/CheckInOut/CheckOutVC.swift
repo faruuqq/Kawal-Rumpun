@@ -1,7 +1,8 @@
 import UIKit
 
-class CheckInVC: UIViewController {
+class CheckOutVC: UIViewController {
     
+    let secondVC = CheckInVCA()
     
     //MARK: - Item for top container
     let imageTop: UIImageView = {
@@ -39,11 +40,16 @@ class CheckInVC: UIViewController {
     }()
     
     @objc func buttonTapped(sender: UIButton) {
-        let alert = UIAlertController(title: "Perhatian", message: "Kami menyarankan Anda untuk tetap berada di rumah untuk mencegah penyebaran virus, yakin tetap ingin keluar rumah?", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Perhatian", message: "Kami menyarankan Anda untuk tetap berada di rumah untuk mencegah penyebaran virus, yakin tetap ingin keluar rumah?", preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: "Iya", style: .default, handler: { action in
             let alertConfirmation = UIAlertController(title: "Terima Kasih", message: "Anda telah berhasil melaporkan status Anda. Harap tetap menjaga jarak.", preferredStyle: .alert)
             alertConfirmation.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
                 print("user has successfully checked out")
+                self.performSegue(withIdentifier: "toCheckInVCPageView", sender: self)
+                self.navigationController?.navigationBar.isHidden = true
+//                self.navigationController?.show(CheckInVC(), sender: self)
+//                let vc = CheckInVC()
+//                self.navigationController?.pushViewController(vc, animated: true)
             }))
             self.present(alertConfirmation, animated: true)
         }))

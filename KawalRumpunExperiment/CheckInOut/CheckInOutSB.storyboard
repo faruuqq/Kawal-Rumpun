@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Check InVC-->
+        <!--Check OutVC-->
         <scene sceneID="9Xj-L1-S8P">
             <objects>
-                <viewController id="k8t-NH-kP2" customClass="CheckInVC" customModule="KawalRumpunExperiment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="k8t-NH-kP2" customClass="CheckOutVC" customModule="KawalRumpunExperiment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Oid-f4-009">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -18,10 +18,55 @@
                         <viewLayoutGuide key="safeArea" id="5d2-qG-EZk"/>
                     </view>
                     <navigationItem key="navigationItem" id="rs3-RE-sT1"/>
+                    <connections>
+                        <segue destination="w08-fO-HmV" kind="show" identifier="toCheckInVCPageView" id="hPQ-hv-O3O"/>
+                        <segue destination="e3d-cQ-tke" kind="show" identifier="toCheckIn" id="AaC-ZO-U3h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z2T-LR-P7H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="989.85507246376824" y="133.92857142857142"/>
+            <point key="canvasLocation" x="1136" y="134"/>
+        </scene>
+        <!--Check InVCA-->
+        <scene sceneID="aYQ-37-Qrj">
+            <objects>
+                <viewController storyboardIdentifier="checkInVCA" modalPresentationStyle="fullScreen" id="e3d-cQ-tke" customClass="CheckInVCA" customModule="KawalRumpunExperiment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nlo-dl-ZAq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="PSh-GT-FFk"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="BhO-mk-WKg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9TM-Oh-Jqn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1541" y="826"/>
+        </scene>
+        <!--Check InVCB-->
+        <scene sceneID="SVJ-8a-CWa">
+            <objects>
+                <viewController storyboardIdentifier="checkInVCB" id="fmp-ha-age" customClass="CheckInVCB" customModule="KawalRumpunExperiment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e4O-PO-b55">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Jta-6w-t3G"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gMQ-Wf-ycr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2484" y="826"/>
+        </scene>
+        <!--Page View-->
+        <scene sceneID="Gks-FV-NFM">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" modalPresentationStyle="fullScreen" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="w08-fO-HmV" customClass="PageView" customModule="KawalRumpunExperiment" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="O7P-pm-MUZ"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vQD-2k-GFA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1997" y="134"/>
         </scene>
     </scenes>
 </document>
