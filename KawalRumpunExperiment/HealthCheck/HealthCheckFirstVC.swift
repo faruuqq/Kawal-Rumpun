@@ -50,7 +50,7 @@ class HealthCheckFirstVC: UIViewController {
         if dataSource[indexPath.row].healthCheckStatus {
             cell.tickImageView.image = UIImage(systemName: "checkmark.rectangle.fill")
         } else {
-            cell.tickImageView.image = UIImage(systemName: "trash")
+            cell.tickImageView.image = nil
         }
     }
 }

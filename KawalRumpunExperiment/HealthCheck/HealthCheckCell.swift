@@ -9,7 +9,7 @@
 import UIKit
 
 class HealthCheckCell: UITableViewCell {
-
+    @IBOutlet weak var tickBackground : UIView!
     @IBOutlet weak var healthCheckListLabel: UILabel!
     @IBOutlet weak var tickImageView: UIImageView!
     static let reuseIdentifier = String(describing: HealthCheckCell.self)
