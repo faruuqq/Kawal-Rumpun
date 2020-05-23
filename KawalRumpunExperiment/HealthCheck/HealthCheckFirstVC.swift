@@ -7,6 +7,7 @@
 //
 
 import UIKit
+
 struct HealthCheckItem {
     var healthCheckStatusLabel : String = ""
     var healthCheckStatus : Bool = false
@@ -19,9 +20,11 @@ struct HealthCheckItem {
         self.healthCheckStatus = !self.healthCheckStatus
     }
 }
+
 class HealthCheckFirstVC: UIViewController {
     
     @IBOutlet weak var todayLabel: UILabel!
+    @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     var dataSource = [HealthCheckItem]()
 
@@ -30,9 +33,13 @@ class HealthCheckFirstVC: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         populateData()
+        styleButton()
         // Do any additional setup after loading the view.
     }
-    
+    func styleButton() {
+        sendButton.backgroundColor = UIColor.blue
+        sendButton.layer.cornerRadius = 8.0
+    }
     func populateData() {
         dataSource.append(HealthCheckItem(healthCheckStatusLabel: "Body Temperature > 37.5 C", healthCheckStatus: false))
         dataSource.append(HealthCheckItem(healthCheckStatusLabel: "Dizzy", healthCheckStatus: false))
