@@ -395,7 +395,7 @@
         <!--Dashboard-->
         <scene sceneID="ZrN-JL-cip">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RMw-l4-gZ2" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="RMw-l4-gZ2" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Dashboard" id="faz-QI-ocB"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="W9F-B3-3I1">

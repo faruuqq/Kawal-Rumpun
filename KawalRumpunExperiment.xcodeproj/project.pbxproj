@@ -28,6 +28,7 @@
 		4DB5BFCA2473B90500D86F16 /* ReportSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DB5BFC92473B90500D86F16 /* ReportSB.storyboard */; };
 		4DB5BFCD2473BD1C00D86F16 /* TabBarSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DB5BFCC2473BD1C00D86F16 /* TabBarSB.storyboard */; };
 		4DB5BFCF2473D0F700D86F16 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB5BFCE2473D0F700D86F16 /* TabBarViewController.swift */; };
+		FEBFF71E2478C8720073D06E /* WelcomeLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBFF71D2478C8720073D06E /* WelcomeLoginVC.swift */; };
 		FEF956C7247652D8007A819F /* DashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF956C6247652D8007A819F /* DashboardVC.swift */; };
 		FEF956CA24769FCC007A819F /* RoundedButtonWithShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF956C924769FCC007A819F /* RoundedButtonWithShadow.swift */; };
 		FEF956CC2476A2CD007A819F /* RoundedViewWithShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF956CB2476A2CD007A819F /* RoundedViewWithShadow.swift */; };
@@ -79,6 +80,7 @@
 		4DB5BFC92473B90500D86F16 /* ReportSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReportSB.storyboard; sourceTree = "<group>"; };
 		4DB5BFCC2473BD1C00D86F16 /* TabBarSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarSB.storyboard; sourceTree = "<group>"; };
 		4DB5BFCE2473D0F700D86F16 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		FEBFF71D2478C8720073D06E /* WelcomeLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeLoginVC.swift; sourceTree = "<group>"; };
 		FEF956C6247652D8007A819F /* DashboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardVC.swift; sourceTree = "<group>"; };
 		FEF956C924769FCC007A819F /* RoundedButtonWithShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButtonWithShadow.swift; sourceTree = "<group>"; };
 		FEF956CB2476A2CD007A819F /* RoundedViewWithShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedViewWithShadow.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				4D53D1AE2472D39A003526CF /* Main.storyboard */,
+				FEBFF71D2478C8720073D06E /* WelcomeLoginVC.swift */,
 				4DB5BFCE2473D0F700D86F16 /* TabBarViewController.swift */,
 				4DB5BFB62473A9C100D86F16 /* KawalRumpunVC.swift */,
 				4DB5BFB82473A9EE00D86F16 /* SignInVC.swift */,
@@ -408,6 +411,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEF956CC2476A2CD007A819F /* RoundedViewWithShadow.swift in Sources */,
+				FEBFF71E2478C8720073D06E /* WelcomeLoginVC.swift in Sources */,
 				4D53D1AD2472D39A003526CF /* ViewController.swift in Sources */,
 				FEF956CA24769FCC007A819F /* RoundedButtonWithShadow.swift in Sources */,
 				FEF956CE2476A889007A819F /* RoundedTableWithShadow.swift in Sources */,

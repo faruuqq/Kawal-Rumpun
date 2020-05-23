@@ -16,7 +16,7 @@ class DashboardVC: UIViewController {
         // Setup navigation bar property
         setNavBar()
               
-        // Adding subtitle above large title
+        // Adding subtitle above large title    
         self.navigationItem.titleView = setTitle(title: "", subtitle: getCurrentDay())
     }
     

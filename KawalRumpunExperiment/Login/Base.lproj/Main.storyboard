@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qxR-d4-EkV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qxR-d4-EkV">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -15,23 +15,67 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="KawalRumpun" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kuj-NM-EwW">
-                                <rect key="frame" x="136" y="231" width="143" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KawalRumpun" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kuj-NM-EwW">
+                                <rect key="frame" x="96" y="277.5" width="222" height="41"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPu-gG-eWD">
-                                <rect key="frame" x="167" y="433" width="80" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Get Started"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login-pict" translatesAutoresizingMaskIntoConstraints="NO" id="1HX-dq-GYi">
+                                <rect key="frame" x="0.0" y="599" width="414" height="297"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPu-gG-eWD" customClass="RoundedButtonWithShadow" customModule="KawalRumpunExperiment" customModuleProvider="target">
+                                <rect key="frame" x="132" y="423" width="150" height="50"/>
+                                <color key="backgroundColor" red="0.41176470588235292" green="0.47450980392156861" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="G9Y-zR-BIo"/>
+                                    <constraint firstAttribute="height" constant="50" id="IsB-8j-FA9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Mari Mulai"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="3" height="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="w2u-0s-MOj" kind="show" id="KOq-W3-a01"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jaga dan kontrol lingkungan anda agar terhindar dari bahaya pandemik Covid-19" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ta-rO-qqH">
+                                <rect key="frame" x="20" y="328.5" width="374" height="44.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="1HX-dq-GYi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BcA-MV-gtW"/>
+                            <constraint firstItem="2Ta-rO-qqH" firstAttribute="top" secondItem="Kuj-NM-EwW" secondAttribute="bottom" constant="10" id="FyE-OC-ARb"/>
+                            <constraint firstItem="Kuj-NM-EwW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-150" id="Meb-pb-hCO"/>
+                            <constraint firstItem="2Ta-rO-qqH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Q6U-Lc-sJM"/>
+                            <constraint firstItem="CPu-gG-eWD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="VDP-z6-6CV"/>
+                            <constraint firstItem="1HX-dq-GYi" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="VZL-jO-I7E"/>
+                            <constraint firstAttribute="bottom" secondItem="1HX-dq-GYi" secondAttribute="bottom" id="jo5-rl-DAr"/>
+                            <constraint firstItem="CPu-gG-eWD" firstAttribute="top" secondItem="2Ta-rO-qqH" secondAttribute="bottom" constant="50" id="lWd-5c-bdA"/>
+                            <constraint firstItem="CPu-gG-eWD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pBN-yc-biH"/>
+                            <constraint firstItem="Kuj-NM-EwW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rdR-dE-mDZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2Ta-rO-qqH" secondAttribute="trailing" constant="20" id="vTR-8L-q3L"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="mpP-hz-T8v"/>
@@ -40,36 +84,173 @@
             </objects>
             <point key="canvasLocation" x="3537.68115942029" y="133.92857142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--Welcome LoginVC-->
         <scene sceneID="Zq4-yh-J9U">
             <objects>
-                <viewController id="w2u-0s-MOj" sceneMemberID="viewController">
+                <viewController id="w2u-0s-MOj" customClass="WelcomeLoginVC" customModule="KawalRumpunExperiment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rW9-lS-T9Q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZt-ds-FCD">
-                                <rect key="frame" x="155" y="323" width="104" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Sign UP"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AgI-0R-9ae">
-                                <rect key="frame" x="184" y="501" width="47" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Sign In"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login-pict" translatesAutoresizingMaskIntoConstraints="NO" id="itS-sN-Pq7">
+                                <rect key="frame" x="0.0" y="599" width="414" height="297"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AgI-0R-9ae" customClass="RoundedButtonWithShadow" customModule="KawalRumpunExperiment" customModuleProvider="target">
+                                <rect key="frame" x="51" y="520" width="312" height="56"/>
+                                <color key="backgroundColor" red="0.13725490196078433" green="0.30980392156862746" blue="0.44705882352941173" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="312" id="Ntt-rS-jXg"/>
+                                    <constraint firstAttribute="height" constant="56" id="sdW-vz-Pd8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="@  |                                    Sign In"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="3" height="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="V4b-BF-8Pq" kind="show" id="Ql7-nT-cav"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rqr-dn-LZK" customClass="RoundedButtonWithShadow" customModule="KawalRumpunExperiment" customModuleProvider="target">
+                                <rect key="frame" x="51" y="420" width="312" height="56"/>
+                                <color key="backgroundColor" red="0.33333333333333331" green="0.54117647058823526" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="KPi-2x-gb5"/>
+                                    <constraint firstAttribute="width" constant="312" id="b4a-QJ-4Lx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <inset key="titleEdgeInsets" minX="25" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="|    Lanjutkan dengan Facebook" image="facebook"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="3" height="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daftar atau masuk untuk bantu mencegah penyebaran virus Covid-19 dalam lingkup tetangga." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uX2-ao-5w1">
+                                <rect key="frame" x="30" y="342.5" width="354" height="57.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Atau" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fg5-BV-7qu">
+                                <rect key="frame" x="190.5" y="488.5" width="33.5" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selamat Datang" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fu9-g0-o1N">
+                                <rect key="frame" x="84.5" y="281.5" width="245" height="41"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Fg5-BV-7qu" firstAttribute="centerX" secondItem="rW9-lS-T9Q" secondAttribute="centerX" id="48M-sQ-MMz"/>
+                            <constraint firstItem="AgI-0R-9ae" firstAttribute="centerY" secondItem="rW9-lS-T9Q" secondAttribute="centerY" constant="100" id="4Br-cO-Cyc"/>
+                            <constraint firstItem="Fu9-g0-o1N" firstAttribute="centerX" secondItem="rW9-lS-T9Q" secondAttribute="centerX" id="DNS-fV-9Fm"/>
+                            <constraint firstItem="Fg5-BV-7qu" firstAttribute="centerY" secondItem="rW9-lS-T9Q" secondAttribute="centerY" constant="50" id="FVO-ny-xfB"/>
+                            <constraint firstItem="itS-sN-Pq7" firstAttribute="trailing" secondItem="LrF-d7-8VT" secondAttribute="trailing" id="IgN-CI-cOQ"/>
+                            <constraint firstItem="Rqr-dn-LZK" firstAttribute="centerY" secondItem="rW9-lS-T9Q" secondAttribute="centerY" id="QpH-F2-Fod"/>
+                            <constraint firstItem="AgI-0R-9ae" firstAttribute="centerX" secondItem="rW9-lS-T9Q" secondAttribute="centerX" id="gG0-Va-CYp"/>
+                            <constraint firstAttribute="bottom" secondItem="itS-sN-Pq7" secondAttribute="bottom" id="hDx-85-uxg"/>
+                            <constraint firstItem="itS-sN-Pq7" firstAttribute="leading" secondItem="LrF-d7-8VT" secondAttribute="leading" id="iDv-Kr-5UX"/>
+                            <constraint firstAttribute="trailing" secondItem="uX2-ao-5w1" secondAttribute="trailing" constant="30" id="jqb-fB-nCK"/>
+                            <constraint firstItem="uX2-ao-5w1" firstAttribute="top" secondItem="Fu9-g0-o1N" secondAttribute="bottom" constant="20" id="oOD-OW-jOO"/>
+                            <constraint firstItem="Rqr-dn-LZK" firstAttribute="top" secondItem="uX2-ao-5w1" secondAttribute="bottom" constant="20" id="pcX-61-lHY"/>
+                            <constraint firstItem="uX2-ao-5w1" firstAttribute="leading" secondItem="rW9-lS-T9Q" secondAttribute="leading" constant="30" id="uy6-yp-3up"/>
+                            <constraint firstItem="Rqr-dn-LZK" firstAttribute="centerX" secondItem="rW9-lS-T9Q" secondAttribute="centerX" id="wDM-hz-mGa"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="LrF-d7-8VT"/>
                     </view>
-                    <navigationItem key="navigationItem" id="lL0-i3-uWV"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="lL0-i3-uWV">
+                        <nil key="title"/>
+                        <rightBarButtonItems>
+                            <barButtonItem style="plain" id="e6a-Tl-plm">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rux-Nt-l2c">
+                                    <rect key="frame" x="351" y="7" width="43" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Daftar"/>
+                                    <connections>
+                                        <segue destination="q1P-Op-1bB" kind="show" id="G54-3b-RlN"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                            <barButtonItem style="plain" id="Pki-A9-CZn">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="NC2-A0-IJV">
+                                    <rect key="frame" x="298" y="7" width="45" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Lewati"/>
+                                    <connections>
+                                        <segue destination="Cep-e7-Zes" kind="show" id="LTL-95-Avv"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="goToLoginPage" destination="AgI-0R-9ae" id="fHG-IV-r8U"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oEQ-fw-JhT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4373.913043478261" y="133.92857142857142"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="7Il-O7-xK0">
+            <objects>
+                <viewController id="q1P-Op-1bB" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pAS-6Q-vR1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHN-np-7Uo">
+                                <rect key="frame" x="189" y="433" width="111" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Daftar Sekarang"/>
+                                <connections>
+                                    <segue destination="V4b-BF-8Pq" kind="show" id="doc-y0-zAp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="gSX-kv-7Xp"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="3ct-35-lPM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2oh-JF-tfT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5559" y="-290"/>
         </scene>
         <!--Sign InVC-->
         <scene sceneID="Xgh-d0-70c">
@@ -79,7 +260,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="eject" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="W45-50-C3r">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W45-50-C3r">
                                 <rect key="frame" x="87" y="160" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -131,13 +312,14 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QWy-lL-QBe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6260.8695652173919" y="215.625"/>
+            <point key="canvasLocation" x="6430" y="518"/>
         </scene>
         <!--DashbordSB-->
         <scene sceneID="bDH-Xp-wRj">
             <objects>
                 <viewControllerPlaceholder storyboardName="DashbordSB" id="Cep-e7-Zes" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="l14-OJ-b3a"/>
+                    <navigationItem key="navigationItem" id="uwq-kt-bF4"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hvf-4f-eq4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -182,7 +364,12 @@
             <point key="canvasLocation" x="2715.9420289855075" y="133.92857142857142"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="LTL-95-Avv"/>
+        <segue reference="Ql7-nT-cav"/>
+    </inferredMetricsTieBreakers>
     <resources>
-        <image name="eject" catalog="system" width="128" height="112"/>
+        <image name="facebook" width="12" height="21"/>
+        <image name="login-pict" width="345" height="297"/>
     </resources>
 </document>
