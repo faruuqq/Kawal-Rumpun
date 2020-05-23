@@ -24,11 +24,11 @@ class WelcomeLoginVC: UIViewController {
         let normalAttribute = NSMutableAttributedString(string: goToLoginPage.titleLabel?.text ?? "")
         normalAttribute.addAttribute(.foregroundColor, value: UIColor.lightGray, range: NSRange(location: 0, length: 5))
         normalAttribute.addAttribute(.font, value: UIFont.systemFont(ofSize: 20), range: NSRange(location: 0, length: 5) )
-        normalAttribute.addAttribute(.foregroundColor, value: UIColor.white, range: NSRange(location: 40, length: 7))
+        normalAttribute.addAttribute(.foregroundColor, value: UIColor.white, range: NSRange(location: 15, length: 16))
         
         // adding attribute for highlighted state
         let highlightedAttribute = NSMutableAttributedString(string: goToLoginPage.titleLabel?.text ?? "")
-        highlightedAttribute.addAttribute(.foregroundColor, value: UIColor.lightGray, range: NSRange(location: 0, length: 47))
+        highlightedAttribute.addAttribute(.foregroundColor, value: UIColor.lightGray, range: NSRange(location: 0, length: 31))
         highlightedAttribute.addAttribute(.font, value: UIFont.systemFont(ofSize: 20), range: NSRange(location: 0, length: 5) )
         
         // set attribute
