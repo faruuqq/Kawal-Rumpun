@@ -27,7 +27,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selasa, 12 Mei 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyx-yA-cju">
-                                <rect key="frame" x="20" y="192" width="154" height="20.5"/>
+                                <rect key="frame" x="20" y="192" width="241" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="241" id="3Sr-y6-hV7"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -139,7 +142,6 @@
                             <constraint firstItem="5o3-Lk-29X" firstAttribute="leading" secondItem="HXB-0E-6BG" secondAttribute="leading" constant="20" id="Sxq-EY-2wI"/>
                             <constraint firstItem="HXB-0E-6BG" firstAttribute="trailing" secondItem="89V-HP-2W9" secondAttribute="trailing" constant="10" id="VIF-1n-a6d"/>
                             <constraint firstItem="aC9-QV-x3a" firstAttribute="top" secondItem="vJd-xS-5Z6" secondAttribute="bottom" constant="23" id="ZsX-Ha-YEC"/>
-                            <constraint firstItem="HXB-0E-6BG" firstAttribute="trailing" secondItem="hyx-yA-cju" secondAttribute="trailing" constant="240" id="cRx-yc-ti9"/>
                             <constraint firstItem="vJd-xS-5Z6" firstAttribute="leading" secondItem="HXB-0E-6BG" secondAttribute="leading" constant="20" id="f2x-5c-g2b"/>
                             <constraint firstItem="CkD-ZH-1pG" firstAttribute="leading" secondItem="HXB-0E-6BG" secondAttribute="leading" constant="20" id="gDc-CR-bLW"/>
                             <constraint firstItem="vJd-xS-5Z6" firstAttribute="top" secondItem="Fy3-Ue-G8i" secondAttribute="bottom" constant="24" id="gJ9-xZ-zbq"/>
