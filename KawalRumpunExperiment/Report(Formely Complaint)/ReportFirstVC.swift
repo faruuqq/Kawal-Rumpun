@@ -66,6 +66,7 @@ extension Notification {
 class ReportFirstVC: UIViewController {
     var currentIdWarga = ""
     var thisReport = ReportModel()
+    @IBOutlet weak var complaintTextField: UITextField!
     @IBOutlet weak var kesehatanButton: UIButton!
     @IBOutlet weak var fasilitasButton: UIButton!
     @IBOutlet weak var sosialButton: UIButton!
@@ -116,6 +117,7 @@ class ReportFirstVC: UIViewController {
     }
     
     @IBAction func sendReportTapped(_ sender: UIButton) {
+        thisReport.complaintText =
     }
     
     

@@ -149,6 +149,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="p9w-fn-L8G"/>
                     <connections>
+                        <outlet property="complaintTextField" destination="CkD-ZH-1pG" id="HEp-RA-dtR"/>
                         <outlet property="fasilitasButton" destination="my8-CB-bIc" id="O4h-wh-g2o"/>
                         <outlet property="kesehatanButton" destination="vfe-CK-bgE" id="WvK-8V-7sn"/>
                         <outlet property="selanjutnyaButton" destination="tkC-LN-qmt" id="862-Px-WzP"/>
