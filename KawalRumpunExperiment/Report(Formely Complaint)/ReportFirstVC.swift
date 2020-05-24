@@ -7,17 +7,67 @@
 //
 
 import UIKit
+import CoreData
+
 
 struct ReportModel {
-    var keluhanType = ""
-    var complaintText = ""
+    var id: String {
+        return UUID().uuidString
+    }
+    var id_warga : String?
+    var keluhanType : String?
+    var complaintText : String?
+    var imageData : UIImage?
+    var date: Date?
+}
+
+enum Keluhan:String {
+    case kesehatan = "kesehatan"
+    case fasilitas = "fasilitas"
+    case sosial = "sosial"
+}
+
+extension Report {
+    static func save(context : NSManagedObjectContext, report : ReportModel)-> Report? {
+        
+        if let date=report.date,
+            let complaint = report.complaintText,
+            let type = report.keluhanType,
+            let id_warga = report.id_warga,
+            let photo = report.imageData {
+            let newReport = Report(context: context)
+            newReport.date = date
+            newReport.type = type
+            newReport.id = report.id
+            newReport.id_warga = id_warga
+            newReport.photo = photo.jpegData(compressionQuality: 1.0)
+            newReport.complaint = complaint
+            
+            let newNotif = Notification(context: context)
+            newNotif.id = UUID().uuidString
+            newNotif.id_related = report.id
+            newNotif.tipe = "HealthCheck"
+            do {
+                try context.save()
+                return newReport
+            } catch {
+                return nil
+            }
+        }
+        return nil
+    }
+}
+
+extension Notification {
+    static func save(context: NSManagedObjectContext, report: ReportModel) {
+        
+    }
 }
 class ReportFirstVC: UIViewController {
     var currentIdWarga = ""
+    var thisReport = ReportModel()
     @IBOutlet weak var kesehatanButton: UIButton!
-    
     @IBOutlet weak var fasilitasButton: UIButton!
-    
     @IBOutlet weak var sosialButton: UIButton!
     @IBOutlet weak var selanjutnyaButton: UIButton!
     override func viewDidLoad() {
@@ -33,8 +83,55 @@ class ReportFirstVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func reportTypeButtonTapped(_ sender: UIButton) {
-        print(sender.titleLabel?.text)
+    func setupView() {
+        for button in [fasilitasButton,kesehatanButton,sosialButton] {
+            button?.layer.cornerRadius = 10.0
+            button?.backgroundColor = UIColor.systemGray2
+        }
     }
     
+    @IBAction func addImageTapped(_ sender: UIButton) {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.allowsEditing = false
+        imagePicker.sourceType = .camera
+        present(imagePicker,animated: true)
+    }
+    @IBAction func reportTypeButtonTapped(_ sender: UIButton) {
+        for button in [fasilitasButton,kesehatanButton,sosialButton] {
+            if button==sender {
+                button?.backgroundColor = UIColor.blue
+            } else {
+                button?.backgroundColor = UIColor.systemGray2
+            }
+        }
+        switch sender {
+        case fasilitasButton:
+            thisReport.keluhanType = Keluhan.fasilitas.rawValue
+        case kesehatanButton:
+            thisReport.keluhanType = Keluhan.kesehatan.rawValue
+        default:
+            thisReport.keluhanType = Keluhan.sosial.rawValue
+        }
+    }
+    
+    @IBAction func sendReportTapped(_ sender: UIButton) {
+    }
+    
+    
+}
+
+extension ReportFirstVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let image = info[.originalImage] as? UIImage else {fatalError("Cant convert to UIImage")}
+        thisReport.imageData = image
+    }
+}
+
+extension ReportFirstVC {
+    func getViewContext() -> NSManagedObjectContext? {
+        let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        let container = appDelegate?.persistentContainer
+        return container?.viewContext
+    }
 }
