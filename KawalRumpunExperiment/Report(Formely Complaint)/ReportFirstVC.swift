@@ -72,9 +72,11 @@ extension Report {
 }
 
 class ReportFirstVC: UIViewController {
+    let date = Date()
     var currentIdWarga = ""
     var thisReport = ReportModel()
     @IBOutlet weak var complaintTextField: UITextField!
+    @IBOutlet weak var todayLabel: UILabel!
     @IBOutlet weak var kesehatanButton: UIButton!
     @IBOutlet weak var fasilitasButton: UIButton!
     @IBOutlet weak var sosialButton: UIButton!
@@ -97,6 +99,9 @@ class ReportFirstVC: UIViewController {
             button?.layer.cornerRadius = 10.0
             button?.backgroundColor = UIColor.systemGray2
         }
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.weekday,.day,.month,.year], from: date)
+        todayLabel.text = "\(components.day!) \(components.month!) \(components.year!)"
     }
     
     @IBAction func addPhotoTapped(_ sender: UIButton) {
@@ -141,7 +146,7 @@ class ReportFirstVC: UIViewController {
         if let actualText = complaintTextField.text {
             thisReport.complaintText = actualText
         }
-        thisReport.date = Date()
+        thisReport.date = date
         if let context = getViewContext() {
             Report.save(context: context, report: self.thisReport)
         }

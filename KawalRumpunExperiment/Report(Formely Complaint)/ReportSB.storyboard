@@ -164,6 +164,7 @@
                         <outlet property="kesehatanButton" destination="vfe-CK-bgE" id="WvK-8V-7sn"/>
                         <outlet property="selanjutnyaButton" destination="tkC-LN-qmt" id="862-Px-WzP"/>
                         <outlet property="sosialButton" destination="b5h-cC-DHP" id="oX7-h6-JAB"/>
+                        <outlet property="todayLabel" destination="hyx-yA-cju" id="LUy-Dc-fgF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="glb-2f-qYc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
