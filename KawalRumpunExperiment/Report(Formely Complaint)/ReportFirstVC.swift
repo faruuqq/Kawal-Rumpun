@@ -29,40 +29,48 @@ enum Keluhan:String {
 
 extension Report {
     static func save(context : NSManagedObjectContext, report : ReportModel)-> Report? {
-        
-        if let date=report.date,
-            let complaint = report.complaintText,
-            let type = report.keluhanType,
-            let id_warga = report.id_warga,
-            let photo = report.imageData {
-            let newReport = Report(context: context)
-            newReport.date = date
-            newReport.type = type
-            newReport.id = report.id
-            newReport.id_warga = id_warga
-            newReport.photo = photo.jpegData(compressionQuality: 1.0)
-            newReport.complaint = complaint
-            
-            let newNotif = Notification(context: context)
-            newNotif.id = UUID().uuidString
-            newNotif.id_related = report.id
-            newNotif.tipe = "HealthCheck"
-            do {
-                try context.save()
-                return newReport
-            } catch {
-                return nil
-            }
+        print("Mau Nge Save")
+        let newReport = Report(context: context)
+        let newNotif = Notification(context: context)
+        let idBoth = report.id
+        newReport.id = idBoth
+        newNotif.id = UUID().uuidString
+        newNotif.id_related = idBoth
+        if let text = report.complaintText {
+            print("Complaint")
+            newReport.complaint = text
         }
-        return nil
-    }
+        
+        if let date = report.date {
+            print("Date")
+            newReport.date = date
+        }
+        
+        if let type = report.keluhanType {
+            print("Type")
+            newReport.type = type
+        }
+        
+        if let image = report.imageData {
+            print("Image Data")
+            newReport.photo = image.jpegData(compressionQuality: 0.8)
+        }
+        
+        if let id_warga = report.id_warga {
+            print("ID Warga")
+            newReport.id_warga = id_warga
+        }
+        do {
+            try context.save()
+            print("Saved")
+            return newReport
+        } catch {
+            print("error")
+            return nil
+        }
+}
 }
 
-extension Notification {
-    static func save(context: NSManagedObjectContext, report: ReportModel) {
-        
-    }
-}
 class ReportFirstVC: UIViewController {
     var currentIdWarga = ""
     var thisReport = ReportModel()
@@ -75,12 +83,11 @@ class ReportFirstVC: UIViewController {
         super.viewDidLoad()
         //Asume we have the user already logged in
         if let userDefaultsIdWarga = UserDefaults.standard.string(forKey: "id_warga") {
-            if userDefaultsIdWarga.isEmpty {
-                currentIdWarga = "dummy_id_warga"
-            } else {
-                currentIdWarga = userDefaultsIdWarga
-            }
+            currentIdWarga = userDefaultsIdWarga
+        } else {
+            currentIdWarga = "id_dummy_warga"
         }
+        thisReport.id_warga = currentIdWarga
         // Do any additional setup after loading the view.
         setupView()
     }
@@ -131,13 +138,16 @@ class ReportFirstVC: UIViewController {
     }
     
     @IBAction func sendReportTapped(_ sender: UIButton) {
-        thisReport.complaintText = complaintTextField.text
+        if let actualText = complaintTextField.text {
+            thisReport.complaintText = actualText
+        }
         let date = Date()
         let calendar = Calendar.current
         let components = calendar.dateComponents([.hour,.minute,.day, .month, .year], from: date)
         thisReport.date = components.date
-        thisReport.id_warga = currentIdWarga
-        _ = Report.save(context: getViewContext()!, report: thisReport)
+        if let context = getViewContext() {
+            Report.save(context: context, report: self.thisReport)
+        }
     }
     
     
@@ -147,6 +157,7 @@ extension ReportFirstVC: UIImagePickerControllerDelegate, UINavigationController
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         guard let image = info[.originalImage] as? UIImage else {fatalError("Cant convert to UIImage")}
         thisReport.imageData = image
+        dismiss(animated: true)
     }
 }
 
