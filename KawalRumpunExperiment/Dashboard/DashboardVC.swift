@@ -10,8 +10,20 @@ import UIKit
 
 class DashboardVC: UIViewController {
 
+    @IBOutlet weak var gugusCovidTable: UITableView!
+    
+    let petugasGugusCovid = [
+        ["Firza Ilhami", "Najib"],
+        ["Faruuq", "Fawaaz", "Daiva"]
+    ]
+    let headerName = ["Gugus Covid-19", "Jadwal Siskambling"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // setup tableview
+        gugusCovidTable.delegate = self
+        gugusCovidTable.dataSource = self
         
         // Setup navigation bar property
         setNavBar()
@@ -124,4 +136,38 @@ class DashboardVC: UIViewController {
     }
     */
 
+}
+
+extension DashboardVC: UITableViewDelegate {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        headerName.count
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 44
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = Bundle.main.loadNibNamed("headerViewCell", owner: self, options: nil)?.first as! HeaderViewCell
+        headerView.headerImage.image = #imageLiteral(resourceName: "shield")
+        headerView.headerTitleLabel.text = headerName[section]
+        return headerView
+    }
+    
+}
+
+extension DashboardVC: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return petugasGugusCovid[section].count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let gugusCell = gugusCovidTable.dequeueReusableCell(withIdentifier: "gugusCell", for: indexPath) as! GugusCovidCell
+        gugusCell.cellLabel.text = petugasGugusCovid[indexPath.section][indexPath.row]
+        
+        return gugusCell
+    }
+    
+    
 }

@@ -10,30 +10,30 @@ import UIKit
 
 class WelcomeLoginVC: UIViewController {
 
-    @IBOutlet weak var goToLoginPage: RoundedButtonWithShadow!
+    @IBOutlet weak var goToLoginButton: RoundedButtonWithShadow!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setTitleLabelAttributeState()
+        setTitleGoToLoginAttr()
         
     }
     
-    func setTitleLabelAttributeState() {
+    func setTitleGoToLoginAttr() {
         
         // adding attribute for normal state
-        let normalAttribute = NSMutableAttributedString(string: goToLoginPage.titleLabel?.text ?? "")
+        let normalAttribute = NSMutableAttributedString(string: goToLoginButton.titleLabel?.text ?? "")
         normalAttribute.addAttribute(.foregroundColor, value: UIColor.lightGray, range: NSRange(location: 0, length: 5))
         normalAttribute.addAttribute(.font, value: UIFont.systemFont(ofSize: 20), range: NSRange(location: 0, length: 5) )
         normalAttribute.addAttribute(.foregroundColor, value: UIColor.white, range: NSRange(location: 15, length: 16))
         
         // adding attribute for highlighted state
-        let highlightedAttribute = NSMutableAttributedString(string: goToLoginPage.titleLabel?.text ?? "")
+        let highlightedAttribute = NSMutableAttributedString(string: goToLoginButton.titleLabel?.text ?? "")
         highlightedAttribute.addAttribute(.foregroundColor, value: UIColor.lightGray, range: NSRange(location: 0, length: 31))
         highlightedAttribute.addAttribute(.font, value: UIFont.systemFont(ofSize: 20), range: NSRange(location: 0, length: 5) )
         
         // set attribute
-        goToLoginPage.setAttributedTitle(normalAttribute, for: .normal)
-        goToLoginPage.setAttributedTitle(highlightedAttribute, for: .highlighted)
+        goToLoginButton.setAttributedTitle(normalAttribute, for: .normal)
+        goToLoginButton.setAttributedTitle(highlightedAttribute, for: .highlighted)
       
     }
     
