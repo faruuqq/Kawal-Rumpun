@@ -14,6 +14,8 @@ class PanicVC: UIViewController {
     
     var panicked : Bool = false
     
+    @IBOutlet weak var testgetTime: UILabel!
+    
     @IBOutlet weak var headerAtas: UILabel!
     @IBOutlet weak var deskripsiPanic: UILabel!
     
@@ -45,9 +47,22 @@ class PanicVC: UIViewController {
             deskripsiPanic.font = deskripsiPanic.font.withSize(13)
             deskripsiPanic.textAlignment = .center
            deskripsiPanic.font = .boldSystemFont(ofSize: 18)
-//            deskripsiPanic.lineBreakMode = .byWordWrapping
             
-            //nanti disini ditambahin babak
+            //get current date time
+            let currentDateTime = Date()
+            
+            //get format time
+            let formater = DateFormatter()
+            formater.timeStyle = .medium
+            formater.dateStyle = .long
+            
+            //date and time diubah jadi  stringfrom other the date object
+            let dateTimeString = formater.string(from: currentDateTime)
+            
+            //dispay the waktunya
+            self.testgetTime.text = dateTimeString
+            
+            
             
         } else {
             panicButton.setImage(#imageLiteral(resourceName: "Panic Button Turn Off Big"), for: .normal)
