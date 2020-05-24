@@ -42,7 +42,7 @@
                                     <action selector="sendReportTapped:" destination="yN3-IG-20q" eventType="touchUpInside" id="L4v-R3-eLj"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="103" translatesAutoresizingMaskIntoConstraints="NO" id="vJd-xS-5Z6">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="103" translatesAutoresizingMaskIntoConstraints="NO" id="vJd-xS-5Z6">
                                 <rect key="frame" x="20" y="271" width="374" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfe-CK-bgE">
@@ -77,25 +77,35 @@
                                     <constraint firstAttribute="height" constant="50" id="e1V-7t-hG1"/>
                                 </constraints>
                             </stackView>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="89V-HP-2W9">
-                                <rect key="frame" x="10" y="731" width="394" height="51"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="89V-HP-2W9">
+                                <rect key="frame" x="10" y="721" width="394" height="61"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="camera" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="JCE-Cj-NaF">
-                                        <rect key="frame" x="15" y="-1" width="53" height="53"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="JCE-Cj-NaF">
+                                        <rect key="frame" x="15" y="0.0" width="53" height="53"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="53" id="B1C-Eo-h1o"/>
+                                            <constraint firstAttribute="height" constant="55" id="nlW-qM-f3e"/>
+                                        </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nrd-s6-Yfd">
-                                        <rect key="frame" x="76" y="13" width="114" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Tambahkan Foto">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cls-mO-fjN">
+                                        <rect key="frame" x="91" y="11" width="114" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="114" id="d3e-dw-bWZ"/>
+                                        </constraints>
+                                        <state key="normal" title="Tambahkan Foto"/>
                                         <connections>
-                                            <action selector="addImageTapped:" destination="yN3-IG-20q" eventType="touchUpInside" id="eKJ-NU-EwF"/>
+                                            <action selector="addPhotoTapped:" destination="yN3-IG-20q" eventType="touchUpInside" id="ywp-iF-IO9"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="Cls-mO-fjN" firstAttribute="leading" secondItem="JCE-Cj-NaF" secondAttribute="trailing" constant="23" id="Mqe-5C-vI2"/>
+                                    <constraint firstAttribute="bottom" secondItem="Cls-mO-fjN" secondAttribute="bottom" constant="20" id="YbS-RS-DVn"/>
+                                    <constraint firstItem="Cls-mO-fjN" firstAttribute="top" secondItem="89V-HP-2W9" secondAttribute="top" constant="11" id="m7m-9b-P7g"/>
+                                    <constraint firstItem="JCE-Cj-NaF" firstAttribute="leading" secondItem="89V-HP-2W9" secondAttribute="leading" constant="15" id="sno-nH-Z4o"/>
+                                    <constraint firstAttribute="bottom" secondItem="JCE-Cj-NaF" secondAttribute="bottom" constant="6.5" id="tLx-dI-I0E"/>
+                                </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kategori" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fy3-Ue-G8i">
                                 <rect key="frame" x="20" y="226.5" width="65" height="20.5"/>
@@ -110,9 +120,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="bezel" placeholder="Complaint" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CkD-ZH-1pG">
-                                <rect key="frame" x="20" y="386" width="374" height="277"/>
+                                <rect key="frame" x="20" y="386" width="374" height="220"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="277" id="1Xg-C9-rcq"/>
+                                    <constraint firstAttribute="height" constant="220" id="1Xg-C9-rcq"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>

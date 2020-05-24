@@ -82,6 +82,7 @@ class ReportFirstVC: UIViewController {
             }
         }
         // Do any additional setup after loading the view.
+        setupView()
     }
     
     func setupView() {
@@ -91,17 +92,30 @@ class ReportFirstVC: UIViewController {
         }
     }
     
-    @IBAction func addImageTapped(_ sender: UIButton) {
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.allowsEditing = false
-        imagePicker.sourceType = .camera
-        present(imagePicker,animated: true)
+    @IBAction func addPhotoTapped(_ sender: UIButton) {
+        print("TAP")
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            print("Camera")
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.allowsEditing = false
+            imagePicker.sourceType = .camera
+            present(imagePicker,animated: true)
+        } else if(UIImagePickerController.isSourceTypeAvailable(.photoLibrary)) {
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.allowsEditing = false
+            imagePicker.sourceType = .photoLibrary
+            present(imagePicker,animated: true)
+            print("Photo Lib")
+        }
+        print("No Presents")
+     
     }
     @IBAction func reportTypeButtonTapped(_ sender: UIButton) {
         for button in [fasilitasButton,kesehatanButton,sosialButton] {
             if button==sender {
-                button?.backgroundColor = UIColor.blue
+                button?.backgroundColor = UIColor.blue.withAlphaComponent(0.5)
             } else {
                 button?.backgroundColor = UIColor.systemGray2
             }
@@ -117,7 +131,13 @@ class ReportFirstVC: UIViewController {
     }
     
     @IBAction func sendReportTapped(_ sender: UIButton) {
-        thisReport.complaintText =
+        thisReport.complaintText = complaintTextField.text
+        let date = Date()
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.hour,.minute,.day, .month, .year], from: date)
+        thisReport.date = components.date
+        thisReport.id_warga = currentIdWarga
+        _ = Report.save(context: getViewContext()!, report: thisReport)
     }
     
     
