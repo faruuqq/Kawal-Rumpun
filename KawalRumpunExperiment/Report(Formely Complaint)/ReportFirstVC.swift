@@ -141,10 +141,7 @@ class ReportFirstVC: UIViewController {
         if let actualText = complaintTextField.text {
             thisReport.complaintText = actualText
         }
-        let date = Date()
-        let calendar = Calendar.current
-        let components = calendar.dateComponents([.hour,.minute,.day, .month, .year], from: date)
-        thisReport.date = components.date
+        thisReport.date = Date()
         if let context = getViewContext() {
             Report.save(context: context, report: self.thisReport)
         }
