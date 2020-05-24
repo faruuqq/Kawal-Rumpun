@@ -8,13 +8,41 @@
 
 import UIKit
 
-class MessagesViewController: UIViewController, UISearchBarDelegate {
+class MessagesViewController: UIViewController, UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate {
+    
+    @IBOutlet weak var tableMessages: UITableView!
+    
+    
+    //bikin strcut buat dummy
+    struct Category {
+        var categoryDate: String
+        var categoryName: String
+        var categoryImage: String
+    }
+    
+    //buat array dummy
+    let categoriesDummy = [
+        Category(categoryDate: "10 September", categoryName: "Hai Amalia", categoryImage: "accesories-1"),
+        Category(categoryDate: "12 September", categoryName: "Hai Kamuuuu", categoryImage: "brass-1"),
+        Category(categoryDate: "13 September", categoryName: "Hai Diaaa", categoryImage: "lessons-1"),
+        Category(categoryDate: "14 September", categoryName: "Hai Bukan kamu", categoryImage: "percussions-1"),
+        Category(categoryDate: "15 September", categoryName: "Hai Gimana yak", categoryImage: "piano-1"),
+    ]
+        
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //tableView.dataSource = self
+        
         setupNavBAr()
-
+//        self.tableView.delgate = self
+//        self.tableView.dataSource = self
+        //untuk nunjukin func di table
+        tableMessages.delegate = self
+        tableMessages.dataSource = self
+        
+        
         // Do any additional setup after loading the view.
     }
     
@@ -61,6 +89,31 @@ class MessagesViewController: UIViewController, UISearchBarDelegate {
         }
     }
     
+    //Edut Tableview
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return categoriesDummy.count
+    }
+    
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellMessages", for: indexPath)
+        
+        let category = categoriesDummy[indexPath.row]
+        cell.textLabel?.text = category.categoryDate
+        cell.detailTextLabel?.text = category.categoryName
+        cell.imageView?.image = UIImage(named: category.categoryImage)
+        //cell.textLabel?.text = "Coba Section\(indexPath.section) Row \(indexPath.row)"
+        return cell
+    }
     
 
     /*
