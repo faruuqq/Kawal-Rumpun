@@ -23,11 +23,63 @@ class HealthCheckFirstVC: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         styleButton()
+        createTodayLabel()
         // Do any additional setup after loading the view.
     }
     func styleButton() {
         sendButton.backgroundColor = UIColor.blue
         sendButton.layer.cornerRadius = 8.0
+    }
+    func createTodayLabel() {
+        let date = Date()
+        let hari : String
+        let bulan : String
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.weekday,.day,.month,.year], from: date)
+               switch components.weekday! {
+               case 1:
+                    hari = "Minggu"
+               case 2:
+                    hari = "Senin"
+               case 3:
+                    hari = "Selasa"
+               case 4:
+                    hari = "Rabu"
+               case 5:
+                    hari = "Kamis"
+               case 6:
+                    hari = "Jumat"
+               default:
+                    hari = "Sabtu"
+               }
+               
+               switch components.month! {
+               case 1:
+                    bulan = "Januari"
+               case 2:
+                    bulan = "Februari"
+               case 3:
+                    bulan = "Maret"
+               case 4:
+                    bulan = "April"
+               case 5:
+                    bulan = "Mei"
+               case 6:
+                    bulan = "Juni"
+               case 7:
+                    bulan = "Juli"
+               case 8:
+                    bulan = "Agustus"
+               case 9:
+                    bulan = "September"
+               case 10:
+                    bulan = "Oktober"
+               case 11:
+                    bulan = "November"
+               default:
+                    bulan = "Desember"
+               }
+               todayLabel.text = "\(hari), \(components.day!) \(bulan) \(components.year!)"
     }
     
     func configureCheckMark(for cell: HealthCheckCell, indexPath: IndexPath) {
