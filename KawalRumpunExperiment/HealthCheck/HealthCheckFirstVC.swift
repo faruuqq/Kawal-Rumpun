@@ -8,22 +8,7 @@
 
 import UIKit
 import CoreData
-struct HealthCheckItem {
-    var healthCheckStatusLabel : String = ""
-    var healthCheckStatus : Bool = false
-    init(healthCheckStatusLabel: String, healthCheckStatus: Bool) {
-        self.healthCheckStatus = healthCheckStatus
-        self.healthCheckStatusLabel = healthCheckStatusLabel
-    }
-    
-    mutating func toggle() {
-        self.healthCheckStatus = !self.healthCheckStatus
-    }
-    
-    func persistTo(to context: NSManagedObjectContext) {
-        
-    }
-}
+
 
 
 class HealthCheckFirstVC: UIViewController {
@@ -72,7 +57,7 @@ extension HealthCheckFirstVC: UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        dataSource[indexPath.row].toggle()
+        dataSource[indexPath.row].healthCheckStatus.toggle()
         guard let selectedCell = tableView.cellForRow(at: indexPath) as? HealthCheckCell else {fatalError("Cant convert cell")}
         configureCheckMark(for: selectedCell, indexPath: indexPath)
     }
