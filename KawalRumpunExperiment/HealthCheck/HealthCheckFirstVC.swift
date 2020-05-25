@@ -24,7 +24,16 @@ class HealthCheckFirstVC: UIViewController {
         tableView.dataSource = self
         styleButton()
         createTodayLabel()
+        setupWargaId()
         // Do any additional setup after loading the view.
+    }
+    
+    func setupWargaId() {
+        if let UserDefaultsString = UserDefaults.standard.string(forKey: "id_warga") {
+            dataSource.id_warga = UserDefaultsString
+        } else {
+            dataSource.id_warga = "id_warga_dummy"
+        }
     }
     func styleButton() {
         sendButton.backgroundColor = UIColor.blue
