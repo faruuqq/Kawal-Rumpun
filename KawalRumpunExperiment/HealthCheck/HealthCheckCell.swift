@@ -16,6 +16,7 @@ class HealthCheckCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        healthCheckListLabel.adjustsFontSizeToFitWidth = true
         // Initialization code
     }
 

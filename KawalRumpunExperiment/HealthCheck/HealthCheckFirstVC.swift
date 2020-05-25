@@ -16,13 +16,12 @@ class HealthCheckFirstVC: UIViewController {
     @IBOutlet weak var todayLabel: UILabel!
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
-    var dataSource = [HealthCheckItem]()
+    var dataSource = HealthCheckReportModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        populateData()
         styleButton()
         // Do any additional setup after loading the view.
     }
@@ -30,24 +29,24 @@ class HealthCheckFirstVC: UIViewController {
         sendButton.backgroundColor = UIColor.blue
         sendButton.layer.cornerRadius = 8.0
     }
-    func populateData() {
-        dataSource.append(HealthCheckItem(healthCheckStatusLabel: "Body Temperature > 37.5 C", healthCheckStatus: false))
-        dataSource.append(HealthCheckItem(healthCheckStatusLabel: "Dizzy", healthCheckStatus: false))
-    }
     
     func configureCheckMark(for cell: HealthCheckCell, indexPath: IndexPath) {
-        cell.healthCheckListLabel.text = dataSource[indexPath.row].healthCheckStatusLabel
-        if dataSource[indexPath.row].healthCheckStatus {
+        cell.healthCheckListLabel.text = dataSource.healthCheckItemArray[indexPath.row].healthCheckStatusLabel
+        if dataSource.healthCheckItemArray[indexPath.row].healthCheckStatus {
             cell.tickImageView.image = UIImage(systemName: "checkmark.rectangle.fill")
         } else {
             cell.tickImageView.image = nil
         }
     }
+    @IBAction func sendTapped(_ sender: UIButton) {
+        dataSource.persist(to: getViewContext()!)
+    }
+    
 }
 
 extension HealthCheckFirstVC: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        dataSource.count
+        return dataSource.healthCheckItemArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -57,7 +56,7 @@ extension HealthCheckFirstVC: UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        dataSource[indexPath.row].healthCheckStatus.toggle()
+        dataSource.healthCheckItemArray[indexPath.row].healthCheckStatus.toggle()
         guard let selectedCell = tableView.cellForRow(at: indexPath) as? HealthCheckCell else {fatalError("Cant convert cell")}
         configureCheckMark(for: selectedCell, indexPath: indexPath)
     }
@@ -66,7 +65,6 @@ extension HealthCheckFirstVC: UITableViewDelegate,UITableViewDataSource {
 
 extension HealthCheckFirstVC {
     func getViewContext() -> NSManagedObjectContext? {
-        
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
         let container = appDelegate?.persistentContainer
         return container?.viewContext
