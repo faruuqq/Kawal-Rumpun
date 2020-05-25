@@ -12,6 +12,7 @@ class MessagesViewController: UIViewController, UISearchBarDelegate, UITableView
     
     @IBOutlet weak var tableMessages: UITableView!
     
+    @IBOutlet weak var namaSegmentedCon: UISegmentedControl!
     
     //bikin strcut buat dummy
     struct Category {
@@ -21,7 +22,7 @@ class MessagesViewController: UIViewController, UISearchBarDelegate, UITableView
     }
     
     //buat array dummy
-    let categoriesDummy = [
+    var categoriesDummy = [
         Category(categoryDate: "10 September", categoryName: "Hai Amalia", categoryImage: "accesories-1"),
         Category(categoryDate: "12 September", categoryName: "Hai Kamuuuu", categoryImage: "brass-1"),
         Category(categoryDate: "13 September", categoryName: "Hai Diaaa", categoryImage: "lessons-1"),
@@ -37,7 +38,6 @@ class MessagesViewController: UIViewController, UISearchBarDelegate, UITableView
         Category(categoryDate: "13 September", categoryName: "Hai Diaaa", categoryImage: "lessons-1"),
         Category(categoryDate: "14 September", categoryName: "Hai Bukan kamu", categoryImage: "percussions-1"),
         Category(categoryDate: "15 September", categoryName: "Hai Gimana yak", categoryImage: "piano-1"),
-        
     ]
         
 
@@ -47,6 +47,7 @@ class MessagesViewController: UIViewController, UISearchBarDelegate, UITableView
         //tableView.dataSource = self
         
         setupNavBAr()
+        
 //        self.tableView.delgate = self
 //        self.tableView.dataSource = self
         //untuk nunjukin func di table
@@ -56,6 +57,50 @@ class MessagesViewController: UIViewController, UISearchBarDelegate, UITableView
         
         // Do any additional setup after loading the view.
     }
+    
+    
+    @IBAction func messegaesSegmented(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+            categoriesDummy = [
+                Category(categoryDate: "10 September", categoryName: "Hai Amalia", categoryImage: "accesories-1"),
+                Category(categoryDate: "12 September", categoryName: "Hai Kamuuuu", categoryImage: "brass-1"),
+                Category(categoryDate: "13 September", categoryName: "Hai Diaaa", categoryImage: "lessons-1"),
+                Category(categoryDate: "14 September", categoryName: "Hai Bukan kamu", categoryImage: "percussions-1"),
+                Category(categoryDate: "15 September", categoryName: "Hai Gimana yak", categoryImage: "piano-1"),
+                Category(categoryDate: "10 September", categoryName: "Hai Amalia", categoryImage: "accesories-1"),
+                Category(categoryDate: "12 September", categoryName: "Hai Kamuuuu", categoryImage: "brass-1"),
+                Category(categoryDate: "13 September", categoryName: "Hai Diaaa", categoryImage: "lessons-1"),
+                Category(categoryDate: "14 September", categoryName: "Hai Bukan kamu", categoryImage: "percussions-1"),
+                Category(categoryDate: "15 September", categoryName: "Hai Gimana yak", categoryImage: "piano-1"),
+                Category(categoryDate: "10 September", categoryName: "Hai Amalia", categoryImage: "accesories-1"),
+                Category(categoryDate: "12 September", categoryName: "Hai Kamuuuu", categoryImage: "brass-1"),
+                Category(categoryDate: "13 September", categoryName: "Hai Diaaa", categoryImage: "lessons-1"),
+                Category(categoryDate: "14 September", categoryName: "Hai Bukan kamu", categoryImage: "percussions-1"),
+                Category(categoryDate: "15 September", categoryName: "Hai Gimana yak", categoryImage: "piano-1"),
+            ]
+            tableMessages.reloadData()
+        } else if sender.selectedSegmentIndex == 1 {
+            categoriesDummy = [
+                Category(categoryDate: "xxxxxxxxxxxx", categoryName: "Hai Amalia", categoryImage: "accesories-2"),
+                Category(categoryDate: "12 September", categoryName: "Hai Kamuuuu", categoryImage: "brass-2"),
+                Category(categoryDate: "13 September", categoryName: "Hai Diaaa", categoryImage: "lessons-2"),
+                Category(categoryDate: "14 September", categoryName: "Hai Bukan kamu", categoryImage: "percussions-2"),
+                Category(categoryDate: "15 September", categoryName: "Hai Gimana yak", categoryImage: "piano-2"),
+                Category(categoryDate: "10 September", categoryName: "Hai Amalia", categoryImage: "accesories-2"),
+                Category(categoryDate: "12 September", categoryName: "Hai Kamuuuu", categoryImage: "brass-2"),
+                Category(categoryDate: "13 September", categoryName: "Hai Diaaa", categoryImage: "lessons-2"),
+                Category(categoryDate: "14 September", categoryName: "Hai Bukan kamu", categoryImage: "percussions-2"),
+                Category(categoryDate: "15 September", categoryName: "Hai Gimana yak", categoryImage: "piano-2"),
+                Category(categoryDate: "10 September", categoryName: "Hai Amalia", categoryImage: "accesories-2"),
+                Category(categoryDate: "12 September", categoryName: "Hai Kamuuuu", categoryImage: "brass-2"),
+                Category(categoryDate: "13 September", categoryName: "Hai Diaaa", categoryImage: "lessons-2"),
+                Category(categoryDate: "14 September", categoryName: "Hai Bukan kamu", categoryImage: "percussions-2"),
+                Category(categoryDate: "15 September", categoryName: "Hai Gimana yak", categoryImage: "piano-2"),
+            ]
+            tableMessages.reloadData()
+        }
+    }
+    
     
     func setupNavBAr(){
         //input nama title
@@ -101,9 +146,9 @@ class MessagesViewController: UIViewController, UISearchBarDelegate, UITableView
             textfield.clipsToBounds = true
             
         
-        let items = ["Label A", "Label B"]
-        let segmentedController = UISegmentedControl(items: items)
-            navigationItem.titleView = segmentedController
+//        let items = ["Label A", "Label B"]
+//        let segmentedController = UISegmentedControl(items: items)
+//            navigationItem.titleView = segmentedController
     
         }
     }
@@ -125,8 +170,8 @@ class MessagesViewController: UIViewController, UISearchBarDelegate, UITableView
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellMessages", for: indexPath)
-        
         let category = categoriesDummy[indexPath.row]
+        //cell.reloadInputViews()
         cell.textLabel?.text = category.categoryDate
         cell.detailTextLabel?.text = category.categoryName
         cell.imageView?.image = UIImage(named: category.categoryImage)

@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Tc8-EC-8p5">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <rect key="frame" x="0.0" y="139" width="414" height="674"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cellMessages" textLabel="ZZG-Ya-1JI" detailTextLabel="oT9-LS-Asb" rowHeight="80" style="IBUITableViewCellStyleSubtitle" id="lZp-p0-kct">
@@ -45,20 +45,34 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TKx-5s-KZu">
+                                <rect key="frame" x="86" y="98" width="242" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="242" id="yex-fU-awO"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Pesan Masuk"/>
+                                    <segment title="Pesan Keluar"/>
+                                </segments>
+                                <connections>
+                                    <action selector="messegaesSegmented:" destination="Att-PQ-K1w" eventType="valueChanged" id="yCA-WD-UBo"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Tc8-EC-8p5" firstAttribute="bottom" secondItem="DHt-P4-ihQ" secondAttribute="bottom" id="3ry-by-Tn0"/>
-                            <constraint firstItem="Tc8-EC-8p5" firstAttribute="leading" secondItem="DHt-P4-ihQ" secondAttribute="leading" id="cTU-LM-Ws7"/>
-                            <constraint firstItem="Tc8-EC-8p5" firstAttribute="trailing" secondItem="DHt-P4-ihQ" secondAttribute="trailing" id="g9V-j1-c4m"/>
-                            <constraint firstItem="Tc8-EC-8p5" firstAttribute="top" secondItem="WYn-Ta-Qr3" secondAttribute="top" id="sc5-FE-0iz"/>
+                            <constraint firstItem="Tc8-EC-8p5" firstAttribute="bottom" secondItem="DHt-P4-ihQ" secondAttribute="bottom" id="MbI-Hh-yE9"/>
+                            <constraint firstItem="TKx-5s-KZu" firstAttribute="centerX" secondItem="WYn-Ta-Qr3" secondAttribute="centerX" id="Ndg-rN-KpH"/>
+                            <constraint firstItem="Tc8-EC-8p5" firstAttribute="trailing" secondItem="DHt-P4-ihQ" secondAttribute="trailing" id="Q7G-WC-62a"/>
+                            <constraint firstItem="TKx-5s-KZu" firstAttribute="top" secondItem="DHt-P4-ihQ" secondAttribute="top" constant="10" id="RcE-8x-U1p"/>
+                            <constraint firstItem="Tc8-EC-8p5" firstAttribute="top" secondItem="TKx-5s-KZu" secondAttribute="bottom" constant="10" id="X32-Jx-Ddl"/>
+                            <constraint firstItem="Tc8-EC-8p5" firstAttribute="leading" secondItem="DHt-P4-ihQ" secondAttribute="leading" id="fGf-zc-Rbx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DHt-P4-ihQ"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Ji0-0R-pJz">
-                        <nil key="title"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="Ji0-0R-pJz"/>
                     <connections>
+                        <outlet property="namaSegmentedCon" destination="TKx-5s-KZu" id="Sf7-4z-r6J"/>
                         <outlet property="tableMessages" destination="Tc8-EC-8p5" id="tbX-L4-I4b"/>
                     </connections>
                 </viewController>
@@ -73,8 +87,8 @@
                     <tabBarItem key="tabBarItem" title="Messages" id="8KZ-2A-yay"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="m8h-Nw-Me9">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="m8h-Nw-Me9">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
