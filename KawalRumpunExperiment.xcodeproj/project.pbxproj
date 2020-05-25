@@ -17,6 +17,7 @@
 		4D53D1C32472D39A003526CF /* KawalRumpunExperimentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D53D1C22472D39A003526CF /* KawalRumpunExperimentTests.swift */; };
 		4D53D1CE2472D39B003526CF /* KawalRumpunExperimentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D53D1CD2472D39B003526CF /* KawalRumpunExperimentUITests.swift */; };
 		4D697FD824766D2600B9C3BB /* HealthCheckFirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D697FD724766D2600B9C3BB /* HealthCheckFirstVC.swift */; };
+		4D8C7CFD247B8558000E41AB /* HealthCheckUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8C7CFC247B8558000E41AB /* HealthCheckUtil.swift */; };
 		4D92B07C2478D1B3003DE32F /* HealthCheckCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D92B07B2478D1B3003DE32F /* HealthCheckCell.swift */; };
 		4DB5BFB72473A9C100D86F16 /* KawalRumpunVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB5BFB62473A9C100D86F16 /* KawalRumpunVC.swift */; };
 		4DB5BFB92473A9EE00D86F16 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB5BFB82473A9EE00D86F16 /* SignInVC.swift */; };
@@ -66,6 +67,7 @@
 		4D53D1CD2472D39B003526CF /* KawalRumpunExperimentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KawalRumpunExperimentUITests.swift; sourceTree = "<group>"; };
 		4D53D1CF2472D39B003526CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D697FD724766D2600B9C3BB /* HealthCheckFirstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthCheckFirstVC.swift; sourceTree = "<group>"; };
+		4D8C7CFC247B8558000E41AB /* HealthCheckUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthCheckUtil.swift; sourceTree = "<group>"; };
 		4D92B07B2478D1B3003DE32F /* HealthCheckCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthCheckCell.swift; sourceTree = "<group>"; };
 		4DB5BFB62473A9C100D86F16 /* KawalRumpunVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KawalRumpunVC.swift; sourceTree = "<group>"; };
 		4DB5BFB82473A9EE00D86F16 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 				4DB5BFC32473B8E300D86F16 /* HealthCheckSB.storyboard */,
 				4D697FD724766D2600B9C3BB /* HealthCheckFirstVC.swift */,
 				4D92B07B2478D1B3003DE32F /* HealthCheckCell.swift */,
+				4D8C7CFC247B8558000E41AB /* HealthCheckUtil.swift */,
 			);
 			path = HealthCheck;
 			sourceTree = "<group>";
@@ -393,6 +396,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D8C7CFD247B8558000E41AB /* HealthCheckUtil.swift in Sources */,
 				4D697FD824766D2600B9C3BB /* HealthCheckFirstVC.swift in Sources */,
 				4D53D1AD2472D39A003526CF /* ViewController.swift in Sources */,
 				4D92B07C2478D1B3003DE32F /* HealthCheckCell.swift in Sources */,

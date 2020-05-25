@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import CoreData
 struct HealthCheckItem {
     var healthCheckStatusLabel : String = ""
     var healthCheckStatus : Bool = false
@@ -19,7 +19,12 @@ struct HealthCheckItem {
     mutating func toggle() {
         self.healthCheckStatus = !self.healthCheckStatus
     }
+    
+    func persistTo(to context: NSManagedObjectContext) {
+        
+    }
 }
+
 
 class HealthCheckFirstVC: UIViewController {
     
@@ -72,4 +77,14 @@ extension HealthCheckFirstVC: UITableViewDelegate,UITableViewDataSource {
         configureCheckMark(for: selectedCell, indexPath: indexPath)
     }
     
+}
+
+extension HealthCheckFirstVC {
+    func getViewContext() -> NSManagedObjectContext? {
+        
+        let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        let container = appDelegate?.persistentContainer
+        return container?.viewContext
+        
+    }
 }
