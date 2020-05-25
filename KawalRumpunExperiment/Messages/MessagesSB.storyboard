@@ -16,14 +16,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Tc8-EC-8p5">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellMessages" textLabel="ZZG-Ya-1JI" detailTextLabel="oT9-LS-Asb" rowHeight="80" style="IBUITableViewCellStyleSubtitle" id="lZp-p0-kct">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cellMessages" textLabel="ZZG-Ya-1JI" detailTextLabel="oT9-LS-Asb" rowHeight="80" style="IBUITableViewCellStyleSubtitle" id="lZp-p0-kct">
                                         <rect key="frame" x="0.0" y="28" width="414" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lZp-p0-kct" id="KXV-78-lRs">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZZG-Ya-1JI">
@@ -48,14 +48,16 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="DHt-P4-ihQ" firstAttribute="trailing" secondItem="Tc8-EC-8p5" secondAttribute="trailing" id="Niy-hf-O2M"/>
-                            <constraint firstItem="Tc8-EC-8p5" firstAttribute="bottom" secondItem="DHt-P4-ihQ" secondAttribute="bottom" id="hcB-CR-Byj"/>
-                            <constraint firstItem="Tc8-EC-8p5" firstAttribute="leading" secondItem="DHt-P4-ihQ" secondAttribute="leading" id="iGE-Pn-n3E"/>
-                            <constraint firstItem="Tc8-EC-8p5" firstAttribute="top" secondItem="DHt-P4-ihQ" secondAttribute="top" id="jZ7-dM-Vm3"/>
+                            <constraint firstItem="Tc8-EC-8p5" firstAttribute="bottom" secondItem="DHt-P4-ihQ" secondAttribute="bottom" id="3ry-by-Tn0"/>
+                            <constraint firstItem="Tc8-EC-8p5" firstAttribute="leading" secondItem="DHt-P4-ihQ" secondAttribute="leading" id="cTU-LM-Ws7"/>
+                            <constraint firstItem="Tc8-EC-8p5" firstAttribute="trailing" secondItem="DHt-P4-ihQ" secondAttribute="trailing" id="g9V-j1-c4m"/>
+                            <constraint firstItem="Tc8-EC-8p5" firstAttribute="top" secondItem="WYn-Ta-Qr3" secondAttribute="top" id="sc5-FE-0iz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DHt-P4-ihQ"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Ji0-0R-pJz"/>
+                    <navigationItem key="navigationItem" id="Ji0-0R-pJz">
+                        <nil key="title"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableMessages" destination="Tc8-EC-8p5" id="tbX-L4-I4b"/>
                     </connections>

@@ -27,6 +27,17 @@ class MessagesViewController: UIViewController, UISearchBarDelegate, UITableView
         Category(categoryDate: "13 September", categoryName: "Hai Diaaa", categoryImage: "lessons-1"),
         Category(categoryDate: "14 September", categoryName: "Hai Bukan kamu", categoryImage: "percussions-1"),
         Category(categoryDate: "15 September", categoryName: "Hai Gimana yak", categoryImage: "piano-1"),
+        Category(categoryDate: "10 September", categoryName: "Hai Amalia", categoryImage: "accesories-1"),
+        Category(categoryDate: "12 September", categoryName: "Hai Kamuuuu", categoryImage: "brass-1"),
+        Category(categoryDate: "13 September", categoryName: "Hai Diaaa", categoryImage: "lessons-1"),
+        Category(categoryDate: "14 September", categoryName: "Hai Bukan kamu", categoryImage: "percussions-1"),
+        Category(categoryDate: "15 September", categoryName: "Hai Gimana yak", categoryImage: "piano-1"),
+        Category(categoryDate: "10 September", categoryName: "Hai Amalia", categoryImage: "accesories-1"),
+        Category(categoryDate: "12 September", categoryName: "Hai Kamuuuu", categoryImage: "brass-1"),
+        Category(categoryDate: "13 September", categoryName: "Hai Diaaa", categoryImage: "lessons-1"),
+        Category(categoryDate: "14 September", categoryName: "Hai Bukan kamu", categoryImage: "percussions-1"),
+        Category(categoryDate: "15 September", categoryName: "Hai Gimana yak", categoryImage: "piano-1"),
+        
     ]
         
 
@@ -70,6 +81,7 @@ class MessagesViewController: UIViewController, UISearchBarDelegate, UITableView
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
         searchController.obscuresBackgroundDuringPresentation = false
+        //searchController.searchBar.scopeButtonTitles = ["Hai","Bu"]
         searchController.searchBar.delegate = self
         
         //change searchbar color
@@ -80,12 +92,19 @@ class MessagesViewController: UIViewController, UISearchBarDelegate, UITableView
         searchBar.isTranslucent = false
         searchBar.isOpaque = false
         
+        
         //ngasih warna dalam kotaknya bro
         if let textfield = searchBar.value(forKey: "searchField") as? UITextField{
             textfield.textColor = UIColor.black
             textfield.backgroundColor = UIColor.white
             textfield.layer.cornerRadius = 10
             textfield.clipsToBounds = true
+            
+        
+        let items = ["Label A", "Label B"]
+        let segmentedController = UISegmentedControl(items: items)
+            navigationItem.titleView = segmentedController
+    
         }
     }
     
