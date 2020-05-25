@@ -83,7 +83,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jgt-Ml-hCU">
                                 <rect key="frame" x="23" y="774" width="359" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Kirim"/>
+                                <state key="normal" title="Kirim">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
                                 <connections>
                                     <action selector="kirimButtonTapped:" destination="Ozi-Gj-TyG" eventType="touchUpInside" id="6QK-Sh-cCS"/>
                                 </connections>

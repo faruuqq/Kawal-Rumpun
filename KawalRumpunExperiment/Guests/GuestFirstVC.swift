@@ -90,6 +90,7 @@ class GuestFirstVC: UIViewController {
         periodeTextField.text = "0"
     }
     func styleButton() {
+        kirimButton.backgroundColor = UIColor.blue
         kirimButton.layer.cornerRadius = 10.0
     }
     @IBAction func tamuStepperTapped(_ sender: UIStepper) {
