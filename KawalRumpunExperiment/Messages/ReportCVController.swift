@@ -16,10 +16,11 @@ class ReportCVController: UICollectionViewController {
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+        // self.clearsSelectionOnViewWillAppear = falsess
 
         // Register cell classes
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        setupNavBAr()
 
         // Do any additional setup after loading the view.
     }
@@ -33,6 +34,7 @@ class ReportCVController: UICollectionViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
 
     // MARK: UICollectionViewDataSource
 
@@ -49,9 +51,37 @@ class ReportCVController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "reportCell", for: indexPath) as? ReportCVCell else { fatalError("Cell error")}
-        cell.complainTextField.text = "Hai"
+        cell.complainTextField.text = "Hai kamu cantik"
         return cell
     }
+    
+    
+    func setupNavBAr(){
+            //input nama title
+        self.navigationItem.title = "Report"
+            //input nvaigationtitle ke pojok kiri dan besar
+        navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationController?.navigationBar.tintColor = .white
+            //setwarna NavigationBar
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+            //warna biru yang sama dengan mas Firza
+        appearance.backgroundColor = UIColor(red:0.333, green:0.541, blue:0.910, alpha:1.00)
+            //merubah titlecolor
+        appearance.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+      
+            
+            //implementasikan di view yang background dan large textnya
+        navigationItem.standardAppearance = appearance
+        navigationItem.scrollEdgeAppearance = appearance
+        navigationItem.compactAppearance = appearance
+
+    //        let items = ["Label A", "Label B"]
+    //        let segmentedController = UISegmentedControl(items: items)
+    //            navigationItem.titleView = segmentedController
+        
+            }
+        }
 
     // MARK: UICollectionViewDelegate
 
@@ -84,4 +114,4 @@ class ReportCVController: UICollectionViewController {
     }
     */
 
-}
+

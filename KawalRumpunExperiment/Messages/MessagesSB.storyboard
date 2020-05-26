@@ -111,21 +111,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wy5-D8-ZFf">
-                            <size key="itemSize" width="414" height="785"/>
+                            <size key="itemSize" width="400" height="785"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="reportCell" id="jKS-Uo-gOz" customClass="ReportCVCell" customModule="KawalRumpunExperiment" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="785"/>
+                                <rect key="frame" x="7" y="0.0" width="400" height="785"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="5tt-cR-rZX">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="785"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="785"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Selasa, 12 Mei 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfe-O0-Fgh">
-                                            <rect key="frame" x="20" y="185" width="241" height="20.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selasa, 12 Mei 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfe-O0-Fgh">
+                                            <rect key="frame" x="20" y="43" width="241" height="20.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="241" id="819-T4-2UH"/>
                                             </constraints>
@@ -133,23 +133,25 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillProportionally" spacing="103" translatesAutoresizingMaskIntoConstraints="NO" id="SPJ-WD-omp">
-                                            <rect key="frame" x="20" y="264" width="374" height="50"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="103" id="SPJ-WD-omp">
+                                            <rect key="frame" x="20" y="122" width="360" height="50"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u2W-ef-dBX">
-                                                    <rect key="frame" x="0.0" y="0.0" width="72" height="50"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="70" height="50"/>
                                                     <state key="normal" title="Kesehatan">
                                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="isU-0D-ztf">
-                                                    <rect key="frame" x="175" y="0.0" width="55" height="50"/>
+                                                    <rect key="frame" x="173" y="0.0" width="50.5" height="50"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <state key="normal" title="Fasilitas">
                                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hvY-5C-mxZ">
-                                                    <rect key="frame" x="333" y="0.0" width="41" height="50"/>
+                                                    <rect key="frame" x="326.5" y="0.0" width="33.5" height="50"/>
                                                     <state key="normal" title="Sosial">
                                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     </state>
@@ -159,20 +161,20 @@
                                                 <constraint firstAttribute="height" constant="50" id="Aey-MG-GbZ"/>
                                             </constraints>
                                         </stackView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Kategori" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S2d-Lh-VrJ">
-                                            <rect key="frame" x="20" y="219" width="65" height="20.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kategori" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S2d-Lh-VrJ">
+                                            <rect key="frame" x="20" y="77.5" width="64.5" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Keluhan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fo9-62-1eM">
-                                            <rect key="frame" x="20" y="337" width="62" height="20.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keluhan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fo9-62-1eM">
+                                            <rect key="frame" x="20" y="195" width="61.5" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="bezel" placeholder="Complaint" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FLw-SR-CH7">
-                                            <rect key="frame" x="20" y="379" width="374" height="220"/>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="bezel" placeholder="Complaint" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FLw-SR-CH7">
+                                            <rect key="frame" x="20" y="237" width="360" height="220"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="220" id="hwM-c9-mRZ"/>
                                             </constraints>
@@ -181,13 +183,20 @@
                                         </textField>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="S2d-Lh-VrJ" firstAttribute="leading" secondItem="5tt-cR-rZX" secondAttribute="leading" constant="20" id="78L-z7-sSq"/>
+                                        <constraint firstItem="yfe-O0-Fgh" firstAttribute="leading" secondItem="5tt-cR-rZX" secondAttribute="leading" constant="20" id="8Uv-Jh-syc"/>
+                                        <constraint firstAttribute="trailing" secondItem="FLw-SR-CH7" secondAttribute="trailing" constant="20" id="ER2-9E-Jy7"/>
+                                        <constraint firstItem="Fo9-62-1eM" firstAttribute="leading" secondItem="5tt-cR-rZX" secondAttribute="leading" constant="20" id="HUf-PG-O4h"/>
                                         <constraint firstItem="S2d-Lh-VrJ" firstAttribute="top" secondItem="yfe-O0-Fgh" secondAttribute="bottom" constant="14" id="TPe-4Y-MuD"/>
                                         <constraint firstItem="SPJ-WD-omp" firstAttribute="top" secondItem="S2d-Lh-VrJ" secondAttribute="bottom" constant="24" id="TdR-Vm-qqv"/>
                                         <constraint firstItem="FLw-SR-CH7" firstAttribute="top" secondItem="Fo9-62-1eM" secondAttribute="bottom" constant="21.5" id="U2o-e7-QRb"/>
+                                        <constraint firstItem="SPJ-WD-omp" firstAttribute="leading" secondItem="5tt-cR-rZX" secondAttribute="leading" constant="20" id="UZG-XX-1eq"/>
+                                        <constraint firstAttribute="trailing" secondItem="SPJ-WD-omp" secondAttribute="trailing" constant="20" id="eye-dz-qSU"/>
+                                        <constraint firstItem="FLw-SR-CH7" firstAttribute="leading" secondItem="5tt-cR-rZX" secondAttribute="leading" constant="20" id="pqB-UO-BU0"/>
                                         <constraint firstItem="Fo9-62-1eM" firstAttribute="top" secondItem="SPJ-WD-omp" secondAttribute="bottom" constant="23" id="zsh-KH-Q8X"/>
                                     </constraints>
                                 </collectionViewCellContentView>
-                                <size key="customSize" width="414" height="785"/>
+                                <size key="customSize" width="400" height="785"/>
                                 <connections>
                                     <outlet property="complainTextField" destination="FLw-SR-CH7" id="R6j-2P-Est"/>
                                     <outlet property="fasilitasButton" destination="isU-0D-ztf" id="Fgc-b0-kuK"/>
@@ -202,11 +211,11 @@
                             <outlet property="delegate" destination="adY-KK-KMA" id="fZ0-Td-uw9"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="nOL-uI-M0L"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="nOL-uI-M0L"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hcC-yj-n6n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2325" y="-251"/>
+            <point key="canvasLocation" x="2324.6376811594205" y="-251.11607142857142"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="b45-v4-MYr">
