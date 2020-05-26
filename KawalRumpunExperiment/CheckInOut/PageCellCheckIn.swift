@@ -2,6 +2,7 @@ import UIKit
 
 class PageCellCheckIn: UICollectionViewCell {
     
+    //MARK: - Unwrapped Page
     var page: PageCheckIn? {
         didSet {
             
@@ -9,15 +10,16 @@ class PageCellCheckIn: UICollectionViewCell {
             
             imageContainer.image = UIImage(named: unwrappedPage.imageName)
             
-            let attributedText = NSMutableAttributedString(string: unwrappedPage.headerText, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 36, weight: .heavy)])
+            let attributedText = NSMutableAttributedString(string: unwrappedPage.headerText, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 36, weight: .heavy), NSAttributedString.Key.foregroundColor: UIColor.white])
             
-            attributedText.append(NSAttributedString(string: "\n\n\(unwrappedPage.bodyText)", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18, weight: .regular), NSAttributedString.Key.foregroundColor: UIColor.gray]))
+            attributedText.append(NSAttributedString(string: "\n\n\(unwrappedPage.bodyText)", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18, weight: .regular), NSAttributedString.Key.foregroundColor: UIColor.white]))
             
             textContainer.attributedText = attributedText
             textContainer.textAlignment = .center
         }
     }
     
+    //MARK: - Item Containers
     let imageContainer: UIImageView = {
         let image = UIImageView(image: #imageLiteral(resourceName: "washingMachine"))
         image.sizeThatFits(CGSize(width: 50, height: 50))
@@ -41,11 +43,13 @@ class PageCellCheckIn: UICollectionViewCell {
         return textView
     }()
     
+    //MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
         containerLayout()
     }
     
+    //MARK: - Functions
     func containerLayout() {
         let containerView = UIView()
 //        containerView.backgroundColor = .green
@@ -67,10 +71,10 @@ class PageCellCheckIn: UICollectionViewCell {
             imageContainer.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
             imageContainer.heightAnchor.constraint(equalTo: containerView.heightAnchor, multiplier: 0.35),
             
-//            textContainer.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
             textContainer.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 20),
             textContainer.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -20),
-            textContainer.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -35)
+            textContainer.topAnchor.constraint(equalTo: imageContainer.bottomAnchor, constant: 50)
+        
         ])
     }
     

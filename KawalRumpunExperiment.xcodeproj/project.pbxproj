@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2A698B982476AA1400FE9CD8 /* CheckOutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A698B972476AA1400FE9CD8 /* CheckOutVC.swift */; };
-		2A698B9A2476AE4900FE9CD8 /* CheckInVCA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A698B992476AE4900FE9CD8 /* CheckInVCA.swift */; };
-		2A698BA2247779B200FE9CD8 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A698BA1247779B200FE9CD8 /* PageView.swift */; };
-		2A698BA82477B54F00FE9CD8 /* CheckInVCB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A698BA72477B54F00FE9CD8 /* CheckInVCB.swift */; };
 		2A7EFE322475321B00E550B6 /* ButtonRounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7EFE312475321B00E550B6 /* ButtonRounded.swift */; };
 		2A7EFE342475334300E550B6 /* ViewRounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7EFE332475334300E550B6 /* ViewRounded.swift */; };
 		2A7EFE362475337100E550B6 /* ViewShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7EFE352475337100E550B6 /* ViewShadow.swift */; };
@@ -60,9 +57,6 @@
 
 /* Begin PBXFileReference section */
 		2A698B972476AA1400FE9CD8 /* CheckOutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutVC.swift; sourceTree = "<group>"; };
-		2A698B992476AE4900FE9CD8 /* CheckInVCA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInVCA.swift; sourceTree = "<group>"; };
-		2A698BA1247779B200FE9CD8 /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
-		2A698BA72477B54F00FE9CD8 /* CheckInVCB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInVCB.swift; sourceTree = "<group>"; };
 		2A7EFE312475321B00E550B6 /* ButtonRounded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonRounded.swift; sourceTree = "<group>"; };
 		2A7EFE332475334300E550B6 /* ViewRounded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRounded.swift; sourceTree = "<group>"; };
 		2A7EFE352475337100E550B6 /* ViewShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewShadow.swift; sourceTree = "<group>"; };
@@ -264,10 +258,7 @@
 				2AFF5838247C837B00637FCA /* CheckInVC.swift */,
 				2AFF583E247CBD7300637FCA /* PageCellCheckIn.swift */,
 				2AFF583C247CBC7200637FCA /* PageCheckIn.swift */,
-				2A698B992476AE4900FE9CD8 /* CheckInVCA.swift */,
-				2A698BA72477B54F00FE9CD8 /* CheckInVCB.swift */,
 				2A698B972476AA1400FE9CD8 /* CheckOutVC.swift */,
-				2A698BA1247779B200FE9CD8 /* PageView.swift */,
 			);
 			path = CheckInOut;
 			sourceTree = "<group>";
@@ -440,11 +431,8 @@
 				2AFF5839247C837B00637FCA /* CheckInVC.swift in Sources */,
 				4DB5BFCF2473D0F700D86F16 /* TabBarViewController.swift in Sources */,
 				4D53D1AB2472D39A003526CF /* SceneDelegate.swift in Sources */,
-				2A698BA82477B54F00FE9CD8 /* CheckInVCB.swift in Sources */,
-				2A698BA2247779B200FE9CD8 /* PageView.swift in Sources */,
 				2AFF583F247CBD7300637FCA /* PageCellCheckIn.swift in Sources */,
 				4DB5BFB72473A9C100D86F16 /* KawalRumpunVC.swift in Sources */,
-				2A698B9A2476AE4900FE9CD8 /* CheckInVCA.swift in Sources */,
 				2A7EFE382475349500E550B6 /* ButtonShadow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

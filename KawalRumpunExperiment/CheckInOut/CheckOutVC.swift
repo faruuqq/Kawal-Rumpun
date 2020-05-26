@@ -1,9 +1,7 @@
 import UIKit
 
 class CheckOutVC: UIViewController {
-    
-    let secondVC = CheckInVCA()
-    
+        
     //MARK: - Item for top container
     let imageTop: UIImageView = {
         let mainImageTop = UIImageView(image: #imageLiteral(resourceName: "CheckInImageTop"))
@@ -42,10 +40,10 @@ class CheckOutVC: UIViewController {
     @objc func buttonTapped(sender: UIButton) {
         let alert = UIAlertController(title: "Perhatian", message: "Kami menyarankan Anda untuk tetap berada di rumah untuk mencegah penyebaran virus, yakin tetap ingin keluar rumah?", preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: "Iya", style: .default, handler: { action in
+            print("user has successfully checked out")
             let alertConfirmation = UIAlertController(title: "Terima Kasih", message: "Anda telah berhasil melaporkan status Anda. Harap tetap menjaga jarak.", preferredStyle: .alert)
             alertConfirmation.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
-                print("user has successfully checked out")
-//                self.performSegue(withIdentifier: "toCheckInVCPageView", sender: self)
+//                self.performSegue(withIdentifier: "toCheckInVC", sender: self)
                 self.navigationController?.navigationBar.isHidden = true
                 self.navigationController?.show(CheckInVC(), sender: self)
 //                let vc = CheckInVC()
@@ -65,7 +63,6 @@ class CheckOutVC: UIViewController {
         topContainerLayout()
         bottomContainerLayout()
     }
-    
     
     //MARK: - Functions
     
@@ -122,16 +119,3 @@ class CheckOutVC: UIViewController {
     }
     
 }
-
-
-
-/*
-// MARK: - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    // Get the new view controller using segue.destination.
-    // Pass the selected object to the new view controller.
-}
-*/
-
