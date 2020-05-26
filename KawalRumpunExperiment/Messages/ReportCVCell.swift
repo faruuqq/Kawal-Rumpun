@@ -14,7 +14,8 @@ class ReportCVCell: UICollectionViewCell {
     @IBOutlet weak var todayLabel: UILabel!
     @IBOutlet weak var kesehatanButton: UIButton!
     @IBOutlet weak var fasilitasButton: UIButton!
-    @IBOutlet weak var sosialButton: UIButton!
-    
-    
+    @IBOutlet weak var sosialButton: UIButton!    
 }
+
+
+

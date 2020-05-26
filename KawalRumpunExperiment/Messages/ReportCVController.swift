@@ -13,7 +13,6 @@ private let reuseIdentifier = "reportCells"
 class ReportCVController: UICollectionViewController {
     
     
-    
     //bikin strcut buat dummy
     struct Category {
         var categoryDate: String
@@ -35,9 +34,12 @@ class ReportCVController: UICollectionViewController {
         // Register cell classes
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         setupNavBAr()
+        
 
         // Do any additional setup after loading the view.
     }
+    
+    
 
     /*
     // MARK: - Navigation
@@ -67,7 +69,8 @@ class ReportCVController: UICollectionViewController {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "reportCell", for: indexPath) as? ReportCVCell else { fatalError("Cell error")}
         cell.complainTextField.text = "Hai kamu cantik"
         cell.todayLabel.text = "Selasa, 17 Desember 1991"
-        
+        cell.kesehatanButton.backgroundColor = UIColor.blue.withAlphaComponent(0.5)
+        cell.complainTextField.isUserInteractionEnabled = false
         return cell
     }
     
