@@ -15,6 +15,9 @@
 		2A7EFE342475334300E550B6 /* ViewRounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7EFE332475334300E550B6 /* ViewRounded.swift */; };
 		2A7EFE362475337100E550B6 /* ViewShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7EFE352475337100E550B6 /* ViewShadow.swift */; };
 		2A7EFE382475349500E550B6 /* ButtonShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7EFE372475349500E550B6 /* ButtonShadow.swift */; };
+		2AFF5839247C837B00637FCA /* CheckInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFF5838247C837B00637FCA /* CheckInVC.swift */; };
+		2AFF583D247CBC7200637FCA /* PageCheckIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFF583C247CBC7200637FCA /* PageCheckIn.swift */; };
+		2AFF583F247CBD7300637FCA /* PageCellCheckIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFF583E247CBD7300637FCA /* PageCellCheckIn.swift */; };
 		4D53D1A92472D39A003526CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D53D1A82472D39A003526CF /* AppDelegate.swift */; };
 		4D53D1AB2472D39A003526CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D53D1AA2472D39A003526CF /* SceneDelegate.swift */; };
 		4D53D1AD2472D39A003526CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D53D1AC2472D39A003526CF /* ViewController.swift */; };
@@ -64,6 +67,9 @@
 		2A7EFE332475334300E550B6 /* ViewRounded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRounded.swift; sourceTree = "<group>"; };
 		2A7EFE352475337100E550B6 /* ViewShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewShadow.swift; sourceTree = "<group>"; };
 		2A7EFE372475349500E550B6 /* ButtonShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonShadow.swift; sourceTree = "<group>"; };
+		2AFF5838247C837B00637FCA /* CheckInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInVC.swift; sourceTree = "<group>"; };
+		2AFF583C247CBC7200637FCA /* PageCheckIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCheckIn.swift; sourceTree = "<group>"; };
+		2AFF583E247CBD7300637FCA /* PageCellCheckIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCellCheckIn.swift; sourceTree = "<group>"; };
 		4D53D1A52472D39A003526CF /* KawalRumpunExperiment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KawalRumpunExperiment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D53D1A82472D39A003526CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D53D1AA2472D39A003526CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -255,6 +261,9 @@
 			isa = PBXGroup;
 			children = (
 				4DB5BFC72473B8FC00D86F16 /* CheckInOutSB.storyboard */,
+				2AFF5838247C837B00637FCA /* CheckInVC.swift */,
+				2AFF583E247CBD7300637FCA /* PageCellCheckIn.swift */,
+				2AFF583C247CBC7200637FCA /* PageCheckIn.swift */,
 				2A698B992476AE4900FE9CD8 /* CheckInVCA.swift */,
 				2A698BA72477B54F00FE9CD8 /* CheckInVCB.swift */,
 				2A698B972476AA1400FE9CD8 /* CheckOutVC.swift */,
@@ -424,13 +433,16 @@
 				4D53D1AD2472D39A003526CF /* ViewController.swift in Sources */,
 				4D53D1A92472D39A003526CF /* AppDelegate.swift in Sources */,
 				4DB5BFB92473A9EE00D86F16 /* SignInVC.swift in Sources */,
+				2AFF583D247CBC7200637FCA /* PageCheckIn.swift in Sources */,
 				2A7EFE322475321B00E550B6 /* ButtonRounded.swift in Sources */,
 				2A7EFE342475334300E550B6 /* ViewRounded.swift in Sources */,
 				4D53D1B32472D39A003526CF /* KawalRumpunExperiment.xcdatamodeld in Sources */,
+				2AFF5839247C837B00637FCA /* CheckInVC.swift in Sources */,
 				4DB5BFCF2473D0F700D86F16 /* TabBarViewController.swift in Sources */,
 				4D53D1AB2472D39A003526CF /* SceneDelegate.swift in Sources */,
 				2A698BA82477B54F00FE9CD8 /* CheckInVCB.swift in Sources */,
 				2A698BA2247779B200FE9CD8 /* PageView.swift in Sources */,
+				2AFF583F247CBD7300637FCA /* PageCellCheckIn.swift in Sources */,
 				4DB5BFB72473A9C100D86F16 /* KawalRumpunVC.swift in Sources */,
 				2A698B9A2476AE4900FE9CD8 /* CheckInVCA.swift in Sources */,
 				2A7EFE382475349500E550B6 /* ButtonShadow.swift in Sources */,

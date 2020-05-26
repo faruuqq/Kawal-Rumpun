@@ -45,9 +45,9 @@ class CheckOutVC: UIViewController {
             let alertConfirmation = UIAlertController(title: "Terima Kasih", message: "Anda telah berhasil melaporkan status Anda. Harap tetap menjaga jarak.", preferredStyle: .alert)
             alertConfirmation.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
                 print("user has successfully checked out")
-                self.performSegue(withIdentifier: "toCheckInVCPageView", sender: self)
+//                self.performSegue(withIdentifier: "toCheckInVCPageView", sender: self)
                 self.navigationController?.navigationBar.isHidden = true
-//                self.navigationController?.show(CheckInVC(), sender: self)
+                self.navigationController?.show(CheckInVC(), sender: self)
 //                let vc = CheckInVC()
 //                self.navigationController?.pushViewController(vc, animated: true)
             }))
