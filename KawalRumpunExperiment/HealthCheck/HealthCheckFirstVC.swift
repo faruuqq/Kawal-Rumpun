@@ -142,6 +142,7 @@ extension HealthCheckFirstVC: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         dataSource.healthCheckItemArray[indexPath.section].healthCheckStatus.toggle()
         guard let selectedCell = tableView.cellForRow(at: indexPath) as? HealthCheckCell else {fatalError("Cant convert cell")}
+        tableView.deselectRow(at: indexPath, animated: true)
         configureCheckMark(for: selectedCell, indexPath: indexPath)
     }
     
