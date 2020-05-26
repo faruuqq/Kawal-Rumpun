@@ -92,8 +92,8 @@ class HealthCheckFirstVC: UIViewController {
     }
     
     func configureCheckMark(for cell: HealthCheckCell, indexPath: IndexPath) {
-        cell.healthCheckListLabel.text = dataSource.healthCheckItemArray[indexPath.row].healthCheckStatusLabel
-        if dataSource.healthCheckItemArray[indexPath.row].healthCheckStatus {
+        cell.healthCheckListLabel.text = dataSource.healthCheckItemArray[indexPath.section].healthCheckStatusLabel
+        if dataSource.healthCheckItemArray[indexPath.section].healthCheckStatus {
             cell.tickImageView.image = UIImage(systemName: "checkmark.rectangle.fill")
         } else {
             cell.tickImageView.image = nil
@@ -107,17 +107,36 @@ class HealthCheckFirstVC: UIViewController {
 
 extension HealthCheckFirstVC: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
         return dataSource.healthCheckItemArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 8.0
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let view = UIView()
+        view.backgroundColor = UIColor.clear
+        return view
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: HealthCheckCell.reuseIdentifier, for: indexPath) as? HealthCheckCell else {fatalError("Fail to get the cell")}
+        cell.layer.borderColor = UIColor.black.cgColor
+        cell.layer.borderWidth = 1.2
+        cell.layer.cornerRadius = 8.0
+        cell.layer.shadowColor = UIColor.black.cgColor
+        cell.layer.shadowOpacity = 0.5
         configureCheckMark(for: cell, indexPath: indexPath)
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        dataSource.healthCheckItemArray[indexPath.row].healthCheckStatus.toggle()
+        dataSource.healthCheckItemArray[indexPath.section].healthCheckStatus.toggle()
         guard let selectedCell = tableView.cellForRow(at: indexPath) as? HealthCheckCell else {fatalError("Cant convert cell")}
         configureCheckMark(for: selectedCell, indexPath: indexPath)
     }
