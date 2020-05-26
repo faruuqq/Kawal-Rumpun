@@ -9,68 +9,6 @@
 import UIKit
 import CoreData
 
-
-struct ReportModel {
-    var id: String {
-        return UUID().uuidString
-    }
-    var id_warga : String?
-    var keluhanType : String?
-    var complaintText : String?
-    var imageData : UIImage?
-    var date: Date?
-}
-
-enum Keluhan:String {
-    case kesehatan = "kesehatan"
-    case fasilitas = "fasilitas"
-    case sosial = "sosial"
-}
-
-extension Report {
-    static func save(context : NSManagedObjectContext, report : ReportModel)-> Report? {
-        print("Mau Nge Save")
-        let newReport = Report(context: context)
-        let newNotif = Notification(context: context)
-        let idBoth = report.id
-        newReport.id = idBoth
-        newNotif.id = UUID().uuidString
-        newNotif.id_related = idBoth
-        if let text = report.complaintText {
-            print("Complaint")
-            newReport.complaint = text
-        }
-        
-        if let date = report.date {
-            print("Date")
-            newReport.date = date
-        }
-        
-        if let type = report.keluhanType {
-            print("Type")
-            newReport.type = type
-        }
-        
-        if let image = report.imageData {
-            print("Image Data")
-            newReport.photo = image.jpegData(compressionQuality: 0.8)
-        }
-        
-        if let id_warga = report.id_warga {
-            print("ID Warga")
-            newReport.id_warga = id_warga
-        }
-        do {
-            try context.save()
-            print("Saved")
-            return newReport
-        } catch {
-            print("error")
-            return nil
-        }
-}
-}
-
 class ReportFirstVC: UIViewController {
     let date = Date()
     var currentIdWarga = ""
@@ -162,7 +100,8 @@ class ReportFirstVC: UIViewController {
         }
         thisReport.date = date
         if let context = getViewContext() {
-            Report.save(context: context, report: self.thisReport)
+            //Report.save(context: context, report: self.thisReport)
+            thisReport.persist(to: getViewContext()!)
         }
     }
     
