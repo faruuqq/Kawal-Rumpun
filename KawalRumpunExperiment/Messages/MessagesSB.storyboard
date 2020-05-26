@@ -100,5 +100,83 @@
             </objects>
             <point key="canvasLocation" x="142.02898550724638" y="172.76785714285714"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="b45-v4-MYr">
+            <objects>
+                <viewController id="U64-LN-w6J" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xGz-dY-UEO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Selasa, 12 Mei 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vtw-JS-sME">
+                                <rect key="frame" x="20" y="241" width="241" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="241" id="KbE-7s-IqC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillProportionally" spacing="103" translatesAutoresizingMaskIntoConstraints="NO" id="cEb-p6-BZx">
+                                <rect key="frame" x="20" y="320" width="374" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E81-xF-5Bw">
+                                        <rect key="frame" x="0.0" y="0.0" width="72" height="50"/>
+                                        <state key="normal" title="Kesehatan">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jj0-mK-7hA">
+                                        <rect key="frame" x="175" y="0.0" width="55" height="50"/>
+                                        <state key="normal" title="Fasilitas">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dtW-Ba-zp2">
+                                        <rect key="frame" x="333" y="0.0" width="41" height="50"/>
+                                        <state key="normal" title="Sosial">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ABc-ZN-rWI"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Kategori" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G0R-ti-Zfz">
+                                <rect key="frame" x="20" y="275" width="65" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Keluhan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbb-cp-xYi">
+                                <rect key="frame" x="20" y="393" width="62" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="bezel" placeholder="Complaint" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jWn-fu-d1w">
+                                <rect key="frame" x="20" y="435" width="374" height="220"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="220" id="lVO-4L-dYJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="fbb-cp-xYi" firstAttribute="top" secondItem="cEb-p6-BZx" secondAttribute="bottom" constant="23" id="07t-4N-NWp"/>
+                            <constraint firstItem="G0R-ti-Zfz" firstAttribute="top" secondItem="Vtw-JS-sME" secondAttribute="bottom" constant="14" id="MkR-7n-Rzk"/>
+                            <constraint firstItem="cEb-p6-BZx" firstAttribute="top" secondItem="G0R-ti-Zfz" secondAttribute="bottom" constant="24" id="aLM-DD-ZIM"/>
+                            <constraint firstItem="jWn-fu-d1w" firstAttribute="top" secondItem="fbb-cp-xYi" secondAttribute="bottom" constant="21.5" id="kAw-We-jqC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8dA-cj-xF7"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VVK-Gb-5x7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1838" y="-197"/>
+        </scene>
     </scenes>
 </document>
