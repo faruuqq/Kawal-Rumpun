@@ -70,6 +70,8 @@ class ReportCVController: UICollectionViewController {
         cell.complainTextField.text = "Hai kamu cantik"
         cell.todayLabel.text = "Selasa, 17 Desember 1991"
         cell.kesehatanButton.backgroundColor = UIColor.blue.withAlphaComponent(0.5)
+        cell.fasilitasButton.backgroundColor = UIColor.white.withAlphaComponent(0.5)
+        cell.sosialButton.backgroundColor = UIColor.white.withAlphaComponent(0.5)
         cell.complainTextField.isUserInteractionEnabled = false
         return cell
     }
