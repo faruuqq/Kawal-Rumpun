@@ -14,6 +14,8 @@ class MessagesViewController: UIViewController, UISearchBarDelegate, UITableView
     
     @IBOutlet weak var namaSegmentedCon: UISegmentedControl!
     
+    var identifierSegue : String = " "
+    
     //bikin strcut buat dummy
     struct Category {
         var categoryDate: String
@@ -169,6 +171,12 @@ class MessagesViewController: UIViewController, UISearchBarDelegate, UITableView
         cell.detailTextLabel?.text = category.categoryName
         cell.imageView?.image = UIImage(named: category.categoryImage)
         //cell.textLabel?.text = "Coba Section\(indexPath.section) Row \(indexPath.row)"
+//        if category.categoryImage == "Complain"{
+//            identifierSegue = "toReportCell"
+//        } else {
+//            identifierSegue = "toGuestCell"
+//        }
+        
         return cell
     }
     
@@ -177,7 +185,7 @@ class MessagesViewController: UIViewController, UISearchBarDelegate, UITableView
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let category = categoriesDummy[indexPath.row]
-        performSegue(withIdentifier: "toReportCell", sender: category)
+        performSegue(withIdentifier: "toGuestCell" , sender: category)
     }
     
 

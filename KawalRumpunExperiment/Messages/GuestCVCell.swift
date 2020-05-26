@@ -10,4 +10,8 @@ import UIKit
 
 class GuestCVCell: UICollectionViewCell {
     
+    @IBOutlet weak var todayLabel: UILabel!
+    @IBOutlet weak var tamyTextField: UITextField!
+    @IBOutlet weak var periodeTextField: UITextField!
+    @IBOutlet weak var alamatTextField: UITextField!
 }

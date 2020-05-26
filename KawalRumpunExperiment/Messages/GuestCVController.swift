@@ -19,7 +19,8 @@ class GuestCVController: UICollectionViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        //self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        setupNavBAr()
 
         // Do any additional setup after loading the view.
     }
@@ -48,12 +49,50 @@ class GuestCVController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+//        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "guestCell", for: indexPath) as? GuestCVCell else { fatalError("Cell error")}
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "guestCell", for: indexPath) as? GuestCVCell else { fatalError("Cell error")}
+        cell.todayLabel.text = "Rabu, 12 Januari 2020"
+        cell.tamyTextField.text = "2"
+        cell.periodeTextField.text = "5"
+        cell.alamatTextField.text = "Toko Warni, Jl. Kemang Barat 3"
+        cell.tamyTextField.isUserInteractionEnabled = false
+        cell.periodeTextField.isUserInteractionEnabled = false
+        cell.alamatTextField.isUserInteractionEnabled = false
+        return cell
+        //let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "guestCell", for: indexPath)
     
         // Configure the cell
     
-        return cell
+        //return cell
     }
+    
+    func setupNavBAr(){
+            //input nama title
+        self.navigationItem.title = "Pendaftaran Tamu"
+            //input nvaigationtitle ke pojok kiri dan besar
+        navigationController?.navigationBar.prefersLargeTitles = true
+        //tombol back jadi putih
+        self.navigationController?.navigationBar.tintColor = .white
+            //setwarna NavigationBar
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+            //warna biru yang sama dengan mas Firza
+        appearance.backgroundColor = UIColor(red:0.333, green:0.541, blue:0.910, alpha:1.00)
+            //merubah titlecolor
+        appearance.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+      
+            
+            //implementasikan di view yang background dan large textnya
+        navigationItem.standardAppearance = appearance
+        navigationItem.scrollEdgeAppearance = appearance
+        navigationItem.compactAppearance = appearance
+
+    //        let items = ["Label A", "Label B"]
+    //        let segmentedController = UISegmentedControl(items: items)
+    //            navigationItem.titleView = segmentedController
+        
+            }
+        }
 
     // MARK: UICollectionViewDelegate
 
@@ -86,4 +125,4 @@ class GuestCVController: UICollectionViewController {
     }
     */
 
-}
+
