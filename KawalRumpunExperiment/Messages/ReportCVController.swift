@@ -11,6 +11,20 @@ import UIKit
 private let reuseIdentifier = "reportCells"
 
 class ReportCVController: UICollectionViewController {
+    
+    
+    
+    //bikin strcut buat dummy
+    struct Category {
+        var categoryDate: String
+        var categoryName: String
+        var categoryImage: String
+    }
+    
+    var categoriesDummy = [
+        Category(categoryDate: "10 September", categoryName: "Hai Amalia", categoryImage: "Complain"),
+    ]
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,15 +66,18 @@ class ReportCVController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "reportCell", for: indexPath) as? ReportCVCell else { fatalError("Cell error")}
         cell.complainTextField.text = "Hai kamu cantik"
+        cell.todayLabel.text = "Selasa, 17 Desember 1991"
+        
         return cell
     }
     
     
     func setupNavBAr(){
             //input nama title
-        self.navigationItem.title = "Report"
+        self.navigationItem.title = "Laporan"
             //input nvaigationtitle ke pojok kiri dan besar
         navigationController?.navigationBar.prefersLargeTitles = true
+        //tombol back jadi putih
         self.navigationController?.navigationBar.tintColor = .white
             //setwarna NavigationBar
         let appearance = UINavigationBarAppearance()

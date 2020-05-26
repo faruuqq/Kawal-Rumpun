@@ -15,4 +15,6 @@ class ReportCVCell: UICollectionViewCell {
     @IBOutlet weak var kesehatanButton: UIButton!
     @IBOutlet weak var fasilitasButton: UIButton!
     @IBOutlet weak var sosialButton: UIButton!
+    
+    
 }
