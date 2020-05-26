@@ -92,8 +92,17 @@ class ReportFirstVC: UIViewController {
         thisReport.id_warga = currentIdWarga
         // Do any additional setup after loading the view.
         setupView()
+        styleButton()
     }
-    
+    func styleButton() {
+        
+        selanjutnyaButton.backgroundColor = UIColor.blue
+        selanjutnyaButton.layer.shadowColor = UIColor.black.cgColor
+        selanjutnyaButton.layer.shadowOffset = CGSize(width: 0, height: 3.0)
+        selanjutnyaButton.layer.shadowRadius = 2.0
+        selanjutnyaButton.layer.shadowOpacity = 0.3
+        selanjutnyaButton.layer.cornerRadius = 8.0
+    }
     func setupView() {
         for button in [fasilitasButton,kesehatanButton,sosialButton] {
             button?.layer.cornerRadius = 10.0
