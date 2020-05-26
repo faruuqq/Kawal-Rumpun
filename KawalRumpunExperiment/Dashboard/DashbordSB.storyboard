@@ -428,7 +428,7 @@
         <scene sceneID="ZrN-JL-cip">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="RMw-l4-gZ2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Dashboard" id="faz-QI-ocB"/>
+                    <tabBarItem key="tabBarItem" title="Dashboard" selectedImage="Today-icon" id="faz-QI-ocB"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="W9F-B3-3I1">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -445,6 +445,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Today-icon" width="18.666666030883789" height="23.666666030883789"/>
         <image name="checkin" width="50" height="50"/>
         <image name="guest" width="50" height="50"/>
         <image name="health" width="50" height="50"/>
