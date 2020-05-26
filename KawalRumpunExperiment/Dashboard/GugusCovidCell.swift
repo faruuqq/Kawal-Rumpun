@@ -8,20 +8,25 @@
 
 import UIKit
 
+protocol PhoneCallDelegate: class {
+    func makePhoneCall(phoneNumber: String)
+}
+
 class GugusCovidCell: UITableViewCell {
 
     @IBOutlet weak var cellImage: UIImageView!
     @IBOutlet weak var cellLabel: UILabel!
+    var orang: People!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    weak var delegate: PhoneCallDelegate?
+    
+    func setPeople(_ people: People) {
+        orang = people
+        cellLabel.text = orang.name
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    @IBAction func callTapped(_ sender: UIButton) {
+        self.delegate?.makePhoneCall(phoneNumber: orang.phoneNumber)
     }
-
+    
 }

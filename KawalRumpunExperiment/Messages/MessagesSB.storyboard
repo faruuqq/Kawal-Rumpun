@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="23Z-rx-HKS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="23Z-rx-HKS">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -44,7 +44,7 @@
         <scene sceneID="2yS-U6-5x6">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="23Z-rx-HKS" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Messages" id="8KZ-2A-yay"/>
+                    <tabBarItem key="tabBarItem" title="Messages" image="messages" id="8KZ-2A-yay"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="m8h-Nw-Me9">
@@ -61,4 +61,7 @@
             <point key="canvasLocation" x="142.02898550724638" y="172.76785714285714"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="messages" width="23.5" height="23.5"/>
+    </resources>
 </document>

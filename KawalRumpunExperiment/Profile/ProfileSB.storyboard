@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wCl-TM-hM3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wCl-TM-hM3">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -41,7 +41,7 @@
         <scene sceneID="tGk-If-KsL">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wCl-TM-hM3" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" id="7sD-Jj-VL5"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="profile" id="7sD-Jj-VL5"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YdR-pd-nuK">
@@ -58,4 +58,7 @@
             <point key="canvasLocation" x="208.69565217391306" y="181.47321428571428"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="profile" width="23" height="23"/>
+    </resources>
 </document>

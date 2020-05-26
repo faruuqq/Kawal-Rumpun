@@ -207,13 +207,13 @@
                                     </connections>
                                 </button>
                             </barButtonItem>
-                            <barButtonItem style="plain" id="Pki-A9-CZn">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="NC2-A0-IJV">
-                                    <rect key="frame" x="298" y="7" width="45" height="30"/>
+                            <barButtonItem style="plain" id="kTV-h5-K2p">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="VJH-tg-ZFm">
+                                    <rect key="frame" x="295" y="178" width="45" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="Lewati"/>
                                     <connections>
-                                        <segue destination="Cep-e7-Zes" kind="show" id="LTL-95-Avv"/>
+                                        <segue destination="ZTn-9H-zPP" kind="show" id="oSk-cx-wb7"/>
                                     </connections>
                                 </button>
                             </barButtonItem>
@@ -725,8 +725,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="LTL-95-Avv"/>
-        <segue reference="doc-y0-zAp"/>
+        <segue reference="oSk-cx-wb7"/>
+        <segue reference="Ql7-nT-cav"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="facebook" width="12" height="21"/>

@@ -8,15 +8,25 @@
 
 import UIKit
 
+struct People {
+    var name: String
+    var phoneNumber: String
+}
+
 class DashboardVC: UIViewController {
 
     @IBOutlet weak var gugusCovidTable: UITableView!
     
     let petugasGugusCovid = [
-        ["Firza Ilhami", "Najib"],
-        ["Faruuq", "Fawaaz", "Daiva"]
+        [People(name: "Firza", phoneNumber: "08170932966"),
+        People(name: "Najib", phoneNumber: "+6281326915077")],
+        [People(name: "Faruuq", phoneNumber: "+6281343070809"),
+        People(name: "Fawaaz", phoneNumber: "+6285248475103"),
+        People(name: "Daiva", phoneNumber: "+628562592664")]
     ]
     let headerName = ["Gugus Covid-19", "Jadwal Siskambling"]
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,7 +100,6 @@ class DashboardVC: UIViewController {
                 y_SubTitle = 30
                 print("iPhone 6, 6+, 6S, 6S+, 7, 7+, 8, 8+ and X")
             default:
-//
                 y_Title = 29
                 y_SubTitle = 30
                 print("Default")
@@ -163,11 +172,26 @@ extension DashboardVC: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let petugas = petugasGugusCovid[indexPath.section][indexPath.row]
         let gugusCell = gugusCovidTable.dequeueReusableCell(withIdentifier: "gugusCell", for: indexPath) as! GugusCovidCell
-        gugusCell.cellLabel.text = petugasGugusCovid[indexPath.section][indexPath.row]
+        
+        tableView.allowsSelection = false
+        
+        gugusCell.setPeople(petugas)
+        gugusCell.delegate = self
         
         return gugusCell
     }
     
+    
+}
+
+extension DashboardVC: PhoneCallDelegate {
+    
+    func makePhoneCall(phoneNumber: String) {
+        if let phoneURL = NSURL(string: ("tel://" + phoneNumber)) {
+            UIApplication.shared.open(phoneURL as URL, options: [:], completionHandler: nil)
+        }
+    }
     
 }
