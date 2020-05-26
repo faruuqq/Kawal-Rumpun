@@ -37,6 +37,10 @@ class HealthCheckFirstVC: UIViewController {
     }
     func styleButton() {
         sendButton.backgroundColor = UIColor.blue
+        sendButton.layer.shadowColor = UIColor.black.cgColor
+        sendButton.layer.shadowOffset = CGSize(width: 0.0, height: 3.0)
+        sendButton.layer.shadowRadius = 2.0
+        sendButton.layer.shadowOpacity = 0.3
         sendButton.layer.cornerRadius = 8.0
     }
     func createTodayLabel() {
