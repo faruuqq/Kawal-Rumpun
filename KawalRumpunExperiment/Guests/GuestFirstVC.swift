@@ -91,7 +91,11 @@ class GuestFirstVC: UIViewController {
     }
     func styleButton() {
         kirimButton.backgroundColor = UIColor.blue
-        kirimButton.layer.cornerRadius = 10.0
+        kirimButton.layer.cornerRadius = 8.0
+        kirimButton.layer.shadowColor = UIColor.black.cgColor
+        kirimButton.layer.shadowOffset = CGSize(width: 0.0, height: 3.0)
+        kirimButton.layer.shadowRadius = 2.0
+        kirimButton.layer.shadowOpacity = 0.3
     }
     @IBAction func tamuStepperTapped(_ sender: UIStepper) {
         tamuTextField.text = "\(Int(sender.value))"
