@@ -24,6 +24,8 @@ class SignUpVC: UIViewController {
     @IBOutlet weak var listKeluargaTable: UITableView!
     
     let listKeluarga = ["Ayah", "Ibu", "Saudara Laki-laki", "Saudara Perempuan", "Lainya"]
+    var relationFamily = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         listKeluargaTable.delegate = self
@@ -46,6 +48,21 @@ class SignUpVC: UIViewController {
 }
 
 extension SignUpVC: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+        cell?.accessoryType = .checkmark
+        
+        if let relasi = cell?.textLabel?.text {
+            relationFamily = relasi
+        }
+        print(relationFamily)
+    }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+        cell?.accessoryType = .none
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return listKeluarga.count
