@@ -172,6 +172,14 @@ class MessagesViewController: UIViewController, UISearchBarDelegate, UITableView
         return cell
     }
     
+    
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let category = categoriesDummy[indexPath.row]
+        performSegue(withIdentifier: "toReportCell", sender: category)
+    }
+    
 
     /*
     // MARK: - Navigation

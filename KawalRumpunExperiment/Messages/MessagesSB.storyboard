@@ -75,6 +75,7 @@
                     <connections>
                         <outlet property="namaSegmentedCon" destination="TKx-5s-KZu" id="Sf7-4z-r6J"/>
                         <outlet property="tableMessages" destination="Tc8-EC-8p5" id="tbX-L4-I4b"/>
+                        <segue destination="adY-KK-KMA" kind="show" identifier="toReportCell" id="2LH-iu-MZc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v3Y-Kb-oDp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -187,6 +188,13 @@
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="414" height="785"/>
+                                <connections>
+                                    <outlet property="complainTextField" destination="FLw-SR-CH7" id="R6j-2P-Est"/>
+                                    <outlet property="fasilitasButton" destination="isU-0D-ztf" id="Fgc-b0-kuK"/>
+                                    <outlet property="kesehatanButton" destination="u2W-ef-dBX" id="GE4-g2-KCf"/>
+                                    <outlet property="sosialButton" destination="hvY-5C-mxZ" id="MoC-eY-XS0"/>
+                                    <outlet property="todayLabel" destination="yfe-O0-Fgh" id="Ewr-F2-WhD"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -194,10 +202,11 @@
                             <outlet property="delegate" destination="adY-KK-KMA" id="fZ0-Td-uw9"/>
                         </connections>
                     </collectionView>
+                    <navigationItem key="navigationItem" id="nOL-uI-M0L"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hcC-yj-n6n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2249.275362318841" y="-239.0625"/>
+            <point key="canvasLocation" x="2325" y="-251"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="b45-v4-MYr">

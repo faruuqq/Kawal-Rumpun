@@ -48,11 +48,8 @@ class ReportCVController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-    
-        // Configure the cell
-        cell.backgroundColor = .blue
-    
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "reportCell", for: indexPath) as? ReportCVCell else { fatalError("Cell error")}
+        cell.complainTextField.text = "Hai"
         return cell
     }
 
