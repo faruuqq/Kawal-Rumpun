@@ -40,8 +40,8 @@ class SignUpVC: UIViewController {
     let listKeluarga = ["Ayah", "Ibu", "Saudara Laki-laki", "Saudara Perempuan", "Lainya"]
     var relationFamily = ""
     
-    var warga: Warga?
-    var famRelation: RelasiKeluarga?
+    var warga: Warga = Warga.init()
+    var famRelation: RelasiKeluarga = RelasiKeluarga.init()
     var registrasi: Registration?
     
     override func viewDidLoad() {
@@ -52,15 +52,28 @@ class SignUpVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func daftar(_ sender: RoundedButtonWithShadow) {
-        registrasi?.nama = namaTF.text!
-        registrasi?.email = emailRegisterTF.text!
-        registrasi?.noHP = noHPTF.text!
-        registrasi?.alamat = alamatTF.text!
-      
-        registrasi?.rt = Int16(alamatRTTF.text!.trimmingCharacters(in: .whitespacesAndNewlines))!
+    @IBAction func daftar(_ sender: UIButton) {
+//        registrasi?.nama = namaTF.text!
+//        registrasi?.email = emailRegisterTF.text!
+//        registrasi?.noHP = noHPTF.text!
+//        registrasi?.alamat = alamatTF.text!
+//
+//        registrasi?.rt = Int16(alamatRTTF.text!.trimmingCharacters(in: .whitespacesAndNewlines))!
+//
+//        registrasi?.rw = Int16(alamatRTTF.text!.trimmingCharacters(in: .whitespacesAndNewlines))!
         
-        registrasi?.rw = Int16(alamatRTTF.text!.trimmingCharacters(in: .whitespacesAndNewlines))!
+        registrasi = Registration(
+            nama: namaTF.text!,
+            email: emailRegisterTF.text!,
+            noHP: noHPTF.text!,
+            alamat: alamatTF.text!,
+            rt: Int16(alamatRTTF.text!.trimmingCharacters(in: .whitespacesAndNewlines))!,
+            rw: Int16(alamatRTTF.text!.trimmingCharacters(in: .whitespacesAndNewlines))!,
+            password: "",
+            shareLoc: shareLocSwitch.isOn,
+            famRelationType: relationFamily,
+            emailFam: emailKeluargaTF.text!
+        )
         
         if inputPassword1TF.text! == inputPassword2TF.text! {
             registrasi?.password = inputPassword2TF.text!
@@ -73,11 +86,9 @@ class SignUpVC: UIViewController {
     }
     
     func save(reg: Registration){
-        let warga = Warga()
-        let relasiKel = RelasiKeluarga()
          
          warga.save(viewContext: AppDelegate.viewContext, dataRegistration: reg)
-         relasiKel.save(viewContext: AppDelegate.viewContext, dataRegistration: reg)
+         famRelation.save(viewContext: AppDelegate.viewContext, dataRegistration: reg)
     }
     
 
@@ -100,7 +111,7 @@ extension SignUpVC: UITableViewDelegate, UITableViewDataSource {
         cell?.accessoryType = .checkmark
         
         if let relasi = cell?.textLabel?.text {
-            registrasi?.famRelationType = relasi
+            relationFamily = relasi
         }
     }
     
