@@ -44,7 +44,9 @@ class ReportFirstVC: UIViewController {
     func setupView() {
         for button in [fasilitasButton,kesehatanButton,sosialButton] {
             button?.layer.cornerRadius = 10.0
-            button?.backgroundColor = UIColor.systemGray2
+            button?.layer.borderColor = UIColor.black.cgColor
+            button?.layer.borderWidth = 0.7
+            button?.backgroundColor = UIColor.clear
         }
         
         let currentDateTime = Date()
@@ -81,7 +83,7 @@ class ReportFirstVC: UIViewController {
             if button==sender {
                 button?.backgroundColor = UIColor.blue.withAlphaComponent(0.5)
             } else {
-                button?.backgroundColor = UIColor.systemGray2
+                button?.backgroundColor = UIColor.clear
             }
         }
         switch sender {
