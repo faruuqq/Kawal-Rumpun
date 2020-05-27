@@ -66,10 +66,18 @@ class SignUpVC: UIViewController {
             registrasi?.password = inputPassword2TF.text!
         }
         registrasi?.shareLoc = shareLocSwitch.isOn
+        if let reg = registrasi {
+            save(reg: reg)
+        }
+ 
     }
     
     func save(reg: Registration){
-        
+        let warga = Warga()
+        let relasiKel = RelasiKeluarga()
+         
+         warga.save(viewContext: AppDelegate.viewContext, dataRegistration: reg)
+         relasiKel.save(viewContext: AppDelegate.viewContext, dataRegistration: reg)
     }
     
 

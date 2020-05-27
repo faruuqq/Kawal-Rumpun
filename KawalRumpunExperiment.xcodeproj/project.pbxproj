@@ -29,6 +29,7 @@
 		4DB5BFCD2473BD1C00D86F16 /* TabBarSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DB5BFCC2473BD1C00D86F16 /* TabBarSB.storyboard */; };
 		4DB5BFCF2473D0F700D86F16 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB5BFCE2473D0F700D86F16 /* TabBarViewController.swift */; };
 		FE371CDC247E7BE3008D87B1 /* Warga+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE371CDB247E7BE3008D87B1 /* Warga+Extensions.swift */; };
+		FE371CDE247EA335008D87B1 /* RelasiKeluarga+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE371CDD247EA335008D87B1 /* RelasiKeluarga+Extension.swift */; };
 		FE523563247972E000566677 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE523562247972E000566677 /* SignUpVC.swift */; };
 		FE523567247A2AC200566677 /* GugusCovidCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE523566247A2AC200566677 /* GugusCovidCell.swift */; };
 		FE52356E247A485700566677 /* HeaderViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE52356C247A485700566677 /* HeaderViewCell.swift */; };
@@ -86,6 +87,7 @@
 		4DB5BFCC2473BD1C00D86F16 /* TabBarSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarSB.storyboard; sourceTree = "<group>"; };
 		4DB5BFCE2473D0F700D86F16 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		FE371CDB247E7BE3008D87B1 /* Warga+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Warga+Extensions.swift"; sourceTree = "<group>"; };
+		FE371CDD247EA335008D87B1 /* RelasiKeluarga+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RelasiKeluarga+Extension.swift"; sourceTree = "<group>"; };
 		FE523562247972E000566677 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		FE523566247A2AC200566677 /* GugusCovidCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GugusCovidCell.swift; sourceTree = "<group>"; };
 		FE52356C247A485700566677 /* HeaderViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewCell.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 			children = (
 				4D53D1AE2472D39A003526CF /* Main.storyboard */,
 				FE371CDB247E7BE3008D87B1 /* Warga+Extensions.swift */,
+				FE371CDD247EA335008D87B1 /* RelasiKeluarga+Extension.swift */,
 				FE523562247972E000566677 /* SignUpVC.swift */,
 				FEBFF71D2478C8720073D06E /* WelcomeLoginVC.swift */,
 				4DB5BFCE2473D0F700D86F16 /* TabBarViewController.swift */,
@@ -441,6 +444,7 @@
 				FE523563247972E000566677 /* SignUpVC.swift in Sources */,
 				4D53D1AB2472D39A003526CF /* SceneDelegate.swift in Sources */,
 				FE523567247A2AC200566677 /* GugusCovidCell.swift in Sources */,
+				FE371CDE247EA335008D87B1 /* RelasiKeluarga+Extension.swift in Sources */,
 				4DB5BFB72473A9C100D86F16 /* KawalRumpunVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
