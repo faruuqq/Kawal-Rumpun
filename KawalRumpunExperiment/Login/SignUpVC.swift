@@ -8,23 +8,10 @@
 
 import UIKit
 
-struct Registration {
-    var nama: String
-    var email: String
-    var noHP: String
-    var alamat: String
-    var rt: Int16
-    var rw: Int16
-    var password: String
-    var shareLoc: Bool
-    var famRelationType: String
-    var emailFam: String
-}
 
 
 class SignUpVC: UIViewController {
 
-    
     @IBOutlet weak var namaTF: UITextField!
     @IBOutlet weak var emailRegisterTF: UITextField!
     @IBOutlet weak var noHPTF: UITextField!
@@ -39,9 +26,6 @@ class SignUpVC: UIViewController {
     
     let listKeluarga = ["Ayah", "Ibu", "Saudara Laki-laki", "Saudara Perempuan", "Lainya"]
     var relationFamily = ""
-    
-    var warga: Warga = Warga.init()
-    var famRelation: RelasiKeluarga = RelasiKeluarga.init()
     var registrasi: Registration?
     
     override func viewDidLoad() {
@@ -53,14 +37,6 @@ class SignUpVC: UIViewController {
     }
     
     @IBAction func daftar(_ sender: UIButton) {
-//        registrasi?.nama = namaTF.text!
-//        registrasi?.email = emailRegisterTF.text!
-//        registrasi?.noHP = noHPTF.text!
-//        registrasi?.alamat = alamatTF.text!
-//
-//        registrasi?.rt = Int16(alamatRTTF.text!.trimmingCharacters(in: .whitespacesAndNewlines))!
-//
-//        registrasi?.rw = Int16(alamatRTTF.text!.trimmingCharacters(in: .whitespacesAndNewlines))!
         
         registrasi = Registration(
             nama: namaTF.text!,
@@ -79,17 +55,12 @@ class SignUpVC: UIViewController {
             registrasi?.password = inputPassword2TF.text!
         }
         registrasi?.shareLoc = shareLocSwitch.isOn
-        if let reg = registrasi {
-            save(reg: reg)
-        }
+        
+        registrasi?.save(viewContext: AppDelegate.viewContext)
  
     }
     
-    func save(reg: Registration){
-         
-         warga.save(viewContext: AppDelegate.viewContext, dataRegistration: reg)
-         famRelation.save(viewContext: AppDelegate.viewContext, dataRegistration: reg)
-    }
+
     
 
     /*
