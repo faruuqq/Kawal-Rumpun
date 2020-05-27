@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3D32A595247D7DC70002BF84 /* GuestCVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D32A594247D7DC70002BF84 /* GuestCVController.swift */; };
 		3D32A597247D83F00002BF84 /* GuestCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D32A596247D83F00002BF84 /* GuestCVCell.swift */; };
+		3D382AE6247E5E43009AAFE7 /* HealthCheckCVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D382AE5247E5E43009AAFE7 /* HealthCheckCVController.swift */; };
+		3D382AE8247E62F6009AAFE7 /* HealthCheckCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D382AE7247E62F6009AAFE7 /* HealthCheckCVCell.swift */; };
 		3D712FE1247AEF200037E6EC /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D712FE0247AEF200037E6EC /* MessagesViewController.swift */; };
 		3D776E9F247D13F500A1E466 /* ReportCVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D776E9E247D13F500A1E466 /* ReportCVController.swift */; };
 		3D776EA1247D19A400A1E466 /* ReportCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D776EA0247D19A400A1E466 /* ReportCVCell.swift */; };
@@ -55,6 +57,8 @@
 /* Begin PBXFileReference section */
 		3D32A594247D7DC70002BF84 /* GuestCVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestCVController.swift; sourceTree = "<group>"; };
 		3D32A596247D83F00002BF84 /* GuestCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestCVCell.swift; sourceTree = "<group>"; };
+		3D382AE5247E5E43009AAFE7 /* HealthCheckCVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthCheckCVController.swift; sourceTree = "<group>"; };
+		3D382AE7247E62F6009AAFE7 /* HealthCheckCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthCheckCVCell.swift; sourceTree = "<group>"; };
 		3D712FE0247AEF200037E6EC /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		3D776E9E247D13F500A1E466 /* ReportCVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportCVController.swift; sourceTree = "<group>"; };
 		3D776EA0247D19A400A1E466 /* ReportCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportCVCell.swift; sourceTree = "<group>"; };
@@ -202,6 +206,8 @@
 				3D776E9E247D13F500A1E466 /* ReportCVController.swift */,
 				3D32A596247D83F00002BF84 /* GuestCVCell.swift */,
 				3D32A594247D7DC70002BF84 /* GuestCVController.swift */,
+				3D382AE5247E5E43009AAFE7 /* HealthCheckCVController.swift */,
+				3D382AE7247E62F6009AAFE7 /* HealthCheckCVCell.swift */,
 			);
 			path = Messages;
 			sourceTree = "<group>";
@@ -405,6 +411,7 @@
 				4D53D1AD2472D39A003526CF /* ViewController.swift in Sources */,
 				3D32A597247D83F00002BF84 /* GuestCVCell.swift in Sources */,
 				3D776E9F247D13F500A1E466 /* ReportCVController.swift in Sources */,
+				3D382AE6247E5E43009AAFE7 /* HealthCheckCVController.swift in Sources */,
 				4D53D1A92472D39A003526CF /* AppDelegate.swift in Sources */,
 				4DB5BFB92473A9EE00D86F16 /* SignInVC.swift in Sources */,
 				4D53D1B32472D39A003526CF /* KawalRumpunExperiment.xcdatamodeld in Sources */,
@@ -414,6 +421,7 @@
 				4D53D1AB2472D39A003526CF /* SceneDelegate.swift in Sources */,
 				3D712FE1247AEF200037E6EC /* MessagesViewController.swift in Sources */,
 				4DB5BFB72473A9C100D86F16 /* KawalRumpunVC.swift in Sources */,
+				3D382AE8247E62F6009AAFE7 /* HealthCheckCVCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
