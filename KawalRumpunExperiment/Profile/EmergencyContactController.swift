@@ -15,6 +15,8 @@ class EmergencyContactController: UIViewController, UITableViewDelegate, UITable
     
     @IBOutlet weak var tableViewApproval: UITableView!
     
+    @IBOutlet weak var tambahKeluarga: UIButton!
+    
     var keluarga = ["Virza Piter"]
     var approval = ["Prima C"]
     
@@ -57,6 +59,7 @@ class EmergencyContactController: UIViewController, UITableViewDelegate, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         myTableView.dataSource = self
+        tambahKeluarga.layer.cornerRadius = 5
         // Do any additional setup after loading the view.
     }
     
