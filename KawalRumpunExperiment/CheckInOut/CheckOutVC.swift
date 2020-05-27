@@ -1,6 +1,11 @@
 import UIKit
+import CoreData
 
 class CheckOutVC: UIViewController {
+    
+    var checkPoint = [CheckPoint]()
+    
+    let context = AppDelegate.viewContext
         
     //MARK: - Item for top container
     let imageTop: UIImageView = {
@@ -40,7 +45,11 @@ class CheckOutVC: UIViewController {
     @objc func buttonTapped(sender: UIButton) {
         let alert = UIAlertController(title: "Perhatian", message: "Kami menyarankan Anda untuk tetap berada di rumah untuk mencegah penyebaran virus, yakin tetap ingin keluar rumah?", preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: "Iya", style: .default, handler: { action in
+            
+            self.newEntry()
             print("user has successfully checked out")
+//            print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
+            
             let alertConfirmation = UIAlertController(title: "Terima Kasih", message: "Anda telah berhasil melaporkan status Anda. Harap tetap menjaga jarak.", preferredStyle: .alert)
             alertConfirmation.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
 //                self.performSegue(withIdentifier: "toCheckInVC", sender: self)
@@ -118,4 +127,40 @@ class CheckOutVC: UIViewController {
         ])
     }
     
+    func newEntry() {
+        let newEntry = CheckPoint(context: context)
+        newEntry.id_warga = "Warga A"
+        newEntry.isCheckOut = true
+        saveEntry()
+    }
+    
+    func saveEntry() {
+        do {
+            try context.save()
+        } catch {
+            print("Error saving context \(error)")
+        }
+    }
+    
+    func fetch() {
+        let request: NSFetchRequest<CheckPoint> = CheckPoint.fetchRequest()
+        do {
+        checkPoint = try context.fetch(request)
+        } catch {
+            print("Error fetching data from context \(error)")
+        }
+    }
+    
+    func isCheckOut() {
+        fetch()
+        let statusWarga = CheckPoint(context: AppDelegate.viewContext)
+        if statusWarga.isCheckOut == true {
+            self.navigationController?.show(CheckInVC(), sender: self)
+        }
+    }
+    
+    func deleteData(viewContext: NSManagedObjectContext = AppDelegate.viewContext) {
+        fetch()
+        
+    }
 }

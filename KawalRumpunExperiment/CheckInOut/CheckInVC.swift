@@ -1,6 +1,10 @@
 import UIKit
+import CoreData
 
 class CheckInVC: UIViewController {
+    
+    var checkPoint = [CheckPoint]()
+    let context = AppDelegate.viewContext
     
     //MARK: - CollectionView Container
     let collectionViewContainer: UICollectionView = {
@@ -36,6 +40,7 @@ class CheckInVC: UIViewController {
     }()
     
     @objc func buttonTapped(sender: UIButton) {
+        newEntry()
         print("user has successfully checked in")
         let alert = UIAlertController(title: "Terima Kasih.", message: "Anda telah berhasil melaporkan status Anda. Harap tetap menjaga jarak.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
@@ -108,6 +113,31 @@ class CheckInVC: UIViewController {
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         pageControlContainer.currentPage = Int(scrollView.contentOffset.x / scrollView.frame.width)
     }
+    
+    func newEntry() {
+        let newEntry = CheckPoint(context: context)
+        newEntry.id_warga = "Warga A"
+        newEntry.isCheckOut = false
+        saveEntry()
+    }
+    
+    func saveEntry() {
+        do {
+            try context.save()
+        } catch {
+            print("Error saving context \(error)")
+        }
+    }
+    
+    func fetch() {
+        let request: NSFetchRequest<CheckPoint> = CheckPoint.fetchRequest()
+        do {
+        checkPoint = try context.fetch(request)
+        } catch {
+            print("Error fetching data from context \(error)")
+        }
+    }
+    
 }
 
 //MARK: - Extensions
