@@ -32,6 +32,7 @@ class ReportFirstVC: UIViewController {
         // Do any additional setup after loading the view.
         setupView()
         styleButton()
+        reportTypeButtonTapped(kesehatanButton)
     }
     func styleButton() {
         
