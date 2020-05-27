@@ -212,9 +212,9 @@
 				3D776E9E247D13F500A1E466 /* ReportCVController.swift */,
 				3D32A596247D83F00002BF84 /* GuestCVCell.swift */,
 				3D32A594247D7DC70002BF84 /* GuestCVController.swift */,
-				3D382AE5247E5E43009AAFE7 /* HealthCheckCVController.swift */,
 				3D382AEB247E9DC7009AAFE7 /* TableCollHealtchCheckVController.swift */,
 				3D382AE9247E77C0009AAFE7 /* TableCheckHealthData.swift */,
+				3D382AE5247E5E43009AAFE7 /* HealthCheckCVController.swift */,
 				3D382AE7247E62F6009AAFE7 /* HealthCheckCVCell.swift */,
 				3D382AED247EAA4E009AAFE7 /* CekCobaViewController.swift */,
 			);
