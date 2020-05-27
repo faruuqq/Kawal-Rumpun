@@ -11,7 +11,15 @@ import UIKit
 private let reuseIdentifier = "healtchekCell"
 
 class HealthCheckCVController: UICollectionViewController {
+    
+    
+    struct dummyTableView{
+        var categoryDate: String
+        var categoryName: String
+        var categoryImage: String
+    }
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
