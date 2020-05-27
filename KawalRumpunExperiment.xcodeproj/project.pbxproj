@@ -29,6 +29,7 @@
 		4DB5BFCD2473BD1C00D86F16 /* TabBarSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DB5BFCC2473BD1C00D86F16 /* TabBarSB.storyboard */; };
 		4DB5BFCF2473D0F700D86F16 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB5BFCE2473D0F700D86F16 /* TabBarViewController.swift */; };
 		F1156C282477B63600C5889F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1156C272477B63600C5889F /* ProfileViewController.swift */; };
+		F1A98654247D83A000FBE7A2 /* EmergencyContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A98653247D83A000FBE7A2 /* EmergencyContactController.swift */; };
 		F1FB6FF5247C008900BF07F4 /* InfoAkunController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FB6FF4247C008900BF07F4 /* InfoAkunController.swift */; };
 		F1FB6FF7247C018400BF07F4 /* TentangAplikasiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FB6FF6247C018400BF07F4 /* TentangAplikasiController.swift */; };
 /* End PBXBuildFile section */
@@ -79,6 +80,7 @@
 		4DB5BFCC2473BD1C00D86F16 /* TabBarSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarSB.storyboard; sourceTree = "<group>"; };
 		4DB5BFCE2473D0F700D86F16 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		F1156C272477B63600C5889F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F1A98653247D83A000FBE7A2 /* EmergencyContactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyContactController.swift; sourceTree = "<group>"; };
 		F1FB6FF4247C008900BF07F4 /* InfoAkunController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoAkunController.swift; sourceTree = "<group>"; };
 		F1FB6FF6247C018400BF07F4 /* TentangAplikasiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TentangAplikasiController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -204,6 +206,7 @@
 				F1156C272477B63600C5889F /* ProfileViewController.swift */,
 				F1FB6FF4247C008900BF07F4 /* InfoAkunController.swift */,
 				F1FB6FF6247C018400BF07F4 /* TentangAplikasiController.swift */,
+				F1A98653247D83A000FBE7A2 /* EmergencyContactController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -400,6 +403,7 @@
 				4D53D1A92472D39A003526CF /* AppDelegate.swift in Sources */,
 				4DB5BFB92473A9EE00D86F16 /* SignInVC.swift in Sources */,
 				4D53D1B32472D39A003526CF /* KawalRumpunExperiment.xcdatamodeld in Sources */,
+				F1A98654247D83A000FBE7A2 /* EmergencyContactController.swift in Sources */,
 				4DB5BFCF2473D0F700D86F16 /* TabBarViewController.swift in Sources */,
 				F1FB6FF7247C018400BF07F4 /* TentangAplikasiController.swift in Sources */,
 				4D53D1AB2472D39A003526CF /* SceneDelegate.swift in Sources */,
