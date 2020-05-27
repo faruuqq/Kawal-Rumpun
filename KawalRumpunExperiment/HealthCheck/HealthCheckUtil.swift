@@ -32,7 +32,7 @@ struct HealthCheckReportModel {
     
     init() {
         //Body temp
-        bodyTemperature = HealthCheckItem(healthCheckStatusLabel: "Body Temperature > 37.5 C", healthCheckStatus: true)
+        bodyTemperature = HealthCheckItem(healthCheckStatusLabel: "Body Temperature > 37.5 C", healthCheckStatus: false)
         //Cough
         cough = HealthCheckItem(healthCheckStatusLabel: "Cough", healthCheckStatus: false)
         //Flu
