@@ -494,6 +494,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="healtchCheckListLabel" destination="MjP-E3-iUZ" id="9Cx-SL-YLf"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>

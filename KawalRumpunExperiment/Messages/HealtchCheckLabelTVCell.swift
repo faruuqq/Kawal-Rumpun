@@ -10,6 +10,8 @@ import UIKit
 
 class HealtchCheckLabelTVCell: UITableViewCell {
 
+    @IBOutlet weak var healtchCheckListLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
