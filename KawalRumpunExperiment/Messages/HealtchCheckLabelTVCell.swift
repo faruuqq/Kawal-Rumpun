@@ -9,8 +9,11 @@
 import UIKit
 
 class HealtchCheckLabelTVCell: UITableViewCell {
+    
 
+    @IBOutlet weak var tickBackground: UIView!
     @IBOutlet weak var healtchCheckListLabel: UILabel!
+    @IBOutlet weak var tickImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
