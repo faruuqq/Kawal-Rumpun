@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ozi-Gj-TyG">
-    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,17 +12,24 @@
             <objects>
                 <viewController id="Ozi-Gj-TyG" customClass="GuestFirstVC" customModule="KawalRumpunExperiment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pZ5-Kv-gQs">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" image="sitting 1" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AWV-72-zom">
+                                <rect key="frame" x="82.5" y="105" width="210" height="210"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="210" id="Q7h-wW-xzl"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="210" id="T74-rc-83n"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pendaftaran Tamu" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Lo-nt-9Vc">
-                                <rect key="frame" x="20" y="19.999999999999996" width="287.33333333333331" height="40.666666666666657"/>
+                                <rect key="frame" x="20" y="20" width="287.5" height="41"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jumlah Tamu" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bqk-5O-11O">
-                                <rect key="frame" x="19.999999999999993" y="392.66666666666669" width="101.33333333333331" height="20.333333333333314"/>
+                                <rect key="frame" x="20" y="323" width="101.5" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="105" id="qso-6R-55l"/>
                                 </constraints>
@@ -31,12 +38,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lNw-I9-PQb">
-                                <rect key="frame" x="201" y="384.33333333333331" width="93" height="34"/>
+                                <rect key="frame" x="201" y="315" width="54" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Periode Tinggal (hari)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hHP-ps-cTw">
-                                <rect key="frame" x="20" y="438" width="164.66666666666666" height="20.333333333333314"/>
+                                <rect key="frame" x="20" y="368.5" width="165" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="165" id="TMr-bJ-AaI"/>
                                 </constraints>
@@ -45,12 +52,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mim-j0-hbO">
-                                <rect key="frame" x="200.66666666666666" y="432.33333333333331" width="93.333333333333343" height="34"/>
+                                <rect key="frame" x="201" y="363" width="54" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="bCh-lZ-YtI">
-                                <rect key="frame" x="311" y="431.33333333333331" width="94" height="32"/>
+                                <rect key="frame" x="272" y="362" width="94" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="94" id="g5Z-aQ-431"/>
                                 </constraints>
@@ -59,13 +66,13 @@
                                 </connections>
                             </stepper>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alamat Asal Tamu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="iaV-G1-YA5">
-                                <rect key="frame" x="20" y="479.33333333333331" width="136" height="21"/>
+                                <rect key="frame" x="20" y="410" width="136" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BNN-9Y-9mn">
-                                <rect key="frame" x="29" y="516.33333333333337" width="356" height="40"/>
+                                <rect key="frame" x="29" y="447" width="317" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Bfj-GL-eIy"/>
                                 </constraints>
@@ -73,7 +80,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jgt-Ml-hCU">
-                                <rect key="frame" x="32" y="635" width="350" height="43"/>
+                                <rect key="frame" x="32" y="566" width="311" height="43"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="QW1-39-ulS"/>
@@ -86,13 +93,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kami Himbau agar tamu anda dapat dilaporkan   juga kepada otoritas terkait " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hqK-MZ-0VP">
-                                <rect key="frame" x="29" y="564.33333333333337" width="356" height="40.666666666666629"/>
+                                <rect key="frame" x="29" y="495" width="317" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="zRs-NH-8zp">
-                                <rect key="frame" x="311" y="380.33333333333331" width="94" height="32"/>
+                                <rect key="frame" x="272" y="311" width="94" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="94" id="WeB-6b-j0P"/>
                                 </constraints>
@@ -101,18 +108,11 @@
                                 </connections>
                             </stepper>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Senin, 25 Mei 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="aeJ-Wl-E7U">
-                                <rect key="frame" x="20" y="65.666666666666671" width="171" height="24"/>
+                                <rect key="frame" x="20" y="66" width="171" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" image="sitting 1" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AWV-72-zom">
-                                <rect key="frame" x="102" y="104.66666666666669" width="210" height="210"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="210" id="Q7h-wW-xzl"/>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="210" id="T74-rc-83n"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -166,6 +166,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="sitting 1" width="219.33332824707031" height="261"/>
+        <image name="sitting 1" width="219.5" height="261"/>
     </resources>
 </document>
