@@ -25,6 +25,23 @@ class TableCollHealtchCheckVController: UIViewController, UITableViewDataSource,
         tableMessages.dataSource = self
         
     }
+    
+    func configureCheckMark(for cell: HealtchCheckLabelTVCell, indexPath: IndexPath){
+        cell.healtchCheckListLabel.text = datasource[indexPath.section].healthCheckStatusLabel
+        if datasource[indexPath.section].healthCheckStatus {
+            cell.tickImageView.image =
+        }
+    }
+    
+    
+//    func configureCheckMark(for cell: HealthCheckCell, indexPath: IndexPath) {
+//        cell.healthCheckListLabel.text = dataSource.healthCheckItemArray[indexPath.section].healthCheckStatusLabel
+//        if dataSource.healthCheckItemArray[indexPath.section].healthCheckStatus {
+//            cell.tickImageView.image = UIImage(systemName: "checkmark.rectangle.fill")
+//        } else {
+//            cell.tickImageView.image = nil
+//        }
+//    }
 
     
     func numberOfSections(in tableView: UITableView) -> Int {
