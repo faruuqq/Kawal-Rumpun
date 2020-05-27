@@ -496,6 +496,8 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="healtchCheckListLabel" destination="MjP-E3-iUZ" id="9Cx-SL-YLf"/>
+                                            <outlet property="tickBackground" destination="4aS-1I-YGM" id="MWY-uk-J4y"/>
+                                            <outlet property="tickImageView" destination="xu5-oU-B6q" id="87K-cG-Gcv"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

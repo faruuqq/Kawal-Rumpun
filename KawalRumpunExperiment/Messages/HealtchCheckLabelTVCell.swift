@@ -14,9 +14,11 @@ class HealtchCheckLabelTVCell: UITableViewCell {
     @IBOutlet weak var tickBackground: UIView!
     @IBOutlet weak var healtchCheckListLabel: UILabel!
     @IBOutlet weak var tickImageView: UIImageView!
+    static let reusableidentifier = String(describing: HealtchCheckLabelTVCell.self)
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        healtchCheckListLabel.adjustsFontSizeToFitWidth = true
         // Initialization code
     }
 
