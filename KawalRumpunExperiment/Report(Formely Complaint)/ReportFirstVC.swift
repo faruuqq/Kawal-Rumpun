@@ -13,6 +13,7 @@ class ReportFirstVC: UIViewController {
     let date = Date()
     var currentIdWarga = ""
     var thisReport = ReportModel()
+    let selectedBackgroundColor = UIColor(red: 47/255.0, green: 128.0/255.0, blue: 237.0/255.0, alpha: 1.0)
     @IBOutlet weak var complaintTextField: UITextField!
     @IBOutlet weak var todayLabel: UILabel!
     @IBOutlet weak var kesehatanButton: UIButton!
@@ -34,7 +35,7 @@ class ReportFirstVC: UIViewController {
     }
     func styleButton() {
         
-        selanjutnyaButton.backgroundColor = UIColor.blue
+        selanjutnyaButton.backgroundColor = UIColor.init(red: 85/255.0, green: 138/255.0, blue: 232/255.0, alpha: 1.0)
         selanjutnyaButton.layer.shadowColor = UIColor.black.cgColor
         selanjutnyaButton.layer.shadowOffset = CGSize(width: 0, height: 3.0)
         selanjutnyaButton.layer.shadowRadius = 2.0
@@ -45,7 +46,7 @@ class ReportFirstVC: UIViewController {
         for button in [fasilitasButton,kesehatanButton,sosialButton] {
             button?.layer.cornerRadius = 10.0
             button?.layer.borderColor = UIColor.black.cgColor
-            button?.layer.borderWidth = 0.7
+            button?.layer.borderWidth = 0.2
             button?.backgroundColor = UIColor.clear
         }
         
@@ -81,9 +82,12 @@ class ReportFirstVC: UIViewController {
     @IBAction func reportTypeButtonTapped(_ sender: UIButton) {
         for button in [fasilitasButton,kesehatanButton,sosialButton] {
             if button==sender {
-                button?.backgroundColor = UIColor.blue.withAlphaComponent(0.5)
+                button?.backgroundColor = selectedBackgroundColor
+                button?.setTitleColor(.white, for: .normal)
             } else {
                 button?.backgroundColor = UIColor.clear
+                button?.setTitleColor(.black, for: .normal)
+               
             }
         }
         switch sender {
@@ -102,8 +106,7 @@ class ReportFirstVC: UIViewController {
         }
         thisReport.date = date
         if let context = getViewContext() {
-            //Report.save(context: context, report: self.thisReport)
-            thisReport.persist(to: getViewContext()!)
+            thisReport.persist(to: context)
         }
     }
     
