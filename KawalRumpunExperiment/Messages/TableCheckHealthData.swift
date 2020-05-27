@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 
-class TableHealtchCheckVController {
+class TableHealthCheckData {
 
     var healthCheckStatusLabel : String = ""
     var healthCheckStatus : Bool = false
@@ -19,35 +19,34 @@ class TableHealtchCheckVController {
     }
     
     struct HealthCheckReportModel {
-    var id_warga = ""
-    var healthCheckItemArray = [TableHealtchCheckVController]()
-    var bodyTemperature : TableHealtchCheckVController
-    var cough : TableHealtchCheckVController
-    var flu : TableHealtchCheckVController
-    var fever : TableHealtchCheckVController
-    var throatPain : TableHealtchCheckVController
-    var breath: TableHealtchCheckVController
-    var symptomp : TableHealtchCheckVController
+    //var id_warga = ""
+    var healthCheckItemArray = [TableHealthCheckData]()
+    var bodyTemperature : TableHealthCheckData
+    var cough : TableHealthCheckData
+    var flu : TableHealthCheckData
+    var fever : TableHealthCheckData
+    var throatPain : TableHealthCheckData
+    var breath: TableHealthCheckData
+    var symptomp : TableHealthCheckData
     
     init() {
         
         //Body temp
-        bodyTemperature = TableHealtchCheckVController(healthCheckStatusLabel: "Body Temperature > 37.5 C", healthCheckStatus: true)
+        bodyTemperature = TableHealthCheckData(healthCheckStatusLabel: "Body Temperature > 37.5 C", healthCheckStatus: true)
         
         //Cough
-        cough = TableHealtchCheckVController(healthCheckStatusLabel: "Cough", healthCheckStatus: false)
+        cough = TableHealthCheckData(healthCheckStatusLabel: "Cough", healthCheckStatus: false)
         //Flu
-        flu = TableHealtchCheckVController(healthCheckStatusLabel: "Flu", healthCheckStatus: false)
+        flu = TableHealthCheckData(healthCheckStatusLabel: "Flu", healthCheckStatus: false)
         //Fever
-        fever = TableHealtchCheckVController(healthCheckStatusLabel: "Fever", healthCheckStatus: false)
+        fever = TableHealthCheckData(healthCheckStatusLabel: "Fever", healthCheckStatus: false)
         //Throat Pain
-        throatPain = TableHealtchCheckVController(healthCheckStatusLabel: "Throat Pain", healthCheckStatus: false)
+        throatPain = TableHealthCheckData(healthCheckStatusLabel: "Throat Pain", healthCheckStatus: false)
         //Shortness of breath
-        breath = TableHealtchCheckVController(healthCheckStatusLabel: "Shortness of Breath", healthCheckStatus: false)
+        breath = TableHealthCheckData(healthCheckStatusLabel: "Shortness of Breath", healthCheckStatus: false)
         //are The Syptomps repidly worsening
-        symptomp = TableHealtchCheckVController(healthCheckStatusLabel: "Are the syptomps rapidly worsening?", healthCheckStatus: false)
+        symptomp = TableHealthCheckData(healthCheckStatusLabel: "Are the syptomps rapidly worsening?", healthCheckStatus: false)
 
-        
         healthCheckItemArray.append(bodyTemperature)
         healthCheckItemArray.append(cough)
         healthCheckItemArray.append(flu)

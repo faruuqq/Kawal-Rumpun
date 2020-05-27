@@ -183,11 +183,12 @@ class MessagesViewController: UIViewController, UISearchBarDelegate, UITableView
     
     //toHealthCheck
     //toGuestCell
+    //toHealthCheckv2
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let category = categoriesDummy[indexPath.row]
-        performSegue(withIdentifier: "toHealthCheck" , sender: category)
+        performSegue(withIdentifier: "toHealthCheckv2" , sender: category)
     }
     
 

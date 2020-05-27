@@ -12,16 +12,7 @@ private let reuseIdentifier = "healtchekCell"
 
 class HealthCheckCVController: UICollectionViewController {
     
-    var healthCheckStatusLabel : String = ""
-    var healthCheckStatus : Bool = false
     
-    struct dummyTableView{
-        var categoryDate: String
-        var categoryName: String
-        var categoryImage: String
-    }
-        
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -95,7 +86,8 @@ class HealthCheckCVController: UICollectionViewController {
     //            navigationItem.titleView = segmentedController
         
             }
-        }
+ 
+}
 
     // MARK: UICollectionViewDelegate
 
