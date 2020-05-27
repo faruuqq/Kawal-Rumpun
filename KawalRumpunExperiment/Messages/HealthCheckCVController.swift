@@ -20,18 +20,6 @@ class HealthCheckCVController: UICollectionViewController {
         var categoryName: String
         var categoryImage: String
     }
-
-    struct HealthCheckReportModel {
-    var id_warga = ""
-    var healthCheckItemArray = [HealthCheckItem]()
-    var bodyTemperature : HealthCheckItem
-    var cough : HealthCheckItem
-    var flu : HealthCheckItem
-    var fever : HealthCheckItem
-    var throatPain : HealthCheckItem
-    var breath: HealthCheckItem
-    var symptomp : HealthCheckItem
-    }
         
 
     
