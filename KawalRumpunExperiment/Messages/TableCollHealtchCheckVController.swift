@@ -25,26 +25,45 @@ class TableCollHealtchCheckVController: UIViewController, UITableViewDataSource,
         tableMessages.dataSource = self
         
     }
-    
-//    func <#name#>(<#parameters#>) -> <#return type#> {
-//        <#function body#>
-//    }
-    
-    
-    
+
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return datasource.count
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
     
+    func tableView(_ tableView: UITableView, estimatedHeightForFooterInSection section: Int) -> CGFloat {
+        return 8.0
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let view = UIView()
+        view.backgroundColor = UIColor.clear
+        return view
+    }
+    
+    
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HealthCheckCell", for: indexPath)
-        print("Hai anime")
+        cell.layer.borderColor = UIColor.black.cgColor
+        cell.layer.borderWidth = 1.2
+        cell.layer.cornerRadius = 8.0
+        cell.layer.shadowColor = UIColor.black.cgColor
+        cell.layer.shadowOpacity = 0.5
+        //cell.textLabel = datasource.[indexPath.]
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        datasource[indexPath.section].healthCheckStatus.toggle()
+        guard let selectedCell = tableView.cellForRow(at: indexPath) as? TableHealthCheckData else {fatalError("Cant Convert cell")}
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    
     
     
     
