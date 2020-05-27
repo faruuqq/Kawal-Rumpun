@@ -12,12 +12,27 @@ private let reuseIdentifier = "healtchekCell"
 
 class HealthCheckCVController: UICollectionViewController {
     
+    var healthCheckStatusLabel : String = ""
+    var healthCheckStatus : Bool = false
     
     struct dummyTableView{
         var categoryDate: String
         var categoryName: String
         var categoryImage: String
     }
+
+    struct HealthCheckReportModel {
+    var id_warga = ""
+    var healthCheckItemArray = [HealthCheckItem]()
+    var bodyTemperature : HealthCheckItem
+    var cough : HealthCheckItem
+    var flu : HealthCheckItem
+    var fever : HealthCheckItem
+    var throatPain : HealthCheckItem
+    var breath: HealthCheckItem
+    var symptomp : HealthCheckItem
+    }
+        
 
     
     override func viewDidLoad() {
