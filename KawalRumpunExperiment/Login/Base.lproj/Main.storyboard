@@ -209,7 +209,7 @@
                             </barButtonItem>
                             <barButtonItem style="plain" id="kTV-h5-K2p">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="VJH-tg-ZFm">
-                                    <rect key="frame" x="295" y="178" width="45" height="30"/>
+                                    <rect key="frame" x="298" y="7" width="45" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="Lewati"/>
                                     <connections>
@@ -440,6 +440,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
+                                                    <action selector="daftar:" destination="q1P-Op-1bB" eventType="touchUpInside" id="gQU-uw-fa3"/>
                                                     <segue destination="V4b-BF-8Pq" kind="show" id="doc-y0-zAp"/>
                                                 </connections>
                                             </button>
@@ -726,7 +727,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="oSk-cx-wb7"/>
-        <segue reference="Ql7-nT-cav"/>
+        <segue reference="doc-y0-zAp"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="facebook" width="12" height="21"/>

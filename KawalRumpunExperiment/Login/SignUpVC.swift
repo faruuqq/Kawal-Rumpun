@@ -8,6 +8,20 @@
 
 import UIKit
 
+struct Registration {
+    var nama: String
+    var email: String
+    var noHP: String
+    var alamat: String
+    var rt: Int16
+    var rw: Int16
+    var password: String
+    var shareLoc: Bool
+    var famRelationType: String
+    var emailFam: String
+}
+
+
 class SignUpVC: UIViewController {
 
     
@@ -26,12 +40,36 @@ class SignUpVC: UIViewController {
     let listKeluarga = ["Ayah", "Ibu", "Saudara Laki-laki", "Saudara Perempuan", "Lainya"]
     var relationFamily = ""
     
+    var warga: Warga?
+    var famRelation: RelasiKeluarga?
+    var registrasi: Registration?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         listKeluargaTable.delegate = self
         listKeluargaTable.dataSource = self
 
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func daftar(_ sender: RoundedButtonWithShadow) {
+        registrasi?.nama = namaTF.text!
+        registrasi?.email = emailRegisterTF.text!
+        registrasi?.noHP = noHPTF.text!
+        registrasi?.alamat = alamatTF.text!
+      
+        registrasi?.rt = Int16(alamatRTTF.text!.trimmingCharacters(in: .whitespacesAndNewlines))!
+        
+        registrasi?.rw = Int16(alamatRTTF.text!.trimmingCharacters(in: .whitespacesAndNewlines))!
+        
+        if inputPassword1TF.text! == inputPassword2TF.text! {
+            registrasi?.password = inputPassword2TF.text!
+        }
+        registrasi?.shareLoc = shareLocSwitch.isOn
+    }
+    
+    func save(reg: Registration){
+        
     }
     
 
@@ -54,9 +92,8 @@ extension SignUpVC: UITableViewDelegate, UITableViewDataSource {
         cell?.accessoryType = .checkmark
         
         if let relasi = cell?.textLabel?.text {
-            relationFamily = relasi
+            registrasi?.famRelationType = relasi
         }
-        print(relationFamily)
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {

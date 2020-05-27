@@ -28,6 +28,7 @@
 		4DB5BFCA2473B90500D86F16 /* ReportSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DB5BFC92473B90500D86F16 /* ReportSB.storyboard */; };
 		4DB5BFCD2473BD1C00D86F16 /* TabBarSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DB5BFCC2473BD1C00D86F16 /* TabBarSB.storyboard */; };
 		4DB5BFCF2473D0F700D86F16 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB5BFCE2473D0F700D86F16 /* TabBarViewController.swift */; };
+		FE371CDC247E7BE3008D87B1 /* Warga+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE371CDB247E7BE3008D87B1 /* Warga+Extensions.swift */; };
 		FE523563247972E000566677 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE523562247972E000566677 /* SignUpVC.swift */; };
 		FE523567247A2AC200566677 /* GugusCovidCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE523566247A2AC200566677 /* GugusCovidCell.swift */; };
 		FE52356E247A485700566677 /* HeaderViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE52356C247A485700566677 /* HeaderViewCell.swift */; };
@@ -84,6 +85,7 @@
 		4DB5BFC92473B90500D86F16 /* ReportSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReportSB.storyboard; sourceTree = "<group>"; };
 		4DB5BFCC2473BD1C00D86F16 /* TabBarSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarSB.storyboard; sourceTree = "<group>"; };
 		4DB5BFCE2473D0F700D86F16 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		FE371CDB247E7BE3008D87B1 /* Warga+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Warga+Extensions.swift"; sourceTree = "<group>"; };
 		FE523562247972E000566677 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		FE523566247A2AC200566677 /* GugusCovidCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GugusCovidCell.swift; sourceTree = "<group>"; };
 		FE52356C247A485700566677 /* HeaderViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewCell.swift; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				4D53D1AE2472D39A003526CF /* Main.storyboard */,
+				FE371CDB247E7BE3008D87B1 /* Warga+Extensions.swift */,
 				FE523562247972E000566677 /* SignUpVC.swift */,
 				FEBFF71D2478C8720073D06E /* WelcomeLoginVC.swift */,
 				4DB5BFCE2473D0F700D86F16 /* TabBarViewController.swift */,
@@ -431,6 +434,7 @@
 				4D53D1A92472D39A003526CF /* AppDelegate.swift in Sources */,
 				4DB5BFB92473A9EE00D86F16 /* SignInVC.swift in Sources */,
 				4D53D1B32472D39A003526CF /* KawalRumpunExperiment.xcdatamodeld in Sources */,
+				FE371CDC247E7BE3008D87B1 /* Warga+Extensions.swift in Sources */,
 				4DB5BFCF2473D0F700D86F16 /* TabBarViewController.swift in Sources */,
 				FE52356E247A485700566677 /* HeaderViewCell.swift in Sources */,
 				FEF956C7247652D8007A819F /* DashboardVC.swift in Sources */,
