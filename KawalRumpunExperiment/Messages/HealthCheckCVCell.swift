@@ -10,4 +10,7 @@ import UIKit
 
 class HealthCheckCVCell: UICollectionViewCell {
     
+    @IBOutlet weak var todayLabel: UILabel!
+    @IBOutlet weak var tableVIiew: UITableView!
+    
 }
