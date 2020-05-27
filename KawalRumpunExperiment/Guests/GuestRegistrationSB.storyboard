@@ -105,6 +105,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sitting 1" translatesAutoresizingMaskIntoConstraints="NO" id="AWV-72-zom">
+                                <rect key="frame" x="59" y="196" width="306" height="265"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="IEt-rH-TJp"/>
@@ -124,4 +128,7 @@
             <point key="canvasLocation" x="952.17391304347836" y="172.76785714285714"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="sitting 1" width="220" height="261"/>
+    </resources>
 </document>
