@@ -30,18 +30,17 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         return menu.count
       }
 
-      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let cell =  tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
                    cell.textLabel?.text = menu[indexPath.row]
         cell.imageView?.image = image [indexPath.row]
-       
-
-               return(cell)
+        return(cell)
       }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let segueIdentifier: String
+        
         switch indexPath.row {
         case 0: //For "one"
              segueIdentifier = "showView1"
@@ -51,6 +50,13 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         segueIdentifier = "showView3"
         case 3: //For "four"
         segueIdentifier = "showView4"
+//        case 4 : //For "five"
+//        let alertController = UIAlertController(title: "Apakah Anda akan log out?", message: "Tetap jaga kesehatan dalam kondisi PSBB.", preferredStyle: UIAlertController.Style.alert)
+//        alertController.addAction(UIAlertAction(title: "Ya", style: UIAlertAction.Style.default, handler: nil))
+//        alertController.addAction(UIAlertAction(title: "Tidak", style: UIAlertAction.Style.default, handler: nil))
+//        self.present(alertController, animated: true, completion: nil)
+        
+    
         default: //For "three"
              segueIdentifier = "showView1"
         }

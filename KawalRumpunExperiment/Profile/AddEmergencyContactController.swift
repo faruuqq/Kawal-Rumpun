@@ -42,9 +42,18 @@ class AddEmergencyContactController: UIViewController, UITableViewDelegate, UITa
     }
 
     
+    
+    @IBAction func tambahKontakDidTapped(_ sender: UIButton) {
+        
+        let alertController = UIAlertController(title: "Tambah kontak darurat?", message: "Kontak darurat dibutuhkan ketika terjadi keadaan darurat", preferredStyle: UIAlertController.Style.alert)
+        alertController.addAction(UIAlertAction(title: "Ya", style: UIAlertAction.Style.default, handler: nil))
+        alertController.addAction(UIAlertAction(title: "Tidak", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alertController, animated: true, completion: nil)
+        
+    }
+    
+    
     override func viewDidAppear(_ animated: Bool) {
-        var list = UserDefaults.standard.object(forKey: "listItem") as? [String] ?? [String]()
-        var dateList = UserDefaults.standard.object(forKey: "dateListItem") as? [String] ?? [String]()
         myTableView.reloadData()
         
     }
