@@ -65,15 +65,15 @@ class PageCellCheckIn: UICollectionViewCell {
             containerView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 40),
             containerView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
             containerView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
-            containerView.heightAnchor.constraint(equalTo: heightAnchor),
+            containerView.bottomAnchor.constraint(equalTo: textContainer.bottomAnchor),
             
-            imageContainer.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 60),
+            imageContainer.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 40),
             imageContainer.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
-            imageContainer.heightAnchor.constraint(equalTo: containerView.heightAnchor, multiplier: 0.35),
+            imageContainer.heightAnchor.constraint(equalToConstant: 160),
             
             textContainer.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 20),
             textContainer.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -20),
-            textContainer.topAnchor.constraint(equalTo: imageContainer.bottomAnchor, constant: 50)
+            textContainer.topAnchor.constraint(equalTo: imageContainer.bottomAnchor, constant: 30)
         
         ])
     }

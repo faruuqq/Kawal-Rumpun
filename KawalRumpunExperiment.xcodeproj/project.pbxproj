@@ -255,10 +255,10 @@
 			isa = PBXGroup;
 			children = (
 				4DB5BFC72473B8FC00D86F16 /* CheckInOutSB.storyboard */,
+				2A698B972476AA1400FE9CD8 /* CheckOutVC.swift */,
 				2AFF5838247C837B00637FCA /* CheckInVC.swift */,
 				2AFF583E247CBD7300637FCA /* PageCellCheckIn.swift */,
 				2AFF583C247CBC7200637FCA /* PageCheckIn.swift */,
-				2A698B972476AA1400FE9CD8 /* CheckOutVC.swift */,
 			);
 			path = CheckInOut;
 			sourceTree = "<group>";

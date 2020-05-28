@@ -3,19 +3,26 @@ import CoreData
 
 class CheckOutVC: UIViewController {
     
+    let scrollViewContainer: UIScrollView = {
+        let scrollView = UIScrollView()
+        return scrollView
+    }()
+    
     var checkPoint = [CheckPoint]()
     
     let context = AppDelegate.viewContext
-        
-    //MARK: - Item for top container
+    
+    //MARK: - Items for container
+    
+    //Image Top
     let imageTop: UIImageView = {
         let mainImageTop = UIImageView(image: #imageLiteral(resourceName: "CheckInImageTop"))
-        mainImageTop.sizeThatFits(CGSize(width: 50, height: 50))
+        //        mainImageTop.sizeThatFits(CGSize(width: 50, height: 50))
         mainImageTop.contentMode = .scaleAspectFit
         return mainImageTop
     }()
     
-    //MARK: - Item for bottom container
+    //Text Container
     let containerText: UITextView = {
         let textView = UITextView()
         
@@ -31,6 +38,7 @@ class CheckOutVC: UIViewController {
         return textView
     }()
     
+    //Button Container
     let buttonCheckOut: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Keluar Rumah", for: .normal)
@@ -48,82 +56,64 @@ class CheckOutVC: UIViewController {
             
             self.newEntry()
             print("user has successfully checked out")
-//            print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
+            //            print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
             
             let alertConfirmation = UIAlertController(title: "Terima Kasih", message: "Anda telah berhasil melaporkan status Anda. Harap tetap menjaga jarak.", preferredStyle: .alert)
             alertConfirmation.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
-//                self.performSegue(withIdentifier: "toCheckInVC", sender: self)
+                //                self.performSegue(withIdentifier: "toCheckInVC", sender: self)
                 self.navigationController?.navigationBar.isHidden = true
                 self.navigationController?.show(CheckInVC(), sender: self)
-//                let vc = CheckInVC()
-//                self.navigationController?.pushViewController(vc, animated: true)
+                //                let vc = CheckInVC()
+                //                self.navigationController?.pushViewController(vc, animated: true)
             }))
             self.present(alertConfirmation, animated: true)
         }))
         alert.addAction(UIAlertAction(title: "Tidak", style: .cancel, handler: nil))
         self.present(alert, animated: true)
     }
-
+    
     //MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = UIColor.white
-        topContainerLayout()
-        bottomContainerLayout()
+        layout()
     }
     
     //MARK: - Functions
     
-    //Top Container
-    func topContainerLayout() {
-        let containerView = UIView()
-//        containerView.backgroundColor = .gray
-        view.addSubview(containerView)
-        containerView.addSubview(imageTop)
-        
-        containerView.translatesAutoresizingMaskIntoConstraints = false
+    func layout() {
+        scrollViewContainer.translatesAutoresizingMaskIntoConstraints = false
         imageTop.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            containerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            containerView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            containerView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            containerView.heightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.heightAnchor, multiplier: 0.5),
-
-            imageTop.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
-            imageTop.centerYAnchor.constraint(equalTo: containerView.centerYAnchor, constant: 20),
-            imageTop.heightAnchor.constraint(equalTo: containerView.heightAnchor, multiplier: 0.7)
-        ])
-    }
-    
-    //Bottom Container
-    func bottomContainerLayout() {
-        let containerView = UIView()
-//        containerView.backgroundColor = .yellow
-        view.addSubview(containerView)
-        containerView.addSubview(containerText)
-        containerView.addSubview(buttonCheckOut)
-        
-        containerView.translatesAutoresizingMaskIntoConstraints = false
         containerText.translatesAutoresizingMaskIntoConstraints = false
         buttonCheckOut.translatesAutoresizingMaskIntoConstraints = false
         
+        view.addSubview(scrollViewContainer)
+        
+        scrollViewContainer.addSubview(imageTop)
+        scrollViewContainer.addSubview(containerText)
+        scrollViewContainer.addSubview(buttonCheckOut)
+        
         NSLayoutConstraint.activate([
-            containerView.heightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.heightAnchor, multiplier: 0.5),
-            containerView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            containerView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            containerView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            scrollViewContainer.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            scrollViewContainer.widthAnchor.constraint(equalTo: view.widthAnchor),
+            scrollViewContainer.topAnchor.constraint(equalTo: view.topAnchor),
+            scrollViewContainer.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
-            containerText.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 10),
-            containerText.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
-            containerText.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 10),
-            containerText.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -10),
+            containerText.topAnchor.constraint(equalTo: imageTop.bottomAnchor, constant: 30),
+            containerText.widthAnchor.constraint(equalTo: scrollViewContainer.widthAnchor, multiplier: 0.9),
+            containerText.centerXAnchor.constraint(equalTo: scrollViewContainer.centerXAnchor),
             
+            imageTop.centerXAnchor.constraint(equalTo: scrollViewContainer.centerXAnchor),
+            imageTop.heightAnchor.constraint(equalToConstant: 241),
+            imageTop.widthAnchor.constraint(equalToConstant: 181),
+            imageTop.topAnchor.constraint(equalTo: scrollViewContainer.topAnchor, constant: 20),
+            
+            buttonCheckOut.topAnchor.constraint(equalTo: containerText.bottomAnchor, constant: 40),
             buttonCheckOut.heightAnchor.constraint(equalToConstant: 50),
-            buttonCheckOut.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -20),
-            buttonCheckOut.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 10),
-            buttonCheckOut.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -10),
+            buttonCheckOut.bottomAnchor.constraint(equalTo: scrollViewContainer.bottomAnchor, constant: -30),
+            buttonCheckOut.centerXAnchor.constraint(equalTo: scrollViewContainer.centerXAnchor),
+            buttonCheckOut.widthAnchor.constraint(equalTo: scrollViewContainer.widthAnchor, constant: -30)
         ])
     }
     
@@ -145,7 +135,7 @@ class CheckOutVC: UIViewController {
     func fetch() {
         let request: NSFetchRequest<CheckPoint> = CheckPoint.fetchRequest()
         do {
-        checkPoint = try context.fetch(request)
+            checkPoint = try context.fetch(request)
         } catch {
             print("Error fetching data from context \(error)")
         }

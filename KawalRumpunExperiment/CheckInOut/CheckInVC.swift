@@ -93,12 +93,12 @@ class CheckInVC: UIViewController {
             containerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             containerView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             containerView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            containerView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.6),
+            containerView.bottomAnchor.constraint(equalTo: collectionViewContainer.bottomAnchor, constant: 10),
             
             collectionViewContainer.topAnchor.constraint(equalTo: containerView.topAnchor),
             collectionViewContainer.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
             collectionViewContainer.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
-            collectionViewContainer.heightAnchor.constraint(equalTo: containerView.heightAnchor),
+            collectionViewContainer.heightAnchor.constraint(equalToConstant: 430),
             
             buttonContainer.heightAnchor.constraint(equalToConstant: 50),
             buttonContainer.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: 80),
@@ -106,7 +106,7 @@ class CheckInVC: UIViewController {
             buttonContainer.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
             
             pageControlContainer.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
-            pageControlContainer.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: 10)
+            pageControlContainer.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: 20)
         ])
     }
     
