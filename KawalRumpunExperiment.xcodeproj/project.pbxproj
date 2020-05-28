@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D34E2B82476D41A001330F0 /* PanicVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D34E2B72476D41A001330F0 /* PanicVC.swift */; };
 		3D32A595247D7DC70002BF84 /* GuestCVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D32A594247D7DC70002BF84 /* GuestCVController.swift */; };
 		3D32A597247D83F00002BF84 /* GuestCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D32A596247D83F00002BF84 /* GuestCVCell.swift */; };
 		3D712FE1247AEF200037E6EC /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D712FE0247AEF200037E6EC /* MessagesViewController.swift */; };
@@ -68,6 +69,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D34E2B72476D41A001330F0 /* PanicVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanicVC.swift; sourceTree = "<group>"; };
 		3D32A594247D7DC70002BF84 /* GuestCVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestCVController.swift; sourceTree = "<group>"; };
 		3D32A596247D83F00002BF84 /* GuestCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestCVCell.swift; sourceTree = "<group>"; };
 		3D712FE0247AEF200037E6EC /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
@@ -260,6 +262,7 @@
 			isa = PBXGroup;
 			children = (
 				4DB5BFC12473B8D600D86F16 /* PanicSB.storyboard */,
+				3D34E2B72476D41A001330F0 /* PanicVC.swift */,
 			);
 			path = Panic;
 			sourceTree = "<group>";
@@ -472,6 +475,7 @@
 				2A7EFE322475321B00E550B6 /* ButtonRounded.swift in Sources */,
 				2A7EFE342475334300E550B6 /* ViewRounded.swift in Sources */,
 				4D53D1B32472D39A003526CF /* KawalRumpunExperiment.xcdatamodeld in Sources */,
+				3D34E2B82476D41A001330F0 /* PanicVC.swift in Sources */,
 				2AFF5839247C837B00637FCA /* CheckInVC.swift in Sources */,
 				4DB5BFCF2473D0F700D86F16 /* TabBarViewController.swift in Sources */,
 				3D776EA1247D19A400A1E466 /* ReportCVCell.swift in Sources */,
@@ -657,6 +661,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4L7CSTPQKF;
 				INFOPLIST_FILE = KawalRumpunExperiment/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -675,6 +680,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4L7CSTPQKF;
 				INFOPLIST_FILE = KawalRumpunExperiment/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
