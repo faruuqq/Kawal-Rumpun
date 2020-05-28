@@ -59,7 +59,8 @@
         <attribute name="photo" optional="YES" attributeType="Binary"/>
         <attribute name="type" optional="YES" attributeType="String"/>
     </entity>
-    <entity name="Warga" representedClassName=".Warga" syncable="YES" codeGenerationType="class">
+    <entity name="Warga" representedClassName="Warga" syncable="YES" codeGenerationType="class">
+        <attribute name="alamat" optional="YES" attributeType="String"/>
         <attribute name="baseLatitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="baseLongitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="currentLatitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
@@ -82,6 +83,6 @@
         <element name="PesanRT" positionX="0" positionY="117" width="128" height="88"/>
         <element name="RelasiKeluarga" positionX="-54" positionY="-9" width="128" height="118"/>
         <element name="Report" positionX="-36" positionY="9" width="128" height="133"/>
-        <element name="Warga" positionX="-63" positionY="-18" width="128" height="223"/>
+        <element name="Warga" positionX="-63" positionY="-18" width="128" height="238"/>
     </elements>
 </model>

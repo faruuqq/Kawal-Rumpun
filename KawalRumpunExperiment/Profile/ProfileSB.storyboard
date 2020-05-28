@@ -464,7 +464,7 @@
         <scene sceneID="tGk-If-KsL">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wCl-TM-hM3" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" id="7sD-Jj-VL5"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="profile" id="7sD-Jj-VL5"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="YdR-pd-nuK">
@@ -493,5 +493,6 @@
     <resources>
         <image name="Atur Kontak-1" width="146" height="139"/>
         <image name="Onboarding Screen" width="375" height="356"/>
+        <image name="profile" width="23" height="23"/>
     </resources>
 </document>

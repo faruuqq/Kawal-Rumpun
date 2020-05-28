@@ -87,7 +87,7 @@
         <scene sceneID="2yS-U6-5x6">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="23Z-rx-HKS" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Messages" id="8KZ-2A-yay"/>
+                    <tabBarItem key="tabBarItem" title="Messages" image="messages" id="8KZ-2A-yay"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="m8h-Nw-Me9">
@@ -573,5 +573,6 @@
     <resources>
         <image name="checkmark.rectangle.fill" catalog="system" width="128" height="93"/>
         <image name="sitting 1" width="295" height="350"/>
+        <image name="messages" width="23.5" height="23.5"/>
     </resources>
 </document>
