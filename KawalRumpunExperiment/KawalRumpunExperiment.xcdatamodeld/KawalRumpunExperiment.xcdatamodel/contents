@@ -3,8 +3,8 @@
     <entity name="CheckPoint" representedClassName=".CheckPoint" syncable="YES" codeGenerationType="class">
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="id" optional="YES" attributeType="String"/>
-        <attribute name="id_warga" optional="YES" attributeType="String"/>
-        <attribute name="isCheckOut" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="id_warga" attributeType="String"/>
+        <attribute name="isCheckOut" attributeType="Boolean" usesScalarValueType="YES"/>
     </entity>
     <entity name="Guest" representedClassName=".Guest" syncable="YES" codeGenerationType="class">
         <attribute name="guestAddress" optional="YES" attributeType="String"/>

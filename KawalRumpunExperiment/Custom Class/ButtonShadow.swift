@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-class ButtonShadow: UIView {
+class ButtonShadow: UIButton {
     
     @IBInspectable var ShadowColor: UIColor = UIColor.clear {
         didSet {
