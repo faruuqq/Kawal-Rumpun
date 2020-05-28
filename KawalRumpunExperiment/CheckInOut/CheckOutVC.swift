@@ -56,15 +56,16 @@ class CheckOutVC: UIViewController {
             
             self.newEntry()
             print("user has successfully checked out")
-            //            print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
+            //  print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
             
             let alertConfirmation = UIAlertController(title: "Terima Kasih", message: "Anda telah berhasil melaporkan status Anda. Harap tetap menjaga jarak.", preferredStyle: .alert)
             alertConfirmation.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
-                //                self.performSegue(withIdentifier: "toCheckInVC", sender: self)
+                
                 self.navigationController?.navigationBar.isHidden = true
                 self.navigationController?.show(CheckInVC(), sender: self)
-                //                let vc = CheckInVC()
-                //                self.navigationController?.pushViewController(vc, animated: true)
+                //  self.performSegue(withIdentifier: "toCheckInVC", sender: self)
+                //  let vc = CheckInVC()
+                //  self.navigationController?.pushViewController(vc, animated: true)
             }))
             self.present(alertConfirmation, animated: true)
         }))
@@ -81,7 +82,6 @@ class CheckOutVC: UIViewController {
     }
     
     //MARK: - Functions
-    
     func layout() {
         scrollViewContainer.translatesAutoresizingMaskIntoConstraints = false
         imageTop.translatesAutoresizingMaskIntoConstraints = false
@@ -127,6 +127,7 @@ class CheckOutVC: UIViewController {
     func saveEntry() {
         do {
             try context.save()
+            print("data saved")
         } catch {
             print("Error saving context \(error)")
         }

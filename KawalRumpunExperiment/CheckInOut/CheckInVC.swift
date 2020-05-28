@@ -44,11 +44,12 @@ class CheckInVC: UIViewController {
         print("user has successfully checked in")
         let alert = UIAlertController(title: "Terima Kasih.", message: "Anda telah berhasil melaporkan status Anda. Harap tetap menjaga jarak.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
-            //                    self.performSegue(withIdentifier: "toCheckInVCPageView", sender: self)
+
             self.navigationController?.navigationBar.isHidden = true
             self.navigationController?.show(CheckOutVC(), sender: self)
-            //                let vc = CheckInVC()
-            //                self.navigationController?.pushViewController(vc, animated: true)
+            //  self.performSegue(withIdentifier: "toCheckInVCPageView", sender: self)
+            //  let vc = CheckInVC()
+            //  self.navigationController?.pushViewController(vc, animated: true)
         }))
         self.present(alert, animated: true)
     }
@@ -124,6 +125,7 @@ class CheckInVC: UIViewController {
     func saveEntry() {
         do {
             try context.save()
+            print("data saved")
         } catch {
             print("Error saving context \(error)")
         }
