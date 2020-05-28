@@ -27,7 +27,7 @@ class PanicVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tabBarController?.tabBar.isHidden = true
+//        self.tabBarController?.tabBar.isHidden = true
         // Do any additional setup after loading the view.
         
     }
