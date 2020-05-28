@@ -77,8 +77,6 @@
                         <outlet property="tableMessages" destination="Tc8-EC-8p5" id="tbX-L4-I4b"/>
                         <segue destination="adY-KK-KMA" kind="show" identifier="toReportCell" id="2LH-iu-MZc"/>
                         <segue destination="PfA-ad-Vsd" kind="show" identifier="toGuestCell" id="Hpd-aA-Mmf"/>
-                        <segue destination="Xct-Sc-lVB" kind="show" identifier="toHealthCheck" id="o7g-XB-BL2"/>
-                        <segue destination="xh4-wG-bvf" kind="show" identifier="toHealthCheckv2" id="TTc-Ar-EU1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v3Y-Kb-oDp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -452,7 +450,7 @@
         <!--Table Coll Healtch CheckV Controller-->
         <scene sceneID="fkM-4i-jXG">
             <objects>
-                <viewController id="xh4-wG-bvf" customClass="TableCollHealtchCheckVController" customModule="KawalRumpunExperiment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="xh4-wG-bvf" customClass="TableCollHealtchCheckVController" customModule="KawalRumpunExperiment" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="A6M-55-Epl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -526,7 +524,7 @@
         <!--Cek Coba View Controller-->
         <scene sceneID="UNa-Fj-zCD">
             <objects>
-                <viewController id="fFW-al-MKz" customClass="CekCobaViewController" customModule="KawalRumpunExperiment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fFW-al-MKz" customClass="CekCobaViewController" customModule="KawalRumpunExperiment" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3oP-Kg-2XW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
