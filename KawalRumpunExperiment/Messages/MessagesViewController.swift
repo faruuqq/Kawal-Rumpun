@@ -188,7 +188,7 @@ class MessagesViewController: UIViewController, UISearchBarDelegate, UITableView
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let category = categoriesDummy[indexPath.row]
-        performSegue(withIdentifier: "toHealthCheckv2" , sender: category)
+        performSegue(withIdentifier: "toReportCell" , sender: category)
     }
     
 
