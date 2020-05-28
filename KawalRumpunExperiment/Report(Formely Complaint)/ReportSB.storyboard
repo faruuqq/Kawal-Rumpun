@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yN3-IG-20q">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yN3-IG-20q">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Report FirstVC-->
+        <!--Lapor-->
         <scene sceneID="67C-69-EFA">
             <objects>
                 <viewController id="yN3-IG-20q" customClass="ReportFirstVC" customModule="KawalRumpunExperiment" customModuleProvider="target" sceneMemberID="viewController">
@@ -26,12 +26,6 @@
                                 <rect key="frame" x="20" y="165" width="164" height="20.666666666666657"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lapor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5o3-Lk-29X">
-                                <rect key="frame" x="20" y="64" width="107" height="48"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tkC-LN-qmt">
@@ -130,8 +124,6 @@
                             <constraint firstItem="HXB-0E-6BG" firstAttribute="trailing" secondItem="CkD-ZH-1pG" secondAttribute="trailing" constant="20" id="05a-wp-DY2"/>
                             <constraint firstItem="QG0-CO-coW" firstAttribute="top" secondItem="95u-Pm-8yP" secondAttribute="top" id="0El-gD-TWq"/>
                             <constraint firstItem="89V-HP-2W9" firstAttribute="leading" secondItem="HXB-0E-6BG" secondAttribute="leading" constant="20" id="2hC-gH-Z32"/>
-                            <constraint firstItem="5o3-Lk-29X" firstAttribute="top" secondItem="HXB-0E-6BG" secondAttribute="top" constant="20" id="4n0-c5-g2H"/>
-                            <constraint firstItem="5o3-Lk-29X" firstAttribute="leading" secondItem="HXB-0E-6BG" secondAttribute="leading" constant="20" id="4ym-e6-tbb"/>
                             <constraint firstItem="vfe-CK-bgE" firstAttribute="leading" secondItem="HXB-0E-6BG" secondAttribute="leading" constant="20" id="83F-aU-xgh"/>
                             <constraint firstItem="Fy3-Ue-G8i" firstAttribute="leading" secondItem="HXB-0E-6BG" secondAttribute="leading" constant="20" id="Atm-hI-kVn"/>
                             <constraint firstItem="CkD-ZH-1pG" firstAttribute="leading" secondItem="HXB-0E-6BG" secondAttribute="leading" constant="20" id="C7Y-Yv-GXt"/>
@@ -158,7 +150,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HXB-0E-6BG"/>
                     </view>
-                    <navigationItem key="navigationItem" id="p9w-fn-L8G"/>
+                    <navigationItem key="navigationItem" title="Lapor" id="p9w-fn-L8G"/>
                     <connections>
                         <outlet property="complaintTextField" destination="CkD-ZH-1pG" id="HEp-RA-dtR"/>
                         <outlet property="fasilitasButton" destination="my8-CB-bIc" id="O4h-wh-g2o"/>

@@ -28,6 +28,8 @@ class ReportFirstVC: UIViewController {
         } else {
             currentIdWarga = "id_dummy_warga"
         }
+        
+        setupNavBAr()
         thisReport.id_warga = currentIdWarga
         // Do any additional setup after loading the view.
         setupView()
@@ -109,6 +111,27 @@ class ReportFirstVC: UIViewController {
         if let context = getViewContext() {
             thisReport.persist(to: context)
         }
+    }
+
+    func setupNavBAr(){
+        //input nama title
+//        self.navigationItem.title = "Pesan Masuk"
+        //input nvaigationtitle ke pojok kiri dan besar
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
+        //setwarna NavigationBar
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        //warna biru yang sama dengan mas Firza
+        appearance.backgroundColor = UIColor(red:0.333, green:0.541, blue:0.910, alpha:1.00)
+        //merubah titlecolor
+        appearance.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+        
+        //implementasikan di view yang background dan large textnya
+        navigationItem.standardAppearance = appearance
+        navigationItem.scrollEdgeAppearance = appearance
+        navigationItem.compactAppearance = appearance
+        
     }
     
     
