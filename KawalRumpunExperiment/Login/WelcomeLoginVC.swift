@@ -11,15 +11,14 @@ import UIKit
 class WelcomeLoginVC: UIViewController {
 
     @IBOutlet weak var goToLoginButton: RoundedButtonWithShadow!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setTitleGoToLoginAttr()
-        
     }
     
     func setTitleGoToLoginAttr() {
-        
         // adding attribute for normal state
         let normalAttribute = NSMutableAttributedString(string: goToLoginButton.titleLabel?.text ?? "")
         normalAttribute.addAttribute(.foregroundColor, value: UIColor.lightGray, range: NSRange(location: 0, length: 5))
@@ -31,7 +30,7 @@ class WelcomeLoginVC: UIViewController {
         highlightedAttribute.addAttribute(.foregroundColor, value: UIColor.lightGray, range: NSRange(location: 0, length: 31))
         highlightedAttribute.addAttribute(.font, value: UIFont.systemFont(ofSize: 20), range: NSRange(location: 0, length: 5) )
         
-        // set attribute
+        // set attribute button
         goToLoginButton.setAttributedTitle(normalAttribute, for: .normal)
         goToLoginButton.setAttributedTitle(highlightedAttribute, for: .highlighted)
       

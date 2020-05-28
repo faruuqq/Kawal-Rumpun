@@ -9,7 +9,6 @@
 import UIKit
 
 
-
 class SignUpVC: UIViewController {
 
     @IBOutlet weak var namaTF: UITextField!
@@ -24,7 +23,7 @@ class SignUpVC: UIViewController {
     @IBOutlet weak var emailKeluargaTF: UITextField!
     @IBOutlet weak var listKeluargaTable: UITableView!
     
-    let listKeluarga = ["Ayah", "Ibu", "Saudara Laki-laki", "Saudara Perempuan", "Lainya"]
+    let listKeluarga = ["Ayah", "Ibu", "Suami", "Istri", "Saudara Laki-laki", "Saudara Perempuan", "Lainya"]
     var relationFamily = ""
     var registrasi: Registration?
     
@@ -32,6 +31,7 @@ class SignUpVC: UIViewController {
         super.viewDidLoad()
         listKeluargaTable.delegate = self
         listKeluargaTable.dataSource = self
+        print(shareLocSwitch.isOn)
 
         // Do any additional setup after loading the view.
     }
@@ -56,12 +56,9 @@ class SignUpVC: UIViewController {
         }
         registrasi?.shareLoc = shareLocSwitch.isOn
         
-        registrasi?.save(viewContext: AppDelegate.viewContext)
+        registrasi?.saveToPersistent(viewContext: AppDelegate.viewContext)
  
     }
-    
-
-    
 
     /*
     // MARK: - Navigation
@@ -75,31 +72,4 @@ class SignUpVC: UIViewController {
 
 }
 
-extension SignUpVC: UITableViewDelegate, UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath)
-        cell?.accessoryType = .checkmark
-        
-        if let relasi = cell?.textLabel?.text {
-            relationFamily = relasi
-        }
-    }
-    
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath)
-        cell?.accessoryType = .none
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return listKeluarga.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = listKeluargaTable.dequeueReusableCell(withIdentifier: "statusKeluargaCell", for: indexPath)
-        cell.textLabel?.text = listKeluarga[indexPath.row]
-        return cell
-    }
-    
-    
-}
+

@@ -21,7 +21,7 @@ struct Registration {
     var famRelationType: String
     var emailFam: String
     
-    func save(viewContext: NSManagedObjectContext){
+    func saveToPersistent(viewContext: NSManagedObjectContext){
         let coreDataWarga = Warga(context: viewContext)
         coreDataWarga.name = nama
         coreDataWarga.email = email
