@@ -30,10 +30,6 @@
 		4DB5BFCF2473D0F700D86F16 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB5BFCE2473D0F700D86F16 /* TabBarViewController.swift */; };
 		FE371CE0247F20D5008D87B1 /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE371CDF247F20D5008D87B1 /* Registration.swift */; };
 		FE371CE2247F9F3F008D87B1 /* SignUpVC+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE371CE1247F9F3F008D87B1 /* SignUpVC+Extension.swift */; };
-		FE371CE7247FA6D8008D87B1 /* ViewRounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE371CE3247FA6D8008D87B1 /* ViewRounded.swift */; };
-		FE371CE8247FA6D8008D87B1 /* ButtonRounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE371CE4247FA6D8008D87B1 /* ButtonRounded.swift */; };
-		FE371CE9247FA6D8008D87B1 /* ViewShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE371CE5247FA6D8008D87B1 /* ViewShadow.swift */; };
-		FE371CEA247FA6D8008D87B1 /* ButtonShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE371CE6247FA6D8008D87B1 /* ButtonShadow.swift */; };
 		FE523563247972E000566677 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE523562247972E000566677 /* SignUpVC.swift */; };
 		FE523567247A2AC200566677 /* GugusCovidCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE523566247A2AC200566677 /* GugusCovidCell.swift */; };
 		FE52356E247A485700566677 /* HeaderViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE52356C247A485700566677 /* HeaderViewCell.swift */; };
@@ -92,10 +88,6 @@
 		4DB5BFCE2473D0F700D86F16 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		FE371CDF247F20D5008D87B1 /* Registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registration.swift; sourceTree = "<group>"; };
 		FE371CE1247F9F3F008D87B1 /* SignUpVC+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUpVC+Extension.swift"; sourceTree = "<group>"; };
-		FE371CE3247FA6D8008D87B1 /* ViewRounded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewRounded.swift; path = "../../../../../../../Downloads/Custom Class/ViewRounded.swift"; sourceTree = "<group>"; };
-		FE371CE4247FA6D8008D87B1 /* ButtonRounded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ButtonRounded.swift; path = "../../../../../../../Downloads/Custom Class/ButtonRounded.swift"; sourceTree = "<group>"; };
-		FE371CE5247FA6D8008D87B1 /* ViewShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewShadow.swift; path = "../../../../../../../Downloads/Custom Class/ViewShadow.swift"; sourceTree = "<group>"; };
-		FE371CE6247FA6D8008D87B1 /* ButtonShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ButtonShadow.swift; path = "../../../../../../../Downloads/Custom Class/ButtonShadow.swift"; sourceTree = "<group>"; };
 		FE523562247972E000566677 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		FE523566247A2AC200566677 /* GugusCovidCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GugusCovidCell.swift; sourceTree = "<group>"; };
 		FE52356C247A485700566677 /* HeaderViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewCell.swift; sourceTree = "<group>"; };
@@ -155,7 +147,6 @@
 		4D53D1A72472D39A003526CF /* KawalRumpunExperiment */ = {
 			isa = PBXGroup;
 			children = (
-				FEF956C824769F5C007A819F /* Custom Class */,
 				4DB5BFC02473B19200D86F16 /* Report(Formely Complaint) */,
 				4DB5BFB52473A7A300D86F16 /* CheckInOut */,
 				4DB5BFB42473A79100D86F16 /* Guests */,
@@ -213,6 +204,9 @@
 		4DB5BFAE2473A76000D86F16 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				FEF956C924769FCC007A819F /* RoundedButtonWithShadow.swift */,
+				FEF956CB2476A2CD007A819F /* RoundedViewWithShadow.swift */,
+				FEF956CD2476A889007A819F /* RoundedTableWithShadow.swift */,
 				4DB5BFBA2473AB7600D86F16 /* DashbordSB.storyboard */,
 				FEF956C6247652D8007A819F /* DashboardVC.swift */,
 				FE523566247A2AC200566677 /* GugusCovidCell.swift */,
@@ -284,20 +278,6 @@
 				4DB5BFCC2473BD1C00D86F16 /* TabBarSB.storyboard */,
 			);
 			path = TabBar;
-			sourceTree = "<group>";
-		};
-		FEF956C824769F5C007A819F /* Custom Class */ = {
-			isa = PBXGroup;
-			children = (
-				FEF956C924769FCC007A819F /* RoundedButtonWithShadow.swift */,
-				FE371CE4247FA6D8008D87B1 /* ButtonRounded.swift */,
-				FE371CE6247FA6D8008D87B1 /* ButtonShadow.swift */,
-				FE371CE3247FA6D8008D87B1 /* ViewRounded.swift */,
-				FE371CE5247FA6D8008D87B1 /* ViewShadow.swift */,
-				FEF956CB2476A2CD007A819F /* RoundedViewWithShadow.swift */,
-				FEF956CD2476A889007A819F /* RoundedTableWithShadow.swift */,
-			);
-			path = "Custom Class";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -441,13 +421,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE371CE9247FA6D8008D87B1 /* ViewShadow.swift in Sources */,
 				FEF956CC2476A2CD007A819F /* RoundedViewWithShadow.swift in Sources */,
-				FE371CE8247FA6D8008D87B1 /* ButtonRounded.swift in Sources */,
 				FEBFF71E2478C8720073D06E /* WelcomeLoginVC.swift in Sources */,
 				4D53D1AD2472D39A003526CF /* ViewController.swift in Sources */,
 				FEF956CA24769FCC007A819F /* RoundedButtonWithShadow.swift in Sources */,
-				FE371CE7247FA6D8008D87B1 /* ViewRounded.swift in Sources */,
 				FE371CE0247F20D5008D87B1 /* Registration.swift in Sources */,
 				FEF956CE2476A889007A819F /* RoundedTableWithShadow.swift in Sources */,
 				4D53D1A92472D39A003526CF /* AppDelegate.swift in Sources */,
@@ -461,7 +438,6 @@
 				4D53D1AB2472D39A003526CF /* SceneDelegate.swift in Sources */,
 				FE523567247A2AC200566677 /* GugusCovidCell.swift in Sources */,
 				4DB5BFB72473A9C100D86F16 /* KawalRumpunVC.swift in Sources */,
-				FE371CEA247FA6D8008D87B1 /* ButtonShadow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
