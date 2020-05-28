@@ -1,36 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZNc-Kz-jRL">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="ipad12_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Item-->
         <scene sceneID="fRk-Kb-GsY">
             <objects>
-                <viewController id="ZNc-Kz-jRL" sceneMemberID="viewController">
+                <viewController id="ZNc-Kz-jRL" customClass="HealthCheckFirstVC" customModule="KawalRumpunExperiment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OoU-IV-Tpq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HealthCheck" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e74-ND-UNf">
-                                <rect key="frame" x="20" y="118" width="191" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selasa, 12 Mei 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bxa-eQ-BbQ">
+                                <rect key="frame" x="20" y="78" width="153.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QPW-kX-hI4">
+                                <rect key="frame" x="20" y="132" width="977" height="998"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HealthCheckCell" id="CU7-Cw-ydv" customClass="HealthCheckCell" customModule="KawalRumpunExperiment" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="977" height="51.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CU7-Cw-ydv" id="hvl-ef-HRe">
+                                            <rect key="frame" x="0.0" y="0.0" width="977" height="51.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YNu-Ym-eim">
+                                                    <rect key="frame" x="23" y="13" width="29" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </view>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkmark.rectangle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Soe-mz-yIp">
+                                                    <rect key="frame" x="20" y="7" width="34" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cek Kesehatan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UWg-XZ-SXK">
+                                                    <rect key="frame" x="66" y="11" width="281" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="healthCheckListLabel" destination="UWg-XZ-SXK" id="PfV-ia-Qke"/>
+                                            <outlet property="tickBackground" destination="YNu-Ym-eim" id="WCu-PA-Hcv"/>
+                                            <outlet property="tickImageView" destination="Soe-mz-yIp" id="LxZ-mc-G4x"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zMr-tP-Cvl">
+                                <rect key="frame" x="20" y="1226" width="984" height="47"/>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="fL4-UB-oiV"/>
+                                </constraints>
+                                <state key="normal" title="Kirim">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendTapped:" destination="ZNc-Kz-jRL" eventType="touchUpInside" id="m1i-xs-pXI"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kami sangat menyarankan Anda untuk tetap menjaga  jarak dan kesehatan demi keluarga Anda" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VJO-qW-SL2">
+                                <rect key="frame" x="20" y="1166.5" width="999" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cek Kesehatan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e74-ND-UNf">
+                                <rect key="frame" x="20" y="15" width="262" height="43"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="VJO-qW-SL2" firstAttribute="top" secondItem="QPW-kX-hI4" secondAttribute="bottom" constant="36.5" id="1Mm-s7-weH"/>
+                            <constraint firstItem="Bxa-eQ-BbQ" firstAttribute="top" secondItem="e74-ND-UNf" secondAttribute="bottom" constant="20" id="1U8-Rb-2ii"/>
+                            <constraint firstItem="Mc0-lI-yAN" firstAttribute="bottom" secondItem="zMr-tP-Cvl" secondAttribute="bottom" constant="28" id="2f5-fW-wFG"/>
+                            <constraint firstItem="Mc0-lI-yAN" firstAttribute="trailing" secondItem="zMr-tP-Cvl" secondAttribute="trailing" constant="20" id="D5A-Eb-moy"/>
+                            <constraint firstItem="QPW-kX-hI4" firstAttribute="top" secondItem="Bxa-eQ-BbQ" secondAttribute="bottom" constant="33" id="ILn-Kr-0aN"/>
+                            <constraint firstItem="e74-ND-UNf" firstAttribute="top" secondItem="Mc0-lI-yAN" secondAttribute="top" constant="15" id="LVQ-Cl-LDC"/>
+                            <constraint firstItem="Mc0-lI-yAN" firstAttribute="trailing" secondItem="QPW-kX-hI4" secondAttribute="trailing" constant="27" id="Lih-x8-Mky"/>
+                            <constraint firstItem="zMr-tP-Cvl" firstAttribute="top" secondItem="VJO-qW-SL2" secondAttribute="bottom" constant="21" id="NyM-jR-Shx"/>
+                            <constraint firstItem="VJO-qW-SL2" firstAttribute="leading" secondItem="Mc0-lI-yAN" secondAttribute="leading" constant="20" id="SHI-so-lSP"/>
+                            <constraint firstItem="QPW-kX-hI4" firstAttribute="leading" secondItem="Mc0-lI-yAN" secondAttribute="leading" constant="20" id="aV3-T8-7jV"/>
+                            <constraint firstItem="e74-ND-UNf" firstAttribute="leading" secondItem="Mc0-lI-yAN" secondAttribute="leading" constant="20" id="bUR-2d-lfX"/>
+                            <constraint firstItem="zMr-tP-Cvl" firstAttribute="leading" secondItem="Mc0-lI-yAN" secondAttribute="leading" constant="20" id="gsQ-sz-x4g"/>
+                            <constraint firstItem="Bxa-eQ-BbQ" firstAttribute="leading" secondItem="Mc0-lI-yAN" secondAttribute="leading" constant="20" id="h8J-MF-Zh1"/>
+                            <constraint firstItem="Mc0-lI-yAN" firstAttribute="trailing" secondItem="VJO-qW-SL2" secondAttribute="trailing" constant="5" id="jtf-kC-6x4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Mc0-lI-yAN"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="tdd-Ig-SyO"/>
                     <navigationItem key="navigationItem" id="9AK-LJ-hwu"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="sendButton" destination="zMr-tP-Cvl" id="qp8-Do-KUU"/>
+                        <outlet property="tableView" destination="QPW-kX-hI4" id="opa-HQ-QDc"/>
+                        <outlet property="todayLabel" destination="Bxa-eQ-BbQ" id="MJF-gH-ftb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IJ4-a0-zZn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="955.07246376811599" y="158.70535714285714"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="checkmark.rectangle.fill" catalog="system" width="128" height="93"/>
+    </resources>
 </document>
