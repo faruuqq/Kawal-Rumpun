@@ -40,6 +40,7 @@ class PanicVC: UIViewController {
             panicButton.setImage(#imageLiteral(resourceName: "Panic Buttorn Turn On Big"), for: .normal)
             panicked = true
             self.navigationController?.navigationBar.isHidden = true
+            self.tabBarController?.tabBar.isHidden = true
             
             //self.headerAtas.text = "hoho ha ha"
             self.deskripsiPanic.text = textPanicTurnOn
@@ -68,6 +69,8 @@ class PanicVC: UIViewController {
             panicButton.setImage(#imageLiteral(resourceName: "Panic Button Turn Off Big"), for: .normal)
             panicked = false
             self.navigationController?.navigationBar.isHidden = false
+            
+            self.tabBarController?.tabBar.isHidden = false
             
             self.deskripsiPanic.text = textPanicTurnOff
             deskripsiPanic.font = deskripsiPanic.font.withSize(13)

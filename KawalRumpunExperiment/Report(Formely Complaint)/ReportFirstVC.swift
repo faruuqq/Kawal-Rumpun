@@ -118,7 +118,7 @@ class ReportFirstVC: UIViewController {
 //        self.navigationItem.title = "Pesan Masuk"
         //input nvaigationtitle ke pojok kiri dan besar
         navigationController?.navigationBar.prefersLargeTitles = true
-        
+        self.navigationController?.navigationBar.tintColor = .white
         //setwarna NavigationBar
         let appearance = UINavigationBarAppearance()
         appearance.configureWithOpaqueBackground()
