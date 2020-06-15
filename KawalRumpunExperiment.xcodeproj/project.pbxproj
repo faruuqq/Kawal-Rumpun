@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2A5E2A2A247FF78E0036C8A4 /* ButtonShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5E2A29247FF78E0036C8A4 /* ButtonShadow.swift */; };
 		2A698B982476AA1400FE9CD8 /* CheckOutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A698B972476AA1400FE9CD8 /* CheckOutVC.swift */; };
+		2ACB025B2483983E00810CBD /* NewLogInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACB025A2483983E00810CBD /* NewLogInVC.swift */; };
 		2AFF5839247C837B00637FCA /* CheckInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFF5838247C837B00637FCA /* CheckInVC.swift */; };
 		2AFF583D247CBC7200637FCA /* PageCheckIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFF583C247CBC7200637FCA /* PageCheckIn.swift */; };
 		2AFF583F247CBD7300637FCA /* PageCellCheckIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFF583E247CBD7300637FCA /* PageCellCheckIn.swift */; };
@@ -84,6 +85,7 @@
 /* Begin PBXFileReference section */
 		2A5E2A29247FF78E0036C8A4 /* ButtonShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonShadow.swift; sourceTree = "<group>"; };
 		2A698B972476AA1400FE9CD8 /* CheckOutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutVC.swift; sourceTree = "<group>"; };
+		2ACB025A2483983E00810CBD /* NewLogInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLogInVC.swift; sourceTree = "<group>"; };
 		2AFF5838247C837B00637FCA /* CheckInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInVC.swift; sourceTree = "<group>"; };
 		2AFF583C247CBC7200637FCA /* PageCheckIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCheckIn.swift; sourceTree = "<group>"; };
 		2AFF583E247CBD7300637FCA /* PageCellCheckIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCellCheckIn.swift; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				4D53D1AE2472D39A003526CF /* Main.storyboard */,
+				2ACB025A2483983E00810CBD /* NewLogInVC.swift */,
 				FE371CDF247F20D5008D87B1 /* Registration.swift */,
 				FE523562247972E000566677 /* SignUpVC.swift */,
 				FE371CE1247F9F3F008D87B1 /* SignUpVC+Extension.swift */,
@@ -541,6 +544,7 @@
 				4D53D1AB2472D39A003526CF /* SceneDelegate.swift in Sources */,
 				FE523567247A2AC200566677 /* GugusCovidCell.swift in Sources */,
 				4DB5BFB72473A9C100D86F16 /* KawalRumpunVC.swift in Sources */,
+				2ACB025B2483983E00810CBD /* NewLogInVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
